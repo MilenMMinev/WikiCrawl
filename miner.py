@@ -5,27 +5,41 @@ import re
 from bs4 import BeautifulSoup
 from queue import Queue
 from threading import Thread, Lock
+import logging
 
+import sys
 from os import listdir
 from constants import *
 
 # amount of links crawler visits per page
 CRAWLER_WIDTH = 20
+THREADS = 1
 
-visitQueue = set()
-visitQueue.add(ARTICLE_URL)
+visited = set()
+
+linkBuffer = set()
+linkBuffer.add(ARTICLE_URL)
+
+visitedLock = Lock()
+bufferLock = Lock()
+
+# logging.basicConfig(filename='miner.log', level=logging.INFO)
+logging.basicConfig(level=logging.INFO)
 
 
 class Miner(Thread):
 
-    def __init__(self, links, lock):
+    def __init__(self, index):
         Thread.__init__(self)
-        self.links = links
-        self.lock = lock
+        self.index = index
 
     def run(self):
-        for l in self.links:
-            self.minePage(l)
+        logging.info('Starting thread {}'.format(self.getName()))
+        while True:
+            if len(linkBuffer) == 0:
+                time.sleep(1)
+                continue
+            self.mine()
 
     def getArticleTitle(self, source):
         return re.findall(r"<title>(.*) - Wikipedia", source)[0]
@@ -34,73 +48,76 @@ class Miner(Thread):
         relativeLinks = []
         wikiDomain = "http://wikipedia.org"
 
-        soup = BeautifulSoup(source, "lxml")
-        links = list(soup.find_all('a', href=True))
-        for link in links:
-            link = str(link)
-            if re.search(r'href=\"/wiki/\w+\"', link):
-                link = re.search(r'href=\"/wiki/\w+\"', link).group()
-                link = re.match(r'href=\"(.*)\"', link).group(0)
-                relativeLinks.append(wikiDomain + link[6:-1])
-                limit = limit - 1
-                if limit == 0:
-                    continue
-        return relativeLinks
+        try:
+            soup = BeautifulSoup(source, "lxml")
+            links = list(soup.find_all('a', href=True))
+            for link in links:
+                link = str(link)
+                if re.search(r'href=\"/wiki/\w+\"', link):
+                    link = re.search(r'href=\"/wiki/\w+\"', link).group()
+                    link = re.match(r'href=\"(.*)\"', link).group(0)
+                    relativeLinks.append(wikiDomain + link[6:-1])
+                    limit = limit - 1
+                    if limit == 0:
+                        continue
+            return relativeLinks
+        except:
+            logging.error('exception in getArticleLinks')
+            sys.exit()
 
 # saves article text to file
-    def minePage(self, url, TIME=False):
-        source = urllib.request.urlopen(url).read()
-        source = source.decode('utf-8')
-        filename = "{}{}.html".format(
-            HTML_SAVE_FOLDER, self.getArticleTitle(source))
-        # if self.getArticleTitle(source) + '.html' in listdir(HTML_SAVE_FOLDER):
-            # print('file already exists! will overwrite')
-            # print(self.getArticleTitle(source) + '.html')
-            # print(listdir(HTML_SAVE_FOLDER))
-        f = open(filename, 'w')
-        f.write(source)
-        f.close()
+    def mine(self, TIME=False):
+        global visited, visitedLock, linkBuffer, bufferLock
+        # logging.info('Links Buffer size:{}'.format(len(linkBuffer)))
+        # logging.info('visited size:{}'.format(len(visited)))
+
+        try:
+            bufferLock.acquire()
+            url = linkBuffer.pop()
+            bufferLock.release()
+
+            source = urllib.request.urlopen(url).read()
+            source = source.decode('utf-8')
+            filename = "{}{}.html".format(
+                HTML_SAVE_FOLDER, self.getArticleTitle(source))
+            if self.getArticleTitle(source) + '.html' in listdir(HTML_SAVE_FOLDER):
+                logging.warning('file already exists! will overwrite')
+            f = open(filename, 'w')
+            f.write(source)
+            f.close()
+        except KeyError:
+            logging.warning('linkBuffer empty')
+            return
 
         allLinks = self.getArticleLinks(source, limit=CRAWLER_WIDTH)
-        global visitQueue
-        self.lock.acquire()
-        for link in allLinks:
-            visitQueue.add(link)
-        self.lock.release()
 
-    # def crawl(self, root):
-    #     self.minePage(root)
-    #     while self.visitQueue:
-    #         link = self.visitQueue.get()
-    #         if link not in self.visited:
-    #             self.minePage(link)
-    #     f.close()
+        # logging.info('links_to_add_count:{}'.format(len(allLinks)))
+        filter(lambda x: x not in visited, allLinks)
+
+        # logging.info('links_to_add_count:{}'.format(len(allLinks)))
+        for link in allLinks:
+            visitedLock.acquire()
+            visited.add(link)
+            visitedLock.release()
+
+            bufferLock.acquire()
+            linkBuffer.add(link)
+            # logging.info('buffer_add, size:{}'.format(len(linkBuffer)))
+            bufferLock.release()
 
 
 def main():
-    lock = Lock()
-    THREADS = 4
 
-    while True:
-        if len(visitQueue) < THREADS:
-            miner = Miner(visitQueue, lock)
-            miner.setDaemon(True)
-            miner.start()
-            miner.join()
-
-        else:
-
-        for link in visitQueue:
-            work = visitQueue[:2]
-            miner = Miner(work, lock)
-            miner.setDaemon(True)
-            miner.start()
+    for i in range(THREADS):
+        miner = Miner(i)
+        miner.setDaemon(True)
+        miner.start()
 
     t0 = time.time()
     while(True):
         delta = time.time() - t0
         count = len(listdir(HTML_SAVE_FOLDER))
-        print('speed: {} f/s'.format(count / delta))
+        logging.info('speed: {} f/s'.format(count / delta))
         # print('{} files in {} seconds'.format(count, delta))
         time.sleep(1)
 if __name__ == '__main__':
