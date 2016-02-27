@@ -13,7 +13,7 @@ from constants import *
 
 # amount of links crawler visits per page
 CRAWLER_WIDTH = 20
-THREADS = 1
+THREADS = 4
 
 visited = set()
 
@@ -92,7 +92,10 @@ class Miner(Thread):
         allLinks = self.getArticleLinks(source, limit=CRAWLER_WIDTH)
 
         # logging.info('links_to_add_count:{}'.format(len(allLinks)))
-        filter(lambda x: x not in visited, allLinks)
+        before = len(allLinks)
+        allLinks = list(filter(lambda x: x not in visited, allLinks))
+        logging.info('links_filtered:{}'.format(before - len(allLinks)))
+        
 
         # logging.info('links_to_add_count:{}'.format(len(allLinks)))
         for link in allLinks:
