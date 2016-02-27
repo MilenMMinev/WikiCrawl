@@ -13,7 +13,7 @@ from constants import *
 
 # amount of links crawler visits per page
 CRAWLER_WIDTH = 20
-THREADS = 4
+THREADS = 100
 
 visited = set()
 
