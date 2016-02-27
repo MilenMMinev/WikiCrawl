@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Simple linear regression - Wikipedia, the free encyclopedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ = window.RLQ || []).push(function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Simple_linear_regression","wgTitle":"Simple linear regression","wgCurRevisionId":700420609,"wgRevisionId":700420609,"wgArticleId":2593771,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from January 2010","All articles lacking in-text citations","Wikipedia articles needing clarification from October 2015","All articles with unsourced statements","Articles with unsourced statements from July 2012","Regression analysis","Estimation theory","Parametric statistics"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Simple_linear_regression","wgRelevantArticleId":2593771,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wikilove-recipient":"","wikilove-anon":0,"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgGatherPageImageThumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/100px-Linear_regression.svg.png","wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSAcceptLanguageList":["pl-pl","pl","en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCentralAuthMobileDomain":false,"wgWikibaseItemId":"Q7520804","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","ext.centralNotice.bannerController","skins.vector.js"]);
+} );</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.gadget.DRN-wizard%2CReferenceTooltips%2CWatchlistBase%2CWatchlistGreenIndicators%2Ccharinsert%2Cfeatured-articles-links%2CrefToolbar%2Cswitcher%2Cteahouse%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.raggett%2CsectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector" />
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.27.0-wmf.14" />
+<meta name="referrer" content="origin-when-cross-origin" />
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Simple_linear_regression" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Simple_linear_regression&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Simple_linear_regression&amp;action=edit" />
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Simple_linear_regression" />
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/static/1.27.0-wmf.14/skins/Vector/csshover.min.htc")}</style><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Simple_linear_regression skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Simple linear regression</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="metadata plainlinks ambox ambox-style ambox-More_footnotes" role="presentation">
+<tr>
+<td class="mbox-image">
+<div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">This article includes a <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>. <span class="hide-when-compact">Please help to <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span> <small><i>(January 2010)</i></small></span></td>
+</tr>
+</table>
+<table class="vertical-navbox nowraplinks hlist" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%">
+<tr>
+<td style="padding-top:0.4em;line-height:1.2em">Part of a series on <a href="/wiki/Statistics" title="Statistics">Statistics</a></td>
+</tr>
+<tr>
+<th style="padding:0.2em 0.4em 0.2em;padding-top:0;font-size:145%;line-height:1.2em"><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></th>
+</tr>
+<tr>
+<td style="padding:0.2em 0 0.4em"><a href="/wiki/File:Linear_regression.svg" class="image"><img alt="Linear regression.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/220px-Linear_regression.svg.png" width="220" height="145" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/330px-Linear_regression.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/440px-Linear_regression.svg.png 2x" data-file-width="438" data-file-height="289" /></a></td>
+</tr>
+<tr>
+<th style="padding:0.1em">Models</th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Linear_regression" title="Linear regression">Linear regression</a></li>
+<li><strong class="selflink">Simple regression</strong></li>
+<li><a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">Ordinary least squares</a></li>
+<li><a href="/wiki/Polynomial_regression" title="Polynomial regression">Polynomial regression</a></li>
+<li><a href="/wiki/General_linear_model" title="General linear model">General linear model</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Generalized_linear_model" title="Generalized linear model">Generalized linear model</a></li>
+<li><a href="/wiki/Discrete_choice" title="Discrete choice">Discrete choice</a></li>
+<li><a href="/wiki/Logistic_regression" title="Logistic regression">Logistic regression</a></li>
+<li><a href="/wiki/Multinomial_logit" title="Multinomial logit" class="mw-redirect">Multinomial logit</a></li>
+<li><a href="/wiki/Mixed_logit" title="Mixed logit">Mixed logit</a></li>
+<li><a href="/wiki/Probit_model" title="Probit model">Probit</a></li>
+<li><a href="/wiki/Multinomial_probit" title="Multinomial probit">Multinomial probit</a></li>
+<li><a href="/wiki/Ordered_logit" title="Ordered logit">Ordered logit</a></li>
+<li><a href="/wiki/Ordered_probit" title="Ordered probit">Ordered probit</a></li>
+<li><a href="/wiki/Poisson_regression" title="Poisson regression">Poisson</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Multilevel_model" title="Multilevel model">Multilevel model</a></li>
+<li><a href="/wiki/Fixed_effects_model" title="Fixed effects model">Fixed effects</a></li>
+<li><a href="/wiki/Random_effects_model" title="Random effects model">Random effects</a></li>
+<li><a href="/wiki/Mixed_model" title="Mixed model">Mixed model</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Nonlinear_regression" title="Nonlinear regression">Nonlinear regression</a></li>
+<li><a href="/wiki/Nonparametric_regression" title="Nonparametric regression">Nonparametric</a></li>
+<li><a href="/wiki/Semiparametric_regression" title="Semiparametric regression">Semiparametric</a></li>
+<li><a href="/wiki/Robust_regression" title="Robust regression">Robust</a></li>
+<li><a href="/wiki/Quantile_regression" title="Quantile regression">Quantile</a></li>
+<li><a href="/wiki/Isotonic_regression" title="Isotonic regression">Isotonic</a></li>
+<li><a href="/wiki/Principal_component_regression" title="Principal component regression">Principal components</a></li>
+<li><a href="/wiki/Least-angle_regression" title="Least-angle regression">Least angle</a></li>
+<li><a href="/wiki/Local_regression" title="Local regression">Local</a></li>
+<li><a href="/wiki/Segmented_regression" title="Segmented regression">Segmented</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Errors-in-variables_models" title="Errors-in-variables models">Errors-in-variables</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em">Estimation</th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Least_squares" title="Least squares">Least squares</a></li>
+<li><a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">Ordinary least squares</a></li>
+<li><a href="/wiki/Linear_least_squares_(mathematics)" title="Linear least squares (mathematics)">Linear (math)</a></li>
+<li><a href="/wiki/Partial_least_squares_regression" title="Partial least squares regression">Partial</a></li>
+<li><a href="/wiki/Total_least_squares" title="Total least squares">Total</a></li>
+<li><a href="/wiki/Generalized_least_squares" title="Generalized least squares">Generalized</a></li>
+<li><a href="/wiki/Weighted_least_squares" title="Weighted least squares" class="mw-redirect">Weighted</a></li>
+<li><a href="/wiki/Non-linear_least_squares" title="Non-linear least squares">Non-linear</a></li>
+<li><a href="/wiki/Non-negative_least_squares" title="Non-negative least squares">Non-negative</a></li>
+<li><a href="/wiki/Iteratively_reweighted_least_squares" title="Iteratively reweighted least squares">Iteratively reweighted</a></li>
+<li><a href="/wiki/Tikhonov_regularization" title="Tikhonov regularization">Ridge regression</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Least_absolute_deviations" title="Least absolute deviations">Least absolute deviations</a></li>
+<li><a href="/wiki/Bayesian_linear_regression" title="Bayesian linear regression">Bayesian</a></li>
+<li><a href="/wiki/Bayesian_multivariate_linear_regression" title="Bayesian multivariate linear regression">Bayesian multivariate</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em">Background</th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Regression_model_validation" title="Regression model validation" class="mw-redirect">Regression model validation</a></li>
+<li><a href="/wiki/Mean_and_predicted_response" title="Mean and predicted response">Mean and predicted response</a></li>
+<li><a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">Errors and residuals</a></li>
+<li><a href="/wiki/Goodness_of_fit" title="Goodness of fit">Goodness of fit</a></li>
+<li><a href="/wiki/Studentized_residual" title="Studentized residual">Studentized residual</a></li>
+<li><a href="/wiki/Gauss%E2%80%93Markov_theorem" title="Gauss–Markov theorem">Gauss–Markov theorem</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0.3em 0.4em 0.3em;font-weight:bold">
+<ul>
+<li><span class="metadata"><a href="/wiki/File:Fisher_iris_versicolor_sepalwidth.svg" class="image"><img alt="Portal icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/16px-Fisher_iris_versicolor_sepalwidth.svg.png" width="16" height="11" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/24px-Fisher_iris_versicolor_sepalwidth.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/32px-Fisher_iris_versicolor_sepalwidth.svg.png 2x" data-file-width="822" data-file-height="567" /></a></span> <a href="/wiki/Portal:Statistics" title="Portal:Statistics">Statistics portal</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Regression_bar" title="Template:Regression bar"><abbr title="View this template">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Regression_bar" title="Template talk:Regression bar"><abbr title="Discuss this template">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Regression_bar&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Okuns_law_quarterly_differences.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Okuns_law_quarterly_differences.svg/300px-Okuns_law_quarterly_differences.svg.png" width="300" height="198" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Okuns_law_quarterly_differences.svg/450px-Okuns_law_quarterly_differences.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Okuns_law_quarterly_differences.svg/600px-Okuns_law_quarterly_differences.svg.png 2x" data-file-width="301" data-file-height="199" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Okuns_law_quarterly_differences.svg" class="internal" title="Enlarge"></a></div>
+<a href="/wiki/Okun%27s_law" title="Okun's law">Okun's law</a> in <a href="/wiki/Macroeconomics" title="Macroeconomics">macroeconomics</a> is an example of the simple linear regression. Here the dependent variable (GDP growth) is presumed to be in a linear relationship with the changes in the unemployment rate.</div>
+</div>
+</div>
+<p>In <a href="/wiki/Statistics" title="Statistics">statistics</a>, <b>simple linear regression</b> is the <a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">least squares</a> estimator of a <a href="/wiki/Linear_regression" title="Linear regression">linear regression</a> model with a single <a href="/wiki/Covariate" title="Covariate">explanatory variable</a>. In other words, simple linear regression fits a <a href="/wiki/Straight_line" title="Straight line" class="mw-redirect">straight line</a> through the set of <span class="texhtml mvar" style="font-style:italic;">n</span> points in such a way that makes the sum of squared <i><a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">residuals</a></i> of the model (that is, vertical distances between the points of the data set and the fitted line) as small as possible.</p>
+<p>The adjective <i>simple</i> refers to the fact that the outcome variable is related to a single predictor. The slope of the fitted line is equal to the <a href="/wiki/Pearson_product_moment_correlation_coefficient" title="Pearson product moment correlation coefficient" class="mw-redirect">correlation</a> between <span class="texhtml mvar" style="font-style:italic;">y</span> and <span class="texhtml mvar" style="font-style:italic;">x</span> corrected by the ratio of standard deviations of these variables. The intercept of the fitted line is such that it passes through the center of mass <span class="texhtml">(<span style="text-decoration:overline;"><i>x</i></span>, <span style="text-decoration:overline;"><i>y</i></span>)</span> of the data points.</p>
+<p><a href="/wiki/Linear_regression" title="Linear regression">Other regression methods</a> besides the simple <a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">ordinary least squares</a> (OLS) also exist. In particular, when one wants to do regression by eye, one usually tends to draw a slightly steeper line, closer to the one produced by the <a href="/wiki/Deming_regression" title="Deming regression">total least squares</a> method. This occurs because it is more natural for one's mind to consider the orthogonal distances from the observations to the regression line, rather than the vertical ones as OLS method does.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Fitting_the_regression_line"><span class="tocnumber">1</span> <span class="toctext">Fitting the regression line</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Linear_regression_without_the_intercept_term"><span class="tocnumber">1.1</span> <span class="toctext">Linear regression without the intercept term</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Numerical_properties"><span class="tocnumber">2</span> <span class="toctext">Numerical properties</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Model-cased_properties"><span class="tocnumber">3</span> <span class="toctext">Model-cased properties</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Unbiasedness"><span class="tocnumber">3.1</span> <span class="toctext">Unbiasedness</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Confidence_intervals"><span class="tocnumber">3.2</span> <span class="toctext">Confidence intervals</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Normality_assumption"><span class="tocnumber">3.3</span> <span class="toctext">Normality assumption</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Asymptotic_assumption"><span class="tocnumber">3.4</span> <span class="toctext">Asymptotic assumption</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Numerical_example"><span class="tocnumber">4</span> <span class="toctext">Numerical example</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Derivation_of_simple_regression_estimators"><span class="tocnumber">5</span> <span class="toctext">Derivation of simple regression estimators</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Fitting_the_regression_line">Fitting the regression line</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=1" title="Edit section: Fitting the regression line">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Suppose there are <span class="texhtml mvar" style="font-style:italic;">n</span> data points <span class="texhtml">{(<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>), <i>i</i> = 1, ..., <i>n</i>}.</span> The function that describes x and y is:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" y_i = \alpha + \beta x_i + \varepsilon_i." src="//upload.wikimedia.org/math/c/1/4/c14ff3f9686f07997b661c5369c3f316.png" /></dd>
+</dl>
+<p>The goal is to find the equation of the straight line</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" y = \alpha + \beta x," src="//upload.wikimedia.org/math/c/9/5/c958896b783bfa6eb86c40d5b2f5a1e2.png" /></dd>
+</dl>
+<p>which would provide a "best" fit for the data points. Here the "best" will be understood as in the <a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">least-squares</a> approach: a line that minimizes the sum of squared residuals of the linear regression model. In other words, <span class="texhtml mvar" style="font-style:italic;">α</span> (the <span class="texhtml mvar" style="font-style:italic;">y</span>-intercept) and <span class="texhtml mvar" style="font-style:italic;">β</span> (the slope) solve the following minimization problem:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\text{Find }\min_{\alpha,\,\beta} Q(\alpha, \beta), \qquad \text{for } Q(\alpha, \beta) = \sum_{i=1}^n\varepsilon_i^{\,2} = \sum_{i=1}^n (y_i - \alpha - \beta x_i)^2\ " src="//upload.wikimedia.org/math/a/e/0/ae0a557a00ac3cf37c8f2fdeadbbee14.png" /></dd>
+</dl>
+<p>By using either <a href="/wiki/Calculus" title="Calculus">calculus</a>, the geometry of <a href="/wiki/Inner_product_space" title="Inner product space">inner product spaces</a>, or simply expanding to get a quadratic expression in <span class="texhtml mvar" style="font-style:italic;">α</span> and <span class="texhtml mvar" style="font-style:italic;">β</span>, it can be shown that the values of <span class="texhtml mvar" style="font-style:italic;">α</span> and <span class="texhtml mvar" style="font-style:italic;">β</span> that minimize the objective function <span class="texhtml mvar" style="font-style:italic;">Q</span><sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> are</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}
+  \hat\beta &amp;= \frac{ \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}) }{ \sum_{i=1}^n (x_i - \bar{x})^2 } \\[6pt]
+            &amp;= \frac{ \sum_{i=1}^{n}{x_i y_i} - \frac{1}{n} \sum_{i=1}^n x_i \sum_{j=1}^n y_j}{ \sum_{i=1}^n {x_i^2} - \frac{1}{n} (\sum_{i=1}^n x_i)^2 } \\[6pt]
+            &amp;= \frac{ \overline{xy} - \bar{x}\bar{y} }{ \overline{x^2} - \bar{x}^2 } = \frac{ \operatorname{Cov}[x, y] }{ \operatorname{Var}[x] } \\
+            &amp;= r_{xy} \frac{s_y}{s_x}, \\[6pt]
+ \hat\alpha &amp; = \bar{y} - \hat\beta\,\bar{x},
+\end{align}" src="//upload.wikimedia.org/math/e/e/d/eed68731d1230938d457c576deee1bcf.png" /></dd>
+</dl>
+<p>where <span class="texhtml"><i>r<sub>xy</sub></i></span> is the <a href="/wiki/Correlation#Pearson.27s_product-moment_coefficient" title="Correlation" class="mw-redirect">sample correlation coefficient</a> between <span class="texhtml mvar" style="font-style:italic;">x</span> and <span class="texhtml mvar" style="font-style:italic;">y</span>; and <span class="texhtml"><i>s<sub>x</sub></i></span> and <span class="texhtml"><i>s<sub>y</sub></i></span> are the <a href="/wiki/Sample_standard_deviation" title="Sample standard deviation" class="mw-redirect">sample standard deviation</a> of <span class="texhtml mvar" style="font-style:italic;">x</span> and <span class="texhtml mvar" style="font-style:italic;">y</span>. A horizontal bar over a quantity indicates the average value of that quantity. For example:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\overline{xy} = \frac{1}{n} \sum_{i=1}^n x_i y_i." src="//upload.wikimedia.org/math/f/e/b/feb9b6ccbf04c0919ba8e49443f2ec4d.png" /></dd>
+</dl>
+<p>Substituting the above expressions for <img class="mwe-math-fallback-image-inline tex" alt="\hat{\alpha}" src="//upload.wikimedia.org/math/d/a/9/da9c842dc02b628b397e0551c00039ed.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" /> into</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="f = \hat{\alpha} + \hat{\beta} x," src="//upload.wikimedia.org/math/4/3/2/432bd8a3fc826abd547140a32ec29322.png" /></dd>
+</dl>
+<p>yields</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\frac{ f - \bar{y}}{s_y} = r_{xy} \frac{ x - \bar{x}}{s_x}  " src="//upload.wikimedia.org/math/4/7/6/476df2ba70d173f6ca97c7f56cad65cc.png" /></dd>
+</dl>
+<p>This shows that <span class="texhtml"><i>r<sub>xy</sub></i></span> is the slope of the regression line of the <a href="/wiki/Standard_score" title="Standard score">standardized</a> data points (and that this line passes through the origin).</p>
+<p>It is sometimes useful to calculate <span class="texhtml"><i>r<sub>xy</sub></i></span> from the data independently using this equation:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="r_{xy} = \frac{ \overline{xy} - \bar{x}\bar{y} }{ \sqrt{ (\overline{x^2} - \bar{x}^2) (\overline{y^2} - \bar{y}^2 )} } " src="//upload.wikimedia.org/math/c/f/6/cf6cd3b69810086965983824ebdcb15c.png" /></dd>
+</dl>
+<p>The <a href="/wiki/Coefficient_of_determination" title="Coefficient of determination">coefficient of determination</a> (R squared) is equal to <img class="mwe-math-fallback-image-inline tex" alt="r_{xy}^2" src="//upload.wikimedia.org/math/a/b/f/abf73253639043ff18efac176ec8be7d.png" /> when the model is linear with a single independent variable. See <a href="/wiki/Correlation#Pearson.27s_product-moment_coefficient" title="Correlation" class="mw-redirect">sample correlation coefficient</a> for additional details.</p>
+<h3><span class="mw-headline" id="Linear_regression_without_the_intercept_term">Linear regression without the intercept term</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=2" title="Edit section: Linear regression without the intercept term">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Sometimes it is appropriate to force the regression line to pass through the origin, because <span class="texhtml mvar" style="font-style:italic;">x</span> and <span class="texhtml mvar" style="font-style:italic;">y</span> are assumed to be proportional. For the model without the intercept term, <span class="texhtml"><i>y</i> = <i>βx</i></span>, the OLS estimator for <span class="texhtml mvar" style="font-style:italic;">β</span> simplifies to</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta} = \frac{ \sum_{i=1}^n x_i y_i }{ \sum_{i=1}^n x_i^2 } = \frac{\overline{x y}}{\overline{x^2}} " src="//upload.wikimedia.org/math/3/c/d/3cd70c3f466a2d9ae1e40c39632f5404.png" /></dd>
+</dl>
+<p>and the sample correlation coefficient becomes</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="r_{xy} = \frac{ \overline{xy} }{ \sqrt{ \overline{x^2} \, \overline{y^2} } } " src="//upload.wikimedia.org/math/c/c/2/cc2d30eb5b61642fe482cf256795a789.png" /></dd>
+</dl>
+<p>Substituting <span class="texhtml">(<i>x</i> − <i>h</i>, <i>y</i> − <i>k</i>)</span> in place of <span class="texhtml">(<i>x</i>, <i>y</i>)</span> gives the regression through <span class="texhtml">(<i>h</i>, <i>k</i>)</span>:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}
+  \hat\beta &amp;= \frac{\overline{(x - h) (y - k)}}{\overline{(x - h)^2}} \\[6pt]
+            &amp;= \frac{\overline{x y} + k \bar{x} - h \bar{y} - h k }{\overline{x^2} - 2 h \bar{x} + h^2} \\[6pt]
+            &amp;= \frac{\overline{x y} - \bar{x} \bar{y} + (\bar{x} - h)(\bar{y} - k)}{\overline{x^2} - \bar{x}^2 + (\bar{x} - h)^2} \\[6pt]
+            &amp;= \frac{\operatorname{Cov}[x,y] + (\bar{x} - h)(\bar{y}-k)}{\operatorname{Var}[x] + (\bar{x} - h)^2}
+\end{align}" src="//upload.wikimedia.org/math/c/c/c/ccc21bcb2bf0ad097a3a48ac1286c6bf.png" /></dd>
+</dl>
+<p>The last form above demonstrates how moving the line away from the center of mass of the data points affects the slope.</p>
+<h2><span class="mw-headline" id="Numerical_properties">Numerical properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=3" title="Edit section: Numerical properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div>
+<ol>
+<li>The regression line goes through the <i>center of mass</i> point, <img class="mwe-math-fallback-image-inline tex" alt="(\bar x,\, \bar y)" src="//upload.wikimedia.org/math/2/3/f/23f69b56d7d4e50825a00d473a4080b1.png" />, if the model includes an intercept term (i.e., not forced through the origin).</li>
+<li>The sum of the residuals is zero if the model includes an intercept term:
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\sum_{i=1}^n \hat{\varepsilon_i} = 0." src="//upload.wikimedia.org/math/d/7/4/d746aae42207b9910d47a13ce7766ce0.png" /></dd>
+</dl>
+</li>
+<li>The residuals and <span class="texhtml mvar" style="font-style:italic;">x</span> values are uncorrelated, meaning (whether or not there is an intercept term in the model):
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\sum_{i=1}^nx_i \hat{\varepsilon}_i \;=\; 0" src="//upload.wikimedia.org/math/a/4/f/a4fad37ab931ea20547a860920566766.png" /></dd>
+</dl>
+</li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Model-cased_properties">Model-cased properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=4" title="Edit section: Model-cased properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Description of the statistical properties of estimators from the simple linear regression estimates requires the use of a <a href="/wiki/Statistical_model" title="Statistical model">statistical model</a>. The following is based on assuming the validity of a model under which the estimates are optimal. It is also possible to evaluate the properties under other assumptions, such as <a href="/wiki/Homoscedasticity" title="Homoscedasticity">inhomogeneity</a>, but this is discussed elsewhere.<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="where? (October 2015)">clarification needed</span></a></i>]</sup></p>
+<h3><span class="mw-headline" id="Unbiasedness">Unbiasedness</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=5" title="Edit section: Unbiasedness">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The estimators <img class="mwe-math-fallback-image-inline tex" alt="\hat{\alpha}" src="//upload.wikimedia.org/math/d/a/9/da9c842dc02b628b397e0551c00039ed.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" /> are <a href="/wiki/Estimator_bias" title="Estimator bias" class="mw-redirect">unbiased</a>. This requires that we interpret the estimators as random variables and so we have to assume that, for each value of <span class="texhtml mvar" style="font-style:italic;">x</span>, the corresponding value of <span class="texhtml mvar" style="font-style:italic;">y</span> is generated as a mean response <span class="texhtml"><i>α</i> + <i>βx</i></span> plus an additional random variable <span class="texhtml mvar" style="font-style:italic;">ε</span> called the <i>error term</i>. This error term has to be equal to zero on average, for each value of <span class="texhtml mvar" style="font-style:italic;">x</span>. Under such interpretation, the least-squares estimators <img class="mwe-math-fallback-image-inline tex" alt="\hat\alpha" src="//upload.wikimedia.org/math/5/9/3/5931bfc89d29d1e7a9917294ba0d3d07.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\hat\beta" src="//upload.wikimedia.org/math/5/9/7/59744f666ff56f695bfe4d128a6784f4.png" /> will themselves be random variables, and they will unbiasedly estimate the "true values" <span class="texhtml mvar" style="font-style:italic;">α</span> and <span class="texhtml mvar" style="font-style:italic;">β</span>.</p>
+<h3><span class="mw-headline" id="Confidence_intervals">Confidence intervals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=6" title="Edit section: Confidence intervals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The formulas given in the previous section allow one to calculate the <i>point estimates</i> of <span class="texhtml mvar" style="font-style:italic;">α</span> and <span class="texhtml mvar" style="font-style:italic;">β</span> — that is, the coefficients of the regression line for the given set of data. However, those formulas don't tell us how precise the estimates are, i.e., how much the estimators <img class="mwe-math-fallback-image-inline tex" alt="\hat{\alpha}" src="//upload.wikimedia.org/math/d/a/9/da9c842dc02b628b397e0551c00039ed.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" /> vary from sample to sample for the specified sample size. <a href="/wiki/Confidence_interval" title="Confidence interval">Confidence intervals</a> were devised to give a plausible set of values the estimates might have if one repeated the experiment a very large number of times.</p>
+<p>The standard method of constructing confidence intervals for linear regression coefficients relies on the normality assumption, which is justified if either:</p>
+<ol>
+<li>the errors in the regression are <a href="/wiki/Normal_distribution" title="Normal distribution">normally distributed</a> (the so-called <i>classic regression</i> assumption), or</li>
+<li>the number of observations <span class="texhtml mvar" style="font-style:italic;">n</span> is sufficiently large, in which case the estimator is approximately normally distributed.</li>
+</ol>
+<p>The latter case is justified by the <a href="/wiki/Central_limit_theorem" title="Central limit theorem">central limit theorem</a>.</p>
+<h3><span class="mw-headline" id="Normality_assumption">Normality assumption</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=7" title="Edit section: Normality assumption">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Under the first assumption above, that of the normality of the error terms, the estimator of the slope coefficient will itself be normally distributed with mean <span class="texhtml mvar" style="font-style:italic;">β</span> and variance <img class="mwe-math-fallback-image-inline tex" alt="\sigma^2/\sum(x_i - \bar{x})^2," style="height:1.5em" src="//upload.wikimedia.org/math/3/4/2/342ebfea95d86ecf64fb74174155cc9d.png" /> where <span class="texhtml"><i>σ</i><sup>2</sup></span> is the variance of the error terms (see <a href="/wiki/Proofs_involving_ordinary_least_squares" title="Proofs involving ordinary least squares">Proofs involving ordinary least squares</a>). At the same time the sum of squared residuals <span class="texhtml mvar" style="font-style:italic;">Q</span> is distributed proportionally to <a href="/wiki/Chi-squared_distribution" title="Chi-squared distribution"><span class="texhtml"><i>χ</i><sup>2</sup></span></a> with <span class="texhtml"><i>n</i> − 2</span> degrees of freedom, and independently from <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" />. This allows us to construct a <span class="texhtml mvar" style="font-style:italic;">t</span>-statistic</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="t = \frac{\hat\beta - \beta}{s_{\hat\beta}}\ \sim\ t_{n - 2}," src="//upload.wikimedia.org/math/a/b/1/ab1733a3563ed6b0422ec416078e87d2.png" /></dd>
+</dl>
+<p>where</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" s_\hat{\beta} = \sqrt{ \frac{\frac{1}{n - 2}\sum_{i=1}^n \hat{\varepsilon}_i^{\,2}} {\sum_{i=1}^n (x_i -\bar{x})^2} }" src="//upload.wikimedia.org/math/a/7/e/a7eec56b89304f0a6e4937c773d9c623.png" /></dd>
+</dl>
+<p>is the <i>standard error</i> of the estimator <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" />.</p>
+<p>This <span class="texhtml mvar" style="font-style:italic;">t</span>-statistic has a <a href="/wiki/Student%27s_t-distribution" title="Student's t-distribution">Student's <span class="texhtml mvar" style="font-style:italic;">t</span></a>-distribution with <span class="texhtml"><i>n</i> − 2</span> degrees of freedom. Using it we can construct a confidence interval for <span class="texhtml mvar" style="font-style:italic;">β</span>:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" \beta \in \left[\hat\beta - s_{\hat\beta} t^*_{n - 2},\ \hat\beta + s_{\hat\beta} t^*_{n - 2}\right]," src="//upload.wikimedia.org/math/7/7/1/771c5c4f00602018bc7ea74579c34c48.png" /></dd>
+</dl>
+<p>at confidence level <span class="texhtml">(1 − <i>γ</i>)</span>, where <img class="mwe-math-fallback-image-inline tex" alt="t^*_{n - 2}" src="//upload.wikimedia.org/math/8/c/6/8c66e6d6620b9b7743f1c6fe4fe0da52.png" /> is the <span class="texhtml">(1 − <span class="sfrac nowrap" style="display:inline-block; vertical-align:-0.5em; font-size:85%; text-align:center;"><span style="display:block; line-height:1em; margin:0 0.1em;"><i>γ</i></span><span class="visualhide">/</span><span style="display:block; line-height:1em; margin:0 0.1em; border-top:1px solid;">2</span></span>)</span>-th quantile of the <span class="texhtml"><i>t</i><sub><i>n</i>−2</sub></span> distribution. For example, if <span class="texhtml"><i>γ</i> = 0.05</span> then the confidence level is 95%.</p>
+<p>Similarly, the confidence interval for the intercept coefficient <span class="texhtml mvar" style="font-style:italic;">α</span> is given by</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\alpha \in \left[ \hat\alpha - s_{\hat\alpha} t^*_{n - 2},\ \hat\alpha + s_\hat{\alpha} t^*_{n - 2}\right]," src="//upload.wikimedia.org/math/4/5/2/452a5b44077fe693c2929194edb67b55.png" /></dd>
+</dl>
+<p>at confidence level (1 − <i>γ</i>), where</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="s_{\hat\alpha} = s_\hat{\beta}\sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2} = \sqrt{\frac{1}{n(n - 2)}\left(\sum_{j=1}^n \hat{\varepsilon}_j^{\,2} \right) \frac{\sum_{i=1}^n x_i^2} {\sum_{i=1}^n (x_i  - \bar{x})^2} }" src="//upload.wikimedia.org/math/3/e/5/3e5a76d0d005dfa2a1f9824692b6784b.png" /></dd>
+</dl>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Okuns_law_with_confidence_bands.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Okuns_law_with_confidence_bands.svg/300px-Okuns_law_with_confidence_bands.svg.png" width="300" height="198" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Okuns_law_with_confidence_bands.svg/450px-Okuns_law_with_confidence_bands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/81/Okuns_law_with_confidence_bands.svg/600px-Okuns_law_with_confidence_bands.svg.png 2x" data-file-width="299" data-file-height="197" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Okuns_law_with_confidence_bands.svg" class="internal" title="Enlarge"></a></div>
+The US "changes in unemployment – GDP growth" regression with the 95% confidence bands.</div>
+</div>
+</div>
+<p>The confidence intervals for <span class="texhtml mvar" style="font-style:italic;">α</span> and <span class="texhtml mvar" style="font-style:italic;">β</span> give us the general idea where these regression coefficients are most likely to be. For example, in the <i>Okun's law</i> regression shown at the beginning of the article the point estimates are</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat{\alpha} = 0.859, \qquad \hat{\beta} = -1.817." src="//upload.wikimedia.org/math/7/1/5/715d00b2432138f7dd1cf50ce8565d87.png" /></dd>
+</dl>
+<p>The 95% confidence intervals for these estimates are</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\alpha \in \left[0.76, 0.96\right], \qquad \beta \in \left[-2.06, -1.58 \right]." src="//upload.wikimedia.org/math/8/e/f/8efa957a2940ea39432f1392c055821a.png" /></dd>
+</dl>
+<p>In order to represent this information graphically, in the form of the confidence bands around the regression line, one has to proceed carefully and account for the joint distribution of the estimators. It can be shown<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2012)">citation needed</span></a></i>]</sup> that at confidence level (1 − <i>γ</i>) the confidence band has hyperbolic form given by the equation</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\left.\hat{y}\right|_{x=\xi} \in \left[ \hat{\alpha} + \hat{\beta} \xi \pm t^*_{n - 2} \sqrt{ \left(\frac{1}{n - 2} \sum\hat{\varepsilon}_i^{\,2} \right) \cdot \left(\frac{1}{n} + \frac{(\xi - \bar{x})^2}{\sum(x_i - \bar{x})^2}\right)}\right]." src="//upload.wikimedia.org/math/d/b/6/db619f27d6b639dbdccaed76842f42a1.png" /></dd>
+</dl>
+<h3><span class="mw-headline" id="Asymptotic_assumption">Asymptotic assumption</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=8" title="Edit section: Asymptotic assumption">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The alternative second assumption states that when the number of points in the dataset is "large enough", the <a href="/wiki/Law_of_large_numbers" title="Law of large numbers">law of large numbers</a> and the <a href="/wiki/Central_limit_theorem" title="Central limit theorem">central limit theorem</a> become applicable, and then the distribution of the estimators is approximately normal. Under this assumption all formulas derived in the previous section remain valid, with the only exception that the quantile <i>t*</i><sub style="position:relative;left:-0.4em"><i>n</i>−2</sub> of <a href="/wiki/Student%27s_t-distribution" title="Student's t-distribution">Student's <i>t</i></a> distribution is replaced with the quantile <i>q*</i> of the <a href="/wiki/Standard_normal_distribution" title="Standard normal distribution" class="mw-redirect">standard normal distribution</a>. Occasionally the fraction <span class="texhtml"><span class="sfrac nowrap" style="display:inline-block; vertical-align:-0.5em; font-size:85%; text-align:center;"><span style="display:block; line-height:1em; margin:0 0.1em;">1</span><span class="visualhide">/</span><span style="display:block; line-height:1em; margin:0 0.1em; border-top:1px solid;"><i>n</i>−2</span></span></span> is replaced with <span class="texhtml"><span class="sfrac nowrap" style="display:inline-block; vertical-align:-0.5em; font-size:85%; text-align:center;"><span style="display:block; line-height:1em; margin:0 0.1em;">1</span><span class="visualhide">/</span><span style="display:block; line-height:1em; margin:0 0.1em; border-top:1px solid;"><i>n</i></span></span></span>. When <span class="texhtml mvar" style="font-style:italic;">n</span> is large such a change does not alter the results appreciably.</p>
+<h2><span class="mw-headline" id="Numerical_example">Numerical example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=9" title="Edit section: Numerical example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This example concerns the data set from the <a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">ordinary least squares</a> article. This data set gives average masses for women as a function of their height in a sample of American women of age 30–39. Although the <a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">OLS</a> article argues that it would be more appropriate to run a quadratic regression for this data, the simple linear regression model is applied here instead.</p>
+<dl>
+<dd>
+<table class="wikitable" style="text-align:right;">
+<tr>
+<th style="text-align:left;">Height (m), <i>x<sub>i</sub></i></th>
+<td>1.47</td>
+<td>1.50</td>
+<td>1.52</td>
+<td>1.55</td>
+<td>1.57</td>
+<td>1.60</td>
+<td>1.63</td>
+<td>1.65</td>
+<td>1.68</td>
+<td>1.70</td>
+<td>1.73</td>
+<td>1.75</td>
+<td>1.78</td>
+<td>1.80</td>
+<td>1.83</td>
+</tr>
+<tr>
+<th style="text-align:left;">Mass (kg), <i>y<sub>i</sub></i></th>
+<td>52.21</td>
+<td>53.12</td>
+<td>54.48</td>
+<td>55.84</td>
+<td>57.20</td>
+<td>58.57</td>
+<td>59.93</td>
+<td>61.29</td>
+<td>63.11</td>
+<td>64.47</td>
+<td>66.28</td>
+<td>68.10</td>
+<td>69.92</td>
+<td>72.19</td>
+<td>74.46</td>
+</tr>
+</table>
+</dd>
+</dl>
+<p>There are <i>n</i> = 15 points in this data set. Hand calculations would be started by finding the following five sums:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}
+  &amp; S_x = \sum x_i = 24.76, \quad S_y = \sum y_i = 931.17 \\
+  &amp; S_{xx} = \sum x_i^2 = 41.0532, \quad S_{xy} = \sum x_iy_i = 1548.2453, \quad S_{yy} = \sum y_i^2 = 58498.5439
+\end{align}" src="//upload.wikimedia.org/math/4/7/5/475cbc84bf6e8927b4465816a6971d58.png" /></dd>
+</dl>
+<p>These quantities would be used to calculate the estimates of the regression coefficients, and their standard errors.</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}
+       \hat\beta  &amp;= \frac{nS_{xy} - S_xS_y}{nS_{xx} - S_x^2} = 61.272 \\
+       \hat\alpha &amp;= \frac{1}{n}S_y - \hat{\beta} \frac{1}{n}S_x = -39.062 \\
+  s_\varepsilon^2 &amp;= \frac{1}{n(n - 2)} \left[ nS_{yy} - S_y^2 - \hat\beta^2(nS_{xx} - S_x^2) \right] = 0.5762 \\
+        s_\beta^2 &amp;= \frac{n s_\varepsilon^2}{nS_{xx} - S_x^2} = 3.1539 \\
+       s_\alpha^2 &amp;= s_\beta^2 \frac{1}{n} S_{xx} = 8.63185
+\end{align}" src="//upload.wikimedia.org/math/0/4/9/0496815e8a8090f79991a277b55e6e1f.png" /></dd>
+</dl>
+<p>The 0.975 quantile of Student's <i>t</i>-distribution with 13 degrees of freedom is t<sup>*</sup><sub style="position:relative;left:-.3em">13</sub>&#160;=&#160;2.1604, and thus the 95% confidence intervals for <span class="texhtml mvar" style="font-style:italic;">α</span> and <span class="texhtml mvar" style="font-style:italic;">β</span> are</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}
+  &amp; \alpha \in [\,\hat{\alpha} \mp t^*_{13} s_\alpha \,] = [\,{-45.4},\ {-32.7}\,] \\
+  &amp; \beta  \in [\,\hat{\beta}  \mp t^*_{13} s_\beta  \,] = [\, 57.4,\ 65.1 \,]
+\end{align}" src="//upload.wikimedia.org/math/c/f/0/cf0eeb92aba23548db6044b248c54d9a.png" /></dd>
+</dl>
+<p>The <a href="/wiki/Pearson_product-moment_correlation_coefficient" title="Pearson product-moment correlation coefficient">product-moment correlation coefficient</a> might also be calculated:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat{r} = \frac{nS_{xy} - S_xS_y}{\sqrt{(nS_{xx} - S_x^2)(nS_{yy} - S_y^2)}} = 0.9945" src="//upload.wikimedia.org/math/0/c/a/0ca3ea52a8f81a7b54e27db7b54ffdd8.png" /></dd>
+</dl>
+<p>This example also demonstrates that sophisticated calculations will not overcome the use of badly prepared data. The heights were originally given in inches, and have been converted to the nearest centimetre. Since the conversion factor is one inch to 2.54&#160;cm, this is <i>not</i> a correct conversion. The original inches can be recovered by Round(x/0.0254) and then re-converted to metric: if this is done, the results become</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat\beta = 61.6746, \qquad \hat\alpha = -39.7468." src="//upload.wikimedia.org/math/1/f/d/1fdace63e6379d763e8e7c94dd8a2183.png" /></dd>
+</dl>
+<p>Thus a seemingly small variation in the data has a real effect.</p>
+<h2><span class="mw-headline" id="Derivation_of_simple_regression_estimators">Derivation of simple regression estimators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=10" title="Edit section: Derivation of simple regression estimators">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>We look for <img class="mwe-math-fallback-image-inline tex" alt="\hat{\alpha}" src="//upload.wikimedia.org/math/d/a/9/da9c842dc02b628b397e0551c00039ed.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" /> that minimize the sum of squared errors (SSE):</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}
+  &amp;\underset{\hat{\alpha}, \hat{\beta}}{\operatorname{min}}\,\operatorname{SSE}\left(\hat{\alpha}, \hat{\beta}\right) \equiv\\
+  &amp;\underset{\hat{\alpha}, \hat{\beta}}{\operatorname{min}} \sum_{i=1}^n \left(y_{i} - \hat{\alpha} - \hat{\beta}x_i\right)^2\\
+\end{align}" src="//upload.wikimedia.org/math/3/1/e/31e4bac6001cb0e1ed5fcd18bb31fcc0.png" /></dd>
+</dl>
+<p>To find a minimum take partial derivatives with respect to <img class="mwe-math-fallback-image-inline tex" alt="\hat{\alpha}" src="//upload.wikimedia.org/math/d/a/9/da9c842dc02b628b397e0551c00039ed.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" /></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}
+                 &amp;\frac{\partial \, \operatorname{SSE} \left(\hat{\alpha}, \hat{\beta}\right)}{\partial\hat{\alpha}} = -2\sum_{i=1}^n \left(y_i - \hat{\alpha} - \hat{\beta}x_i\right) = 0 \\
+  \Rightarrow {} &amp;\sum_{i=1}^n \left(y_i - \hat{\alpha} - \hat{\beta}x_i\right) = 0 \\
+  \Rightarrow {} &amp;\sum_{i=1}^n y_{i} = \sum_{i=1}^{n}\hat{\alpha} + \hat{\beta}\sum_{i=1}^n x_i
+\end{align}" src="//upload.wikimedia.org/math/4/5/6/4568a62bf320dadd11695746786478e8.png" /></dd>
+</dl>
+<p>By multiplying both sides by <img class="mwe-math-fallback-image-inline tex" alt="\tfrac{1}{n}" src="//upload.wikimedia.org/math/8/b/e/8be03bf2d3416dee29efb14cc2a5a56c.png" /></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\frac{1}{n}\sum_{i=1}^n y_{i} = \hat{\alpha}\frac{1}{n} \sum_{i=1}^n 1 + \hat{\beta}\frac{1}{n}\sum_{i=1}^n x_i." src="//upload.wikimedia.org/math/a/3/9/a399c5273e6e0f195dc561981d655089.png" /></dd>
+</dl>
+<p>we get</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\bar{y} = \hat{\alpha} + \hat{\beta}\bar{x}" src="//upload.wikimedia.org/math/4/e/d/4ed5cc2ca20163da6bfbf5a2671608aa.png" /></dd>
+</dl>
+<p>Before taking partial derivative with respect to <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" />, substitute the previous result for <img class="mwe-math-fallback-image-inline tex" alt="\hat{\alpha}" src="//upload.wikimedia.org/math/d/a/9/da9c842dc02b628b397e0551c00039ed.png" />.</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}
+  &amp;\underset{\hat{\alpha}, \hat{\beta}}{\operatorname{min}}\sum_{i=1}^n \left[y_i - \left(\bar{y} - \hat{\beta}\bar{x}\right) - \hat{\beta}x_{i}\right]^2 =\\
+  &amp;\underset{\hat{\alpha}, \hat{\beta}}{\operatorname{min}}\sum_{i=1}^n \left[\left(y_i - \bar{y}\right) - \hat{\beta}\left(x_i - \bar{x}\right)\right]^2
+\end{align}" src="//upload.wikimedia.org/math/5/5/4/55471582c6dc007a78c4e39845f5d7b8.png" /></dd>
+</dl>
+<p>Now, take the derivative with respect to <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" />:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}
+                 &amp;\frac{\partial \, \operatorname{SSE}\left(\hat{\alpha},\hat{\beta}\right)}{\partial\hat{\beta}} = -2\sum_{i=1}^{n}\left[\left(y_{i} - \bar{y}\right) - \hat{\beta}\left(x_{i} - \bar{x}\right)\right]\left(x_{i}-\bar{x}\right) = 0 \\
+  \Rightarrow {} &amp;\sum_{i=1}^{n}\left(y_{i} - \bar{y}\right)\left(x_{i} - \bar{x}\right) - \hat{\beta}\sum_{i=1}^{n}\left(x_{i} - \bar{x}\right)^{2} = 0 \\
+  \Rightarrow {} &amp;\hat{\beta} = \frac{}{}\frac{\sum_{i=1}^n \left(y_{i} - \bar{y}\right)\left(x_i - \bar{x}\right)}{\sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^2} = \frac{\operatorname{Cov}\left(x, y\right)}{\operatorname{Var}\left(x\right)}
+\end{align}" src="//upload.wikimedia.org/math/b/0/2/b026b601e6c9d52da3e9537ff9ec874f.png" /></dd>
+</dl>
+<p>And finally substitute <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" /> to determine <img class="mwe-math-fallback-image-inline tex" alt="\hat{\alpha}" src="//upload.wikimedia.org/math/d/a/9/da9c842dc02b628b397e0551c00039ed.png" /></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat{\alpha} = \bar{y} - \hat{\beta}\bar{x}" src="//upload.wikimedia.org/math/9/9/3/9937e66ba606f7799026632591937aa7.png" /></dd>
+</dl>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Deming_regression" title="Deming regression">Deming regression</a> — simple linear regression with errors measured non-vertically</li>
+<li><a href="/wiki/Line_fitting" title="Line fitting">Line fitting</a></li>
+<li><a href="/wiki/Segmented_regression" title="Segmented regression">Linear segmented regression</a></li>
+<li><a href="/wiki/Proofs_involving_ordinary_least_squares" title="Proofs involving ordinary least squares">Proofs involving ordinary least squares</a> — derivation of all formulas used in this article in general multidimensional case</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">Kenney, J. F. and Keeping, E. S. (1962) "Linear Regression and Correlation." Ch. 15 in <i>Mathematics of Statistics</i>, Pt. 1, 3rd ed. Princeton, NJ: Van Nostrand, pp. 252–285</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit&amp;section=13" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/LeastSquaresFitting.html">Wolfram MathWorld's explanation of Least Squares Fitting, and how to calculate it</a></li>
+<li><a rel="nofollow" class="external text" href="http://people.duke.edu/~rnau/mathreg.htm">Mathematics of simple regression (Robert Nau, Duke University)</a></li>
+</ul>
+<table class="navbox" style="border-spacing:0">
+<tr>
+<td style="padding:2px">
+<table class="nowraplinks hlist collapsible uncollapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Statistics" title="Template:Statistics"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Statistics" title="Template talk:Statistics"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Statistics&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div style="font-size:114%"><a href="/wiki/Statistics" title="Statistics">Statistics</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="/wiki/Outline_of_statistics" title="Outline of statistics">Outline</a></li>
+<li><a href="/wiki/List_of_statistics_articles" title="List of statistics articles">Index</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";"><span style="float:left;width:6em">&#160;</span>
+<div style="font-size:114%"><a href="/wiki/Descriptive_statistics" title="Descriptive statistics">Descriptive statistics</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Continuous_probability_distribution" title="Continuous probability distribution" class="mw-redirect">Continuous data</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Location_parameter" title="Location parameter">Location</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Mean" title="Mean">Mean</a>
+<ul>
+<li><a href="/wiki/Arithmetic_mean" title="Arithmetic mean">arithmetic</a></li>
+<li><a href="/wiki/Geometric_mean" title="Geometric mean">geometric</a></li>
+<li><a href="/wiki/Harmonic_mean" title="Harmonic mean">harmonic</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Median" title="Median">Median</a></li>
+<li><a href="/wiki/Mode_(statistics)" title="Mode (statistics)">Mode</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Statistical_dispersion" title="Statistical dispersion">Dispersion</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Range_(statistics)" title="Range (statistics)">Range</a></li>
+<li><a href="/wiki/Standard_deviation" title="Standard deviation">Standard deviation</a></li>
+<li><a href="/wiki/Coefficient_of_variation" title="Coefficient of variation">Coefficient of variation</a></li>
+<li><a href="/wiki/Percentile" title="Percentile">Percentile</a></li>
+<li><a href="/wiki/Interquartile_range" title="Interquartile range">Interquartile range</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Shape_of_the_distribution" title="Shape of the distribution">Shape</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Variance" title="Variance">Variance</a></li>
+<li><a href="/wiki/Skewness" title="Skewness">Skewness</a></li>
+<li><a href="/wiki/Kurtosis" title="Kurtosis">Kurtosis</a></li>
+<li><a href="/wiki/Moment_(mathematics)" title="Moment (mathematics)">Moments</a></li>
+<li><a href="/wiki/L-moment" title="L-moment">L-moments</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Count_data" title="Count data">Count data</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Index_of_dispersion" title="Index of dispersion">Index of dispersion</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em">Summary tables</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Grouped_data" title="Grouped data">Grouped data</a></li>
+<li><a href="/wiki/Frequency_distribution" title="Frequency distribution">Frequency distribution</a></li>
+<li><a href="/wiki/Contingency_table" title="Contingency table">Contingency table</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Correlation_and_dependence" title="Correlation and dependence">Dependence</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Pearson_product-moment_correlation_coefficient" title="Pearson product-moment correlation coefficient">Pearson product-moment correlation</a></li>
+<li><a href="/wiki/Rank_correlation" title="Rank correlation">Rank correlation</a>
+<ul>
+<li><a href="/wiki/Spearman%27s_rank_correlation_coefficient" title="Spearman's rank correlation coefficient">Spearman's rho</a></li>
+<li><a href="/wiki/Kendall_tau_rank_correlation_coefficient" title="Kendall tau rank correlation coefficient" class="mw-redirect">Kendall's tau</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Partial_correlation" title="Partial correlation">Partial correlation</a></li>
+<li><a href="/wiki/Scatter_plot" title="Scatter plot">Scatter plot</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Statistical_graphics" title="Statistical graphics">Statistical graphics</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Bar_chart" title="Bar chart">Bar chart</a></li>
+<li><a href="/wiki/Biplot" title="Biplot">Biplot</a></li>
+<li><a href="/wiki/Box_plot" title="Box plot">Box plot</a></li>
+<li><a href="/wiki/Control_chart" title="Control chart">Control chart</a></li>
+<li><a href="/wiki/Correlogram" title="Correlogram">Correlogram</a></li>
+<li><a href="/wiki/Fan_chart_(statistics)" title="Fan chart (statistics)">Fan chart</a></li>
+<li><a href="/wiki/Forest_plot" title="Forest plot">Forest plot</a></li>
+<li><a href="/wiki/Histogram" title="Histogram">Histogram</a></li>
+<li><a href="/wiki/Pie_chart" title="Pie chart">Pie chart</a></li>
+<li><a href="/wiki/Q%E2%80%93Q_plot" title="Q–Q plot">Q–Q plot</a></li>
+<li><a href="/wiki/Run_chart" title="Run chart">Run chart</a></li>
+<li><a href="/wiki/Scatter_plot" title="Scatter plot">Scatter plot</a></li>
+<li><a href="/wiki/Stem-and-leaf_display" title="Stem-and-leaf display">Stem-and-leaf display</a></li>
+<li><a href="/wiki/Radar_chart" title="Radar chart">Radar chart</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";"><span style="float:left;width:6em">&#160;</span>
+<div style="font-size:114%"><a href="/wiki/Data_collection" title="Data collection">Data collection</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em">Study design</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Effect_size" title="Effect size">Effect size</a></li>
+<li><a href="/wiki/Standard_error" title="Standard error">Standard error</a></li>
+<li><a href="/wiki/Statistical_power" title="Statistical power">Statistical power</a></li>
+<li><a href="/wiki/Sample_size_determination" title="Sample size determination">Sample size determination</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Survey_methodology" title="Survey methodology">Survey methodology</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Sampling_(statistics)" title="Sampling (statistics)">Sampling</a>
+<ul>
+<li><a href="/wiki/Stratified_sampling" title="Stratified sampling">stratified</a></li>
+<li><a href="/wiki/Cluster_sampling" title="Cluster sampling">cluster</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Opinion_poll" title="Opinion poll">Opinion poll</a></li>
+<li><a href="/wiki/Questionnaire" title="Questionnaire">Questionnaire</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Experiment" title="Experiment">Controlled experiments</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Design_of_experiments" title="Design of experiments">Design</a>
+<ul>
+<li><a href="/wiki/Scientific_control" title="Scientific control">control</a></li>
+<li><a href="/wiki/Optimal_design" title="Optimal design">optimal</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Randomized_controlled_trial" title="Randomized controlled trial">Controlled trial</a></li>
+<li><a href="/wiki/Randomized_experiment" title="Randomized experiment">Randomized</a></li>
+<li><a href="/wiki/Random_assignment" title="Random assignment">Random assignment</a></li>
+<li><a href="/wiki/Replication_(statistics)" title="Replication (statistics)">Replication</a></li>
+<li><a href="/wiki/Blocking_(statistics)" title="Blocking (statistics)">Blocking</a></li>
+<li><a href="/wiki/Factorial_experiment" title="Factorial experiment">Factorial experiment</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em">Uncontrolled studies</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Observational_study" title="Observational study">Observational study</a></li>
+<li><a href="/wiki/Natural_experiment" title="Natural experiment">Natural experiment</a></li>
+<li><a href="/wiki/Quasi-experiment" title="Quasi-experiment">Quasi-experiment</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";"><span style="float:left;width:6em">&#160;</span>
+<div style="font-size:114%"><a href="/wiki/Statistical_inference" title="Statistical inference">Statistical inference</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Statistical_theory" title="Statistical theory">Statistical theory</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Sampling_distribution" title="Sampling distribution">Sampling distribution</a></li>
+<li><a href="/wiki/Order_statistic" title="Order statistic">Order statistic</a></li>
+<li><a href="/wiki/Scan_statistic" title="Scan statistic">Scan statistic</a></li>
+<li><a href="/wiki/Record_value" title="Record value">Record value</a></li>
+<li><a href="/wiki/Sufficient_statistic" title="Sufficient statistic">Sufficiency</a></li>
+<li><a href="/wiki/Completeness_(statistics)" title="Completeness (statistics)">Completeness</a></li>
+<li><a href="/wiki/Exponential_family" title="Exponential family">Exponential family</a></li>
+<li><a href="/wiki/Permutation_test" title="Permutation test" class="mw-redirect">Permutation test</a>&#160;(<a href="/wiki/Randomization_test" title="Randomization test" class="mw-redirect">Randomization test</a>)</li>
+<li><a href="/wiki/Empirical_distribution_function" title="Empirical distribution function">Empirical distribution</a></li>
+<li><a href="/wiki/Bootstrapping_(statistics)" title="Bootstrapping (statistics)">Bootstrap</a></li>
+<li><a href="/wiki/U-statistic" title="U-statistic">U statistic</a></li>
+<li><a href="/wiki/Efficiency_(statistics)" title="Efficiency (statistics)">Efficiency</a></li>
+<li><a href="/wiki/Asymptotic_theory_(statistics)" title="Asymptotic theory (statistics)">Asymptotics</a></li>
+<li><a href="/wiki/Robust_statistics" title="Robust statistics">Robustness</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Frequentist_inference" title="Frequentist inference">Frequentist inference</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Confidence_interval" title="Confidence interval">Confidence interval</a></li>
+<li><a href="/wiki/Statistical_hypothesis_testing" title="Statistical hypothesis testing">Testing hypotheses</a></li>
+<li><a href="/wiki/Power_(statistics)" title="Power (statistics)" class="mw-redirect">Power</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Bias_of_an_estimator" title="Bias of an estimator">Unbiased</a> <a href="/wiki/Estimator" title="Estimator">estimators</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Minimum-variance_unbiased_estimator" title="Minimum-variance unbiased estimator">Mean unbiased minimum-variance</a></li>
+<li><a href="/wiki/Median-unbiased_estimator" title="Median-unbiased estimator" class="mw-redirect">Median unbiased</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Bias_of_an_estimator" title="Bias of an estimator">Biased</a> <a href="/wiki/Estimator" title="Estimator">estimators</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Maximum_likelihood" title="Maximum likelihood">Maximum likelihood</a></li>
+<li><a href="/wiki/Method_of_moments_(statistics)" title="Method of moments (statistics)">Method of moments</a></li>
+<li><a href="/wiki/Minimum_distance_estimation" title="Minimum distance estimation">Minimum distance</a></li>
+<li><a href="/wiki/Density_estimation" title="Density estimation">Density estimation</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Parametric_statistics" title="Parametric statistics">Parametric tests</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Likelihood-ratio_test" title="Likelihood-ratio test">Likelihood-ratio</a></li>
+<li><a href="/wiki/Wald_test" title="Wald test">Wald</a></li>
+<li><a href="/wiki/Score_test" title="Score test">Score</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em">Specific tests</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Z-test" title="Z-test"><i>Z</i> <span style="font-size:90%;">(normal)</span></a></li>
+<li><a href="/wiki/Student%27s_t-test" title="Student's t-test">Student's <i>t</i>-test</a></li>
+<li><i><a href="/wiki/F-test" title="F-test">F</a></i></li>
+<li><a href="/wiki/Shapiro%E2%80%93Wilk_test" title="Shapiro–Wilk test">Shapiro–Wilk</a></li>
+<li><a href="/wiki/Kolmogorov%E2%80%93Smirnov_test" title="Kolmogorov–Smirnov test">Kolmogorov–Smirnov</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Goodness_of_fit" title="Goodness of fit">Goodness of fit</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Chi-squared_test" title="Chi-squared test">Chi-squared</a></li>
+<li><a href="/wiki/G-test" title="G-test"><i>G</i></a></li>
+<li><a href="/wiki/Anderson%E2%80%93Darling_test" title="Anderson–Darling test">Sample source <span style="font-size:90%;">(Anderson–Darling)</span></a></li>
+<li><a href="/wiki/Shapiro%E2%80%93Wilk_test" title="Shapiro–Wilk test">Sample normality <span style="font-size:90%;">(Shapiro–Wilk)</span></a></li>
+<li><a href="/wiki/Jarque%E2%80%93Bera_test" title="Jarque–Bera test">Skewness&#160;/ kurtosis normality <span style="font-size:90%;">(Jarque-Bera)</span></a></li>
+<li><a href="/wiki/Likelihood-ratio_test" title="Likelihood-ratio test">Model comparison <span style="font-size:90%;">(Likelihood-ratio)</span></a></li>
+<li><a href="/wiki/Akaike_information_criterion" title="Akaike information criterion">Model quality <span style="font-size:90%;">(Akaike criterion)</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Rank_statistics" title="Rank statistics" class="mw-redirect">Signed-rank</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Wilcoxon_signed-rank_test" title="Wilcoxon signed-rank test">1-sample <span style="font-size:90%;">(Wilcoxon)</span></a></li>
+<li><a href="/wiki/Mann%E2%80%93Whitney_U_test" title="Mann–Whitney U test">2-sample <span style="font-size:90%;">(Mann–Whitney <i>U</i>)</span></a></li>
+<li><a href="/wiki/Kruskal%E2%80%93Wallis_one-way_analysis_of_variance" title="Kruskal–Wallis one-way analysis of variance">1-way anova <span style="font-size:90%;">(Kruskal–Wallis)</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Bayesian_inference" title="Bayesian inference">Bayesian inference</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Bayesian_probability" title="Bayesian probability">Bayesian probability</a>
+<ul>
+<li><a href="/wiki/Prior_probability" title="Prior probability">prior</a></li>
+<li><a href="/wiki/Posterior_probability" title="Posterior probability">posterior</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Credible_interval" title="Credible interval">Credible interval</a></li>
+<li><a href="/wiki/Bayes_factor" title="Bayes factor">Bayes factor</a></li>
+<li><a href="/wiki/Bayes_estimator" title="Bayes estimator">Bayesian estimator</a></li>
+<li><a href="/wiki/Maximum_a_posteriori_estimation" title="Maximum a posteriori estimation">Maximum posterior estimator</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";"><span style="float:left;width:6em">&#160;</span>
+<div style="font-size:114%">
+<div class="hlist">
+<ul>
+<li><a href="/wiki/Correlation_and_dependence" title="Correlation and dependence">Correlation</a></li>
+<li><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></li>
+</ul>
+</div>
+</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Correlation_and_dependence" title="Correlation and dependence">Correlation</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Pearson_product-moment_correlation_coefficient" title="Pearson product-moment correlation coefficient">Pearson product–moment</a></li>
+<li><a href="/wiki/Partial_correlation" title="Partial correlation">Partial correlation</a></li>
+<li><a href="/wiki/Confounding" title="Confounding">Confounding variable</a></li>
+<li><a href="/wiki/Coefficient_of_determination" title="Coefficient of determination">Coefficient of determination</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">Errors and residuals</a></li>
+<li><a href="/wiki/Regression_model_validation" title="Regression model validation" class="mw-redirect">Regression model validation</a></li>
+<li><a href="/wiki/Mixed_model" title="Mixed model">Mixed effects models</a></li>
+<li><a href="/wiki/Simultaneous_equations_model" title="Simultaneous equations model">Simultaneous equations models</a></li>
+<li><a href="/wiki/Multivariate_adaptive_regression_splines" title="Multivariate adaptive regression splines">Multivariate adaptive regression splines (MARS)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Linear_regression" title="Linear regression">Linear regression</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><strong class="selflink">Simple linear regression</strong></li>
+<li><a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">Ordinary least squares</a></li>
+<li><a href="/wiki/General_linear_model" title="General linear model">General linear model</a></li>
+<li><a href="/wiki/Bayesian_linear_regression" title="Bayesian linear regression">Bayesian regression</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em">Non-standard predictors</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Nonlinear_regression" title="Nonlinear regression">Nonlinear regression</a></li>
+<li><a href="/wiki/Nonparametric_regression" title="Nonparametric regression">Nonparametric</a></li>
+<li><a href="/wiki/Semiparametric_regression" title="Semiparametric regression">Semiparametric</a></li>
+<li><a href="/wiki/Isotonic_regression" title="Isotonic regression">Isotonic</a></li>
+<li><a href="/wiki/Robust_regression" title="Robust regression">Robust</a></li>
+<li><a href="/wiki/Heteroscedasticity" title="Heteroscedasticity">Heteroscedasticity</a></li>
+<li><a href="/wiki/Homoscedasticity" title="Homoscedasticity">Homoscedasticity</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Generalized_linear_model" title="Generalized linear model">Generalized linear model</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Exponential_family" title="Exponential family">Exponential families</a></li>
+<li><a href="/wiki/Logistic_regression" title="Logistic regression">Logistic <span style="font-size:90%;">(Bernoulli)</span></a>&#160;/ <a href="/wiki/Binomial_regression" title="Binomial regression">Binomial</a>&#160;/ <a href="/wiki/Poisson_regression" title="Poisson regression">Poisson regressions</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Partition_of_sums_of_squares" title="Partition of sums of squares">Partition of variance</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Analysis_of_variance" title="Analysis of variance">Analysis of variance (ANOVA, anova)</a></li>
+<li><a href="/wiki/Analysis_of_covariance" title="Analysis of covariance">Analysis of covariance</a></li>
+<li><a href="/wiki/Multivariate_analysis_of_variance" title="Multivariate analysis of variance">Multivariate ANOVA</a></li>
+<li><a href="/wiki/Degrees_of_freedom_(statistics)" title="Degrees of freedom (statistics)">Degrees of freedom</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";"><span style="float:left;width:6em">&#160;</span>
+<div style="font-size:114%"><a href="/wiki/Categorical_variable" title="Categorical variable">Categorical</a>&#160;/ <a href="/wiki/Multivariate_statistics" title="Multivariate statistics">Multivariate</a>&#160;/ <a href="/wiki/Time_series" title="Time series">Time-series</a>&#160;/ <a href="/wiki/Survival_analysis" title="Survival analysis">Survival analysis</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Categorical_variable" title="Categorical variable">Categorical</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Cohen%27s_kappa" title="Cohen's kappa">Cohen's kappa</a></li>
+<li><a href="/wiki/Contingency_table" title="Contingency table">Contingency table</a></li>
+<li><a href="/wiki/Graphical_model" title="Graphical model">Graphical model</a></li>
+<li><a href="/wiki/Poisson_regression" title="Poisson regression">Log-linear model</a></li>
+<li><a href="/wiki/McNemar%27s_test" title="McNemar's test">McNemar's test</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Multivariate_statistics" title="Multivariate statistics">Multivariate</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/General_linear_model" title="General linear model">Multivariate regression</a></li>
+<li><a href="/wiki/Principal_component_analysis" title="Principal component analysis">Principal components</a></li>
+<li><a href="/wiki/Factor_analysis" title="Factor analysis">Factor analysis</a></li>
+<li><a href="/wiki/Cluster_analysis" title="Cluster analysis">Cluster analysis</a></li>
+<li><a href="/wiki/Statistical_classification" title="Statistical classification">Classification</a></li>
+<li><a href="/wiki/Copula_(probability_theory)" title="Copula (probability theory)">Copulas</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Time_series" title="Time series">Time-series</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;">General</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Decomposition_of_time_series" title="Decomposition of time series">Decomposition</a></li>
+<li><a href="/wiki/Trend_estimation" title="Trend estimation" class="mw-redirect">Trend</a></li>
+<li><a href="/wiki/Stationary_process" title="Stationary process">Stationarity</a></li>
+<li><a href="/wiki/Seasonal_adjustment" title="Seasonal adjustment">Seasonal adjustment</a></li>
+<li><a href="/wiki/Exponential_smoothing" title="Exponential smoothing">Exponential smoothing</a></li>
+<li><a href="/wiki/Cointegration" title="Cointegration">Cointegration</a></li>
+<li><a href="/wiki/Structural_break" title="Structural break">Structural break</a></li>
+<li><a href="/wiki/Granger_causality" title="Granger causality">Granger causality</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;">Specific tests</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Dickey%E2%80%93Fuller_test" title="Dickey–Fuller test">Dickey–Fuller</a></li>
+<li><a href="/wiki/Johansen_test" title="Johansen test">Johansen</a></li>
+<li><a href="/wiki/Ljung%E2%80%93Box_test" title="Ljung–Box test">Q-statistic <span style="font-size:90%;">(Ljung–Box)</span></a></li>
+<li><a href="/wiki/Durbin%E2%80%93Watson_statistic" title="Durbin–Watson statistic">Durbin–Watson</a></li>
+<li><a href="/wiki/Breusch%E2%80%93Godfrey_test" title="Breusch–Godfrey test">Breusch–Godfrey</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Time_domain" title="Time domain">Time domain</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Autocorrelation" title="Autocorrelation">Autocorrelation (ACF)</a>
+<ul>
+<li><a href="/wiki/Partial_autocorrelation_function" title="Partial autocorrelation function">partial (PACF)</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Cross-correlation" title="Cross-correlation">Cross-correlation (XCF)</a></li>
+<li><a href="/wiki/Autoregressive%E2%80%93moving-average_model" title="Autoregressive–moving-average model">ARMA model</a></li>
+<li><a href="/wiki/Box%E2%80%93Jenkins" title="Box–Jenkins">ARIMA model <span style="font-size:90%;">(Box–Jenkins)</span></a></li>
+<li><a href="/wiki/Autoregressive_conditional_heteroskedasticity" title="Autoregressive conditional heteroskedasticity">Autoregressive conditional heteroskedasticity (ARCH)</a></li>
+<li><a href="/wiki/Vector_autoregression" title="Vector autoregression">Vector autoregression (VAR)</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Frequency_domain" title="Frequency domain">Frequency domain</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Spectral_density_estimation" title="Spectral density estimation">Spectral density estimation</a></li>
+<li><a href="/wiki/Fourier_analysis" title="Fourier analysis">Fourier analysis</a></li>
+<li><a href="/wiki/Wavelet" title="Wavelet">Wavelet</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Survival_analysis" title="Survival analysis">Survival</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Survival_function" title="Survival function">Survival function</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Kaplan%E2%80%93Meier_estimator" title="Kaplan–Meier estimator">Kaplan–Meier estimator (product limit)</a></li>
+<li><a href="/wiki/Proportional_hazards_model" title="Proportional hazards model">Proportional hazards models</a></li>
+<li><a href="/wiki/Accelerated_failure_time_model" title="Accelerated failure time model">Accelerated failure time (AFT) model</a></li>
+<li><a href="/wiki/First-hitting-time_model" title="First-hitting-time model">First hitting time</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;"><a href="/wiki/Failure_rate" title="Failure rate">Hazard function</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Nelson%E2%80%93Aalen_estimator" title="Nelson–Aalen estimator">Nelson–Aalen estimator</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="font-weight:normal;">Test</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Log-rank_test" title="Log-rank test">Log-rank test</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks collapsible collapsed navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="col" class="navbox-title" colspan="2" style=";"><span style="float:left;width:6em">&#160;</span>
+<div style="font-size:114%"><a href="/wiki/List_of_fields_of_application_of_statistics" title="List of fields of application of statistics">Applications</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Biostatistics" title="Biostatistics">Biostatistics</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Bioinformatics" title="Bioinformatics">Bioinformatics</a></li>
+<li><a href="/wiki/Clinical_trial" title="Clinical trial">Clinical trials</a>&#160;/ <a href="/wiki/Clinical_study_design" title="Clinical study design">studies</a></li>
+<li><a href="/wiki/Epidemiology" title="Epidemiology">Epidemiology</a></li>
+<li><a href="/wiki/Medical_statistics" title="Medical statistics">Medical statistics</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Engineering_statistics" title="Engineering statistics">Engineering statistics</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Chemometrics" title="Chemometrics">Chemometrics</a></li>
+<li><a href="/wiki/Methods_engineering" title="Methods engineering">Methods engineering</a></li>
+<li><a href="/wiki/Probabilistic_design" title="Probabilistic design">Probabilistic design</a></li>
+<li><a href="/wiki/Statistical_process_control" title="Statistical process control">Process</a>&#160;/ <a href="/wiki/Quality_control" title="Quality control">quality control</a></li>
+<li><a href="/wiki/Reliability_engineering" title="Reliability engineering">Reliability</a></li>
+<li><a href="/wiki/System_identification" title="System identification">System identification</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Social_statistics" title="Social statistics">Social statistics</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Actuarial_science" title="Actuarial science">Actuarial science</a></li>
+<li><a href="/wiki/Census" title="Census">Census</a></li>
+<li><a href="/wiki/Crime_statistics" title="Crime statistics">Crime statistics</a></li>
+<li><a href="/wiki/Demographic_statistics" title="Demographic statistics">Demography</a></li>
+<li><a href="/wiki/Econometrics" title="Econometrics">Econometrics</a></li>
+<li><a href="/wiki/National_accounts" title="National accounts">National accounts</a></li>
+<li><a href="/wiki/Official_statistics" title="Official statistics">Official statistics</a></li>
+<li><a href="/wiki/Statistical_population" title="Statistical population">Population</a></li>
+<li><a href="/wiki/Psychometrics" title="Psychometrics">Psychometrics</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="width:12.5em"><a href="/wiki/Spatial_analysis" title="Spatial analysis">Spatial statistics</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Cartography" title="Cartography">Cartography</a></li>
+<li><a href="/wiki/Environmental_statistics" title="Environmental statistics">Environmental statistics</a></li>
+<li><a href="/wiki/Geographic_information_system" title="Geographic information system">Geographic information system</a></li>
+<li><a href="/wiki/Geostatistics" title="Geostatistics">Geostatistics</a></li>
+<li><a href="/wiki/Kriging" title="Kriging">Kriging</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /><b><a href="/wiki/Category:Statistics" title="Category:Statistics">Category</a></b></li>
+<li><img alt="Portal" src="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/16px-Portal-puzzle.svg.png" title="Portal" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/24px-Portal-puzzle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/32px-Portal-puzzle.svg.png 2x" data-file-width="32" data-file-height="28" /><b><a href="/wiki/Portal:Statistics" title="Portal:Statistics">Portal</a></b></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /><b><a href="//commons.wikimedia.org/wiki/Category:Statistics" class="extiw" title="commons:Category:Statistics">Commons</a></b></li>
+<li><img alt="WikiProject" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/16px-People_icon.svg.png" title="WikiProject" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/24px-People_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/32px-People_icon.svg.png 2x" data-file-width="100" data-file-height="100" /> <b><a href="/wiki/Wikipedia:WikiProject_Statistics" title="Wikipedia:WikiProject Statistics">WikiProject</a></b></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1186
+Cached time: 20160214142114
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.400 seconds
+Real time usage: 0.676 seconds
+Preprocessor visited node count: 2907/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 220762/2097152 bytes
+Template argument size: 26004/2097152 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 3/500
+Lua time usage: 0.127/10.000 seconds
+Lua memory usage: 3.01 MB/50 MB
+Number of Wikibase entities loaded: 0-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  531.719      1 - -total
+ 23.50%  124.967      1 - Template:Statistics
+ 22.38%  119.009      1 - Template:Navbox_with_collapsible_groups
+ 16.02%   85.186     11 - Template:Navbox
+ 13.04%   69.316      1 - Template:More_footnotes
+  8.08%   42.981      1 - Template:Ambox
+  5.78%   30.717      1 - Template:Clarify
+  5.36%   28.519      1 - Template:Regression_bar
+  5.16%   27.421      1 - Template:Ordered_list
+  5.06%   26.921      1 - Template:Fix-span
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2593771-0!*!0!!en!4!*!math=0 and timestamp 20160214142113 and revision id 700420609
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Simple_linear_regression&amp;oldid=700420609">https://en.wikipedia.org/w/index.php?title=Simple_linear_regression&amp;oldid=700420609</a>"					</div>
+				<div id='catlinks' class='catlinks' data-mw='interface'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Regression_analysis" title="Category:Regression analysis">Regression analysis</a></li><li><a href="/wiki/Category:Estimation_theory" title="Category:Estimation theory">Estimation theory</a></li><li><a href="/wiki/Category:Parametric_statistics" title="Category:Parametric statistics">Parametric statistics</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_lacking_in-text_citations_from_January_2010" title="Category:Articles lacking in-text citations from January 2010">Articles lacking in-text citations from January 2010</a></li><li><a href="/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_October_2015" title="Category:Wikipedia articles needing clarification from October 2015">Wikipedia articles needing clarification from October 2015</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_July_2012" title="Category:Articles with unsourced statements from July 2012">Articles with unsourced statements from July 2012</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Simple+linear+regression&amp;type=signup" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Simple+linear+regression" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Simple_linear_regression"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Talk:Simple_linear_regression"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Simple_linear_regression" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="/w/index.php?title=Simple_linear_regression&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Simple_linear_regression&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton" />							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Simple_linear_regression" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Simple_linear_regression" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Simple_linear_regression&amp;oldid=700420609" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Simple_linear_regression&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q7520804" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Simple_linear_regression&amp;id=700420609" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Simple+linear+regression">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Simple+linear+regression&amp;returnto=Simple+linear+regression&amp;oldid=700420609&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Simple_linear_regression&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%A7%D9%86%D8%AD%D8%AF%D8%A7%D8%B1_%D8%A7%D9%84%D8%AE%D8%B7%D9%8A_%D8%A7%D9%84%D8%A8%D8%B3%D9%8A%D8%B7" title="الانحدار الخطي البسيط – Arabic" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="//ca.wikipedia.org/wiki/Regressi%C3%B3_lineal_m%C3%ADnim-quadr%C3%A0tica" title="Regressió lineal mínim-quadràtica – Catalan" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-el"><a href="//el.wikipedia.org/wiki/%CE%91%CF%80%CE%BB%CE%AE_%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B9%CE%BA%CE%AE_%CF%80%CE%B1%CE%BB%CE%B9%CE%BD%CE%B4%CF%81%CF%8C%CE%BC%CE%B7%CF%83%CE%B7" title="Απλή γραμμική παλινδρόμηση – Greek" lang="el" hreflang="el">Ελληνικά</a></li><li class="interlanguage-link interwiki-ko"><a href="//ko.wikipedia.org/wiki/%EB%8B%A8%EC%88%9C%ED%9A%8C%EA%B7%80%EB%B6%84%EC%84%9D" title="단순회귀분석 – Korean" lang="ko" hreflang="ko">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="//id.wikipedia.org/wiki/Regresi_Linier_Sederhana" title="Regresi Linier Sederhana – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-pt"><a href="//pt.wikipedia.org/wiki/Regress%C3%A3o_linear_simples" title="Regressão linear simples – Portuguese" lang="pt" hreflang="pt">Português</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="//www.wikidata.org/wiki/Q7520804#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 18 January 2016, at 11:52.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="//wikimediafoundation.org/wiki/Cookie_statement">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Simple_linear_regression&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="//wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/1.27.0-wmf.14/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/1.27.0-wmf.14/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /static/1.27.0-wmf.14/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ = window.RLQ || []).push(function () {
+mw.loader.state({"ext.globalCssJs.site":"ready","ext.globalCssJs.user":"ready","user":"ready","user.groups":"ready"});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.eventLogging.subscriber","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.switcher","ext.gadget.featured-articles-links","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.wikimediaEvents","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage"]);
+} );</script><script>(window.RLQ = window.RLQ || []).push(function () {
+mw.config.set({"wgBackendResponseTime":70,"wgHostname":"mw1237"}); /* @nomin */
+} );</script>
+	</body>
+</html>

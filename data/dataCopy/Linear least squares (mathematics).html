@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Linear least squares (mathematics) - Wikipedia, the free encyclopedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ = window.RLQ || []).push(function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Linear_least_squares_(mathematics)","wgTitle":"Linear least squares (mathematics)","wgCurRevisionId":706689920,"wgRevisionId":706689920,"wgArticleId":484872,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles needing page number citations from December 2010","All articles with unsourced statements","Articles with unsourced statements from December 2010","Regression analysis","Computational statistics","Numerical linear algebra","Least squares","Articles with example MATLAB/Octave code","Articles with example Python code"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Linear_least_squares_(mathematics)","wgRelevantArticleId":484872,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Numerical_methods_for_linear_least_squares","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wikilove-recipient":"","wikilove-anon":0,"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgGatherPageImageThumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/100px-Linear_regression.svg.png","wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSAcceptLanguageList":[],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgInternalRedirectTargetUrl":"/wiki/Linear_least_squares_(mathematics)","wgCentralAuthMobileDomain":false,"wgWikibaseItemId":"Q17086259","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","ext.centralNotice.bannerController","skins.vector.js"]);
+} );</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.gadget.DRN-wizard%2CReferenceTooltips%2CWatchlistBase%2CWatchlistGreenIndicators%2Ccharinsert%2Cfeatured-articles-links%2CrefToolbar%2Cswitcher%2Cteahouse%7Cext.math.styles%7Cext.pygments%2CwikimediaBadges%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.raggett%2CsectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector" />
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.27.0-wmf.14" />
+<meta name="referrer" content="origin-when-cross-origin" />
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Linear_least_squares_(mathematics)" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit" />
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Linear_least_squares_(mathematics)" />
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins/Vector/csshover.min.htc")}</style><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Linear_least_squares_mathematics skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Linear least squares (mathematics)</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="/w/index.php?title=Numerical_methods_for_linear_least_squares&amp;redirect=no" title="Numerical methods for linear least squares">Numerical methods for linear least squares</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><table class="vertical-navbox nowraplinks hlist" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%">
+<tr>
+<td style="padding-top:0.4em;line-height:1.2em">Part of a series on <a href="/wiki/Statistics" title="Statistics">Statistics</a></td>
+</tr>
+<tr>
+<th style="padding:0.2em 0.4em 0.2em;padding-top:0;font-size:145%;line-height:1.2em"><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></th>
+</tr>
+<tr>
+<td style="padding:0.2em 0 0.4em"><a href="/wiki/File:Linear_regression.svg" class="image"><img alt="Linear regression.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/220px-Linear_regression.svg.png" width="220" height="145" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/330px-Linear_regression.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/440px-Linear_regression.svg.png 2x" data-file-width="438" data-file-height="289" /></a></td>
+</tr>
+<tr>
+<th style="padding:0.1em">Models</th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Linear_regression" title="Linear regression">Linear regression</a></li>
+<li><a href="/wiki/Simple_linear_regression" title="Simple linear regression">Simple regression</a></li>
+<li><a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">Ordinary least squares</a></li>
+<li><a href="/wiki/Polynomial_regression" title="Polynomial regression">Polynomial regression</a></li>
+<li><a href="/wiki/General_linear_model" title="General linear model">General linear model</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Generalized_linear_model" title="Generalized linear model">Generalized linear model</a></li>
+<li><a href="/wiki/Discrete_choice" title="Discrete choice">Discrete choice</a></li>
+<li><a href="/wiki/Logistic_regression" title="Logistic regression">Logistic regression</a></li>
+<li><a href="/wiki/Multinomial_logit" title="Multinomial logit" class="mw-redirect">Multinomial logit</a></li>
+<li><a href="/wiki/Mixed_logit" title="Mixed logit">Mixed logit</a></li>
+<li><a href="/wiki/Probit_model" title="Probit model">Probit</a></li>
+<li><a href="/wiki/Multinomial_probit" title="Multinomial probit">Multinomial probit</a></li>
+<li><a href="/wiki/Ordered_logit" title="Ordered logit">Ordered logit</a></li>
+<li><a href="/wiki/Ordered_probit" title="Ordered probit">Ordered probit</a></li>
+<li><a href="/wiki/Poisson_regression" title="Poisson regression">Poisson</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Multilevel_model" title="Multilevel model">Multilevel model</a></li>
+<li><a href="/wiki/Fixed_effects_model" title="Fixed effects model">Fixed effects</a></li>
+<li><a href="/wiki/Random_effects_model" title="Random effects model">Random effects</a></li>
+<li><a href="/wiki/Mixed_model" title="Mixed model">Mixed model</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Nonlinear_regression" title="Nonlinear regression">Nonlinear regression</a></li>
+<li><a href="/wiki/Nonparametric_regression" title="Nonparametric regression">Nonparametric</a></li>
+<li><a href="/wiki/Semiparametric_regression" title="Semiparametric regression">Semiparametric</a></li>
+<li><a href="/wiki/Robust_regression" title="Robust regression">Robust</a></li>
+<li><a href="/wiki/Quantile_regression" title="Quantile regression">Quantile</a></li>
+<li><a href="/wiki/Isotonic_regression" title="Isotonic regression">Isotonic</a></li>
+<li><a href="/wiki/Principal_component_regression" title="Principal component regression">Principal components</a></li>
+<li><a href="/wiki/Least-angle_regression" title="Least-angle regression">Least angle</a></li>
+<li><a href="/wiki/Local_regression" title="Local regression">Local</a></li>
+<li><a href="/wiki/Segmented_regression" title="Segmented regression">Segmented</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Errors-in-variables_models" title="Errors-in-variables models">Errors-in-variables</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em">Estimation</th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Least_squares" title="Least squares">Least squares</a></li>
+<li><a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">Ordinary least squares</a></li>
+<li><strong class="selflink">Linear (math)</strong></li>
+<li><a href="/wiki/Partial_least_squares_regression" title="Partial least squares regression">Partial</a></li>
+<li><a href="/wiki/Total_least_squares" title="Total least squares">Total</a></li>
+<li><a href="/wiki/Generalized_least_squares" title="Generalized least squares">Generalized</a></li>
+<li><a href="/wiki/Weighted_least_squares" title="Weighted least squares" class="mw-redirect">Weighted</a></li>
+<li><a href="/wiki/Non-linear_least_squares" title="Non-linear least squares">Non-linear</a></li>
+<li><a href="/wiki/Non-negative_least_squares" title="Non-negative least squares">Non-negative</a></li>
+<li><a href="/wiki/Iteratively_reweighted_least_squares" title="Iteratively reweighted least squares">Iteratively reweighted</a></li>
+<li><a href="/wiki/Tikhonov_regularization" title="Tikhonov regularization">Ridge regression</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Least_absolute_deviations" title="Least absolute deviations">Least absolute deviations</a></li>
+<li><a href="/wiki/Bayesian_linear_regression" title="Bayesian linear regression">Bayesian</a></li>
+<li><a href="/wiki/Bayesian_multivariate_linear_regression" title="Bayesian multivariate linear regression">Bayesian multivariate</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em">Background</th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Regression_model_validation" title="Regression model validation" class="mw-redirect">Regression model validation</a></li>
+<li><a href="/wiki/Mean_and_predicted_response" title="Mean and predicted response">Mean and predicted response</a></li>
+<li><a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">Errors and residuals</a></li>
+<li><a href="/wiki/Goodness_of_fit" title="Goodness of fit">Goodness of fit</a></li>
+<li><a href="/wiki/Studentized_residual" title="Studentized residual">Studentized residual</a></li>
+<li><a href="/wiki/Gauss%E2%80%93Markov_theorem" title="Gauss–Markov theorem">Gauss–Markov theorem</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0.3em 0.4em 0.3em;font-weight:bold">
+<ul>
+<li><span class="metadata"><a href="/wiki/File:Fisher_iris_versicolor_sepalwidth.svg" class="image"><img alt="Portal icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/16px-Fisher_iris_versicolor_sepalwidth.svg.png" width="16" height="11" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/24px-Fisher_iris_versicolor_sepalwidth.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/32px-Fisher_iris_versicolor_sepalwidth.svg.png 2x" data-file-width="822" data-file-height="567" /></a></span> <a href="/wiki/Portal:Statistics" title="Portal:Statistics">Statistics portal</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Regression_bar" title="Template:Regression bar"><abbr title="View this template">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Regression_bar" title="Template talk:Regression bar"><abbr title="Discuss this template">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Regression_bar&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<div role="note" class="hatnote">This article is about the mathematics that underlie curve fitting using linear least squares.  For statistical regression analysis using least squares, see <a href="/wiki/Linear_regression" title="Linear regression">linear regression</a>.  For linear regression on a single variable, see <a href="/wiki/Simple_linear_regression" title="Simple linear regression">simple linear regression</a>.  For other uses, see <a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">ordinary least squares</a> and <a href="/wiki/Regression_analysis" title="Regression analysis">regression analysis</a>.</div>
+<p>In <a href="/wiki/Statistics" title="Statistics">statistics</a> and <a href="/wiki/Mathematics" title="Mathematics">mathematics</a>, <b>linear least squares</b> is an approach fitting a <a href="/wiki/Mathematical_model" title="Mathematical model">mathematical</a> or <a href="/wiki/Statistical_model" title="Statistical model">statistical model</a> to <a href="/wiki/Data" title="Data">data</a> in cases where the idealized value provided by the model for any data point is expressed linearly in terms of the unknown <a href="/wiki/Parameter" title="Parameter">parameters</a> of the model. The resulting fitted model can be used to <a href="/wiki/Descriptive_statistics" title="Descriptive statistics">summarize</a> the data, to <a href="/wiki/Prediction" title="Prediction">predict</a> unobserved values from the same system, and to understand the mechanisms that may underlie the system.</p>
+<p>Mathematically, linear least squares is the problem of approximately solving an <a href="/wiki/Overdetermined_system" title="Overdetermined system">overdetermined system</a> of linear equations, where the best approximation is defined as that which minimizes the sum of squared differences between the data values and their corresponding modeled values. The approach is called <i>linear</i> least squares since the assumed function is linear in the parameters to be estimated. Linear least squares problems are <a href="/wiki/Convex_function" title="Convex function">convex</a> and have a <a href="/wiki/Closed-form_expression" title="Closed-form expression">closed-form solution</a> that is unique, provided that the number of data points used for fitting equals or exceeds the number of unknown parameters, except in special degenerate situations. In contrast, <a href="/wiki/Non-linear_least_squares" title="Non-linear least squares">non-linear least squares</a> problems generally must be solved by an <a href="/wiki/Iterative_method" title="Iterative method">iterative procedure</a>, and the problems can be non-convex with multiple optima for the objective function. If prior distributions are available, then even an underdetermined system can be solved using the <a href="/wiki/Minimum_mean_square_error" title="Minimum mean square error">Bayesian MMSE estimator</a>.</p>
+<p>In statistics, linear least squares problems correspond to a particularly important type of <a href="/wiki/Statistical_model" title="Statistical model">statistical model</a> called <a href="/wiki/Linear_regression" title="Linear regression">linear regression</a> which arises as a particular form of <a href="/wiki/Regression_analysis" title="Regression analysis">regression analysis</a>. One basic form of such a model is an <a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">ordinary least squares</a> model. The present article concentrates on the mathematical aspects of linear least squares problems, with discussion of the formulation and interpretation of statistical regression models and <a href="/wiki/Statistical_inference" title="Statistical inference">statistical inferences</a> related to these being dealt with in the articles just mentioned. See <a href="/wiki/Outline_of_regression_analysis" title="Outline of regression analysis">outline of regression analysis</a> for an outline of the topic.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Example"><span class="tocnumber">1</span> <span class="toctext">Example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Using_a_quadratic_model"><span class="tocnumber">1.1</span> <span class="toctext">Using a quadratic model</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#The_general_problem"><span class="tocnumber">2</span> <span class="toctext">The general problem</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Derivation_of_the_normal_equations"><span class="tocnumber">3</span> <span class="toctext">Derivation of the normal equations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Derivation_directly_in_terms_of_matrices"><span class="tocnumber">3.1</span> <span class="toctext">Derivation directly in terms of matrices</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Derivation_without_calculus"><span class="tocnumber">3.2</span> <span class="toctext">Derivation without calculus</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Computation"><span class="tocnumber">4</span> <span class="toctext">Computation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Inverting_the_matrix_of_the_normal_equations"><span class="tocnumber">4.1</span> <span class="toctext">Inverting the matrix of the normal equations</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Orthogonal_decomposition_methods"><span class="tocnumber">4.2</span> <span class="toctext">Orthogonal decomposition methods</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Properties_of_the_least-squares_estimators"><span class="tocnumber">5</span> <span class="toctext">Properties of the least-squares estimators</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Limitations"><span class="tocnumber">5.1</span> <span class="toctext">Limitations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Weighted_linear_least_squares"><span class="tocnumber">6</span> <span class="toctext">Weighted linear least squares</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Parameter_errors_and_correlation"><span class="tocnumber">6.1</span> <span class="toctext">Parameter errors and correlation</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Parameter_confidence_limits"><span class="tocnumber">6.2</span> <span class="toctext">Parameter confidence limits</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Residual_values_and_correlation"><span class="tocnumber">6.3</span> <span class="toctext">Residual values and correlation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Objective_function"><span class="tocnumber">7</span> <span class="toctext">Objective function</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Constrained_linear_least_squares"><span class="tocnumber">8</span> <span class="toctext">Constrained linear least squares</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Typical_uses_and_applications"><span class="tocnumber">9</span> <span class="toctext">Typical uses and applications</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#Uses_in_data_fitting"><span class="tocnumber">9.1</span> <span class="toctext">Uses in data fitting</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Further_discussion"><span class="tocnumber">10</span> <span class="toctext">Further discussion</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Rounding_errors"><span class="tocnumber">10.1</span> <span class="toctext">Rounding errors</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#See_also"><span class="tocnumber">11</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#References"><span class="tocnumber">12</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Further_reading"><span class="tocnumber">13</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#External_links"><span class="tocnumber">14</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=1" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">See also: <a href="/wiki/Polynomial_regression" title="Polynomial regression">Polynomial regression</a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Linear_least_squares_example2.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Linear_least_squares_example2.svg/220px-Linear_least_squares_example2.svg.png" width="220" height="216" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Linear_least_squares_example2.svg/330px-Linear_least_squares_example2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Linear_least_squares_example2.svg/440px-Linear_least_squares_example2.svg.png 2x" data-file-width="279" data-file-height="274" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Linear_least_squares_example2.svg" class="internal" title="Enlarge"></a></div>
+A plot of the data points (in red), the least squares line of best fit (in blue), and the residuals (in green).</div>
+</div>
+</div>
+<p>As a result of an experiment, four <img class="mwe-math-fallback-image-inline tex" alt="(x, y)" src="//upload.wikimedia.org/math/9/0/c/90cbc22edf225adf8a68974f51227f05.png" /> data points were obtained, <img class="mwe-math-fallback-image-inline tex" alt="(1, 6)," src="//upload.wikimedia.org/math/1/9/d/19d69677eb137acbfff989f363a97ac7.png" /> <img class="mwe-math-fallback-image-inline tex" alt="(2, 5)," src="//upload.wikimedia.org/math/a/6/8/a6822c1829337c93a39af7a49cef3ff2.png" /> <img class="mwe-math-fallback-image-inline tex" alt="(3, 7)," src="//upload.wikimedia.org/math/2/e/a/2ea373a145a4d706b9ddd2a859d2071c.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="(4, 10)" src="//upload.wikimedia.org/math/d/1/6/d16007e0deae291fdf863e7faf5ec697.png" /> (shown in red in the picture on the right). We hope to find a line <img class="mwe-math-fallback-image-inline tex" alt="y=\beta_1+\beta_2 x" src="//upload.wikimedia.org/math/8/3/2/8323158f1b1657e0b46ddf96c54fe5de.png" /> that best fits these four points. In other words, we would like to find the numbers <img class="mwe-math-fallback-image-inline tex" alt="\beta_1" src="//upload.wikimedia.org/math/9/f/2/9f26b68b727cdcf2c659189280f6ce55.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\beta_2" src="//upload.wikimedia.org/math/6/7/1/6716d7289516889f04c804964a686d62.png" /> that approximately solve the overdetermined linear system</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{alignat}{3}
+\beta_1  +  1\beta_2 &amp;&amp;\; = \;&amp;&amp; 6 &amp; \\
+\beta_1  +  2\beta_2 &amp;&amp;\; = \;&amp;&amp; 5 &amp; \\
+\beta_1  +  3\beta_2 &amp;&amp;\; = \;&amp;&amp; 7 &amp; \\
+\beta_1  +  4\beta_2 &amp;&amp;\; = \;&amp;&amp; 10 &amp; \\
+\end{alignat}" src="//upload.wikimedia.org/math/5/b/a/5ba76cd5f940cdc4ae162cb7eb0ee55f.png" /></dd>
+</dl>
+<p>of four equations in two unknowns in some "best" sense.</p>
+<p>The "error", at each point, between the curve fit and the data is the difference between the right- and left-hand sides of the equations above. The <a href="/wiki/Least_squares" title="Least squares">least squares</a> approach to solving this problem is to try to make the sum of the squares of these errors as small as possible; that is, to find the <a href="/wiki/Maxima_and_minima" title="Maxima and minima">minimum</a> of the function</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{align}S(\beta_1, \beta_2) =&amp;
+ \left[6-(\beta_1+1\beta_2)\right]^2
++\left[5-(\beta_1+2\beta_2)   \right]^2 \\
+&amp;+\left[7-(\beta_1 +  3\beta_2)\right]^2
++\left[10-(\beta_1  +  4\beta_2)\right]^2 \\
+&amp;= 4\beta_1^2 + 30\beta_2^2 + 20\beta_1\beta_2 - 56\beta_1 - 154\beta_2 + 210 .\end{align}" src="//upload.wikimedia.org/math/3/2/3/3239afeba47f9ded47c7385121122d5a.png" /></dd>
+</dl>
+<p>The minimum is determined by calculating the <a href="/wiki/Partial_derivative" title="Partial derivative">partial derivatives</a> of <img class="mwe-math-fallback-image-inline tex" alt="S(\beta_1, \beta_2)" src="//upload.wikimedia.org/math/0/5/c/05cbb3ecb67cb6507f97ed1875f2c73e.png" /> with respect to <img class="mwe-math-fallback-image-inline tex" alt="\beta_1" src="//upload.wikimedia.org/math/9/f/2/9f26b68b727cdcf2c659189280f6ce55.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\beta_2" src="//upload.wikimedia.org/math/6/7/1/6716d7289516889f04c804964a686d62.png" /> and setting them to zero</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\frac{\partial S}{\partial \beta_1}=0=8\beta_1 + 20\beta_2 -56" src="//upload.wikimedia.org/math/6/8/9/689a2d4c2a5d8544a655ce8b90474245.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\frac{\partial S}{\partial \beta_2}=0=20\beta_1 + 60\beta_2 -154." src="//upload.wikimedia.org/math/6/d/0/6d0ce79992855411eb7dd37d63f83931.png" /></dd>
+</dl>
+<p>This results in a system of two equations in two unknowns, called the normal equations, which give, when solved</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\beta_1=3.5" src="//upload.wikimedia.org/math/0/d/b/0db6e5482d8a6155649cec426004fde3.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\beta_2=1.4" src="//upload.wikimedia.org/math/e/d/d/eddef582133d09c57bfcc18a245a29ac.png" /></dd>
+</dl>
+<p>and the equation <img class="mwe-math-fallback-image-inline tex" alt="y=3.5+1.4x" src="//upload.wikimedia.org/math/9/d/9/9d9d0fc85078fe09a6f2c0b30c048807.png" /> of the line of best fit. The <a href="/wiki/Residual_(statistics)" title="Residual (statistics)" class="mw-redirect">residuals</a>, that is, the discrepancies between the <img class="mwe-math-fallback-image-inline tex" alt="y" src="//upload.wikimedia.org/math/4/1/5/415290769594460e2e485922904f345d.png" /> values from the experiment and the <img class="mwe-math-fallback-image-inline tex" alt="y" src="//upload.wikimedia.org/math/4/1/5/415290769594460e2e485922904f345d.png" /> values calculated using the line of best fit are then found to be <img class="mwe-math-fallback-image-inline tex" alt="1.1," src="//upload.wikimedia.org/math/d/0/f/d0f723adb43929e5b3c959bc1b31958d.png" /> <img class="mwe-math-fallback-image-inline tex" alt="-1.3," src="//upload.wikimedia.org/math/e/9/0/e90a0d7ca60c94e7cf95f4e2daa91814.png" /> <img class="mwe-math-fallback-image-inline tex" alt="-0.7," src="//upload.wikimedia.org/math/2/6/c/26ccb135f4ce36c2013e6a6ee083bb37.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="0.9" src="//upload.wikimedia.org/math/a/8/9/a894124cc6d5c5c71afe060d5dde0762.png" /> (see the picture on the right). The minimum value of the sum of squares of the residuals is <img class="mwe-math-fallback-image-inline tex" alt="S(3.5, 1.4)=1.1^2+(-1.3)^2+(-0.7)^2+0.9^2=4.2." src="//upload.wikimedia.org/math/4/3/b/43b7dd2057dbd959320bfaa3778e5066.png" /></p>
+<p>More generally, one can have <img class="mwe-math-fallback-image-inline tex" alt="n" src="//upload.wikimedia.org/math/7/b/8/7b8b965ad4bca0e41ab51de7b31363a1.png" /> regressors <img class="mwe-math-fallback-image-inline tex" alt="x_j" src="//upload.wikimedia.org/math/f/4/b/f4bb95e27d8505366199bb81f2b75b6f.png" />, and a linear model</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="y = \beta_1 + \sum_{i=2}^{n+1} \beta_i x_{i-1} " src="//upload.wikimedia.org/math/e/5/2/e52f9959b544e6410ddeac7224c8fe15.png" />.</dd>
+</dl>
+<h3><span class="mw-headline" id="Using_a_quadratic_model">Using a quadratic model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=2" title="Edit section: Using a quadratic model">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Linear_least_squares2.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Linear_least_squares2.png/220px-Linear_least_squares2.png" width="220" height="264" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Linear_least_squares2.png/330px-Linear_least_squares2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/94/Linear_least_squares2.png/440px-Linear_least_squares2.png 2x" data-file-width="889" data-file-height="1067" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Linear_least_squares2.png" class="internal" title="Enlarge"></a></div>
+The result of fitting a quadratic function <img class="mwe-math-fallback-image-inline tex" alt="y=\beta_1+\beta_2x+\beta_3x^2\," src="//upload.wikimedia.org/math/6/3/e/63e16a1474d14ce1e479e78a072e32b8.png" /> (in blue) through a set of data points <img class="mwe-math-fallback-image-inline tex" alt="(x_i, y_i)" src="//upload.wikimedia.org/math/7/9/9/799d120f74ffbc13ff40be9634389870.png" /> (in red). In linear least squares the function need not be linear in the argument <img class="mwe-math-fallback-image-inline tex" alt="x," src="//upload.wikimedia.org/math/0/e/5/0e503e6ba8df74a61723be29415bcdc5.png" /> but only in the parameters <img class="mwe-math-fallback-image-inline tex" alt="\beta_j" src="//upload.wikimedia.org/math/5/c/2/5c203beeb482b1ff5fdf3b7b1ed20188.png" /> that are determined to give the best fit.</div>
+</div>
+</div>
+<p>Importantly, in "linear least squares", we are not restricted to using a line as the model as in the above example. For instance, we could have chosen the restricted quadratic model <img class="mwe-math-fallback-image-inline tex" alt="y=\beta_1 x^2" src="//upload.wikimedia.org/math/b/9/0/b9035e798953be5f8db3b12d9bf9c7f3.png" />. This model is still linear in the <img class="mwe-math-fallback-image-inline tex" alt="\beta_1" src="//upload.wikimedia.org/math/9/f/2/9f26b68b727cdcf2c659189280f6ce55.png" /> parameter, so we can still perform the same analysis, constructing a system of equations from the data points:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\begin{alignat}{2}
+6 &amp;&amp;\; = \beta_1 (1)^2 \\
+5 &amp;&amp;\; = \beta_1 (2)^2 \\
+7 &amp;&amp;\; = \beta_1 (3)^2 \\
+10 &amp;&amp;\; = \beta_1 (4)^2 \\
+\end{alignat}" src="//upload.wikimedia.org/math/4/9/c/49c72f91547140e851be6fb2cf3f1054.png" /></dd>
+</dl>
+<p>The partial derivatives with respect to the parameters (this time there is only one) are again computed and set to 0:</p>
+<p><img class="mwe-math-fallback-image-inline tex" alt="\frac{\partial S}{\partial \beta_1} = 0 = 708 \beta_1 - 498" src="//upload.wikimedia.org/math/0/9/0/090fbbdb2e0d06edac8be092f37c8f11.png" /></p>
+<p>and solved</p>
+<p><img class="mwe-math-fallback-image-inline tex" alt="\beta_1 = .703" src="//upload.wikimedia.org/math/c/1/8/c1833f365ca235462a537f07bbec3290.png" /></p>
+<p>leading to the resulting best fit model <img class="mwe-math-fallback-image-inline tex" alt="y = .703 x^2" src="//upload.wikimedia.org/math/4/6/9/469e52587a0210aa6aab58020e71ef3a.png" /></p>
+<h2><span class="mw-headline" id="The_general_problem">The general problem</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=3" title="Edit section: The general problem">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Consider an <a href="/wiki/Overdetermined_system" title="Overdetermined system">overdetermined system</a></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\sum_{j=1}^{n} X_{ij}\beta_j = y_i,\ (i=1, 2, \dots, m)," src="//upload.wikimedia.org/math/4/6/6/466fe8c57876b308e65399fc52ede533.png" /></dd>
+</dl>
+<p>of <i>m</i> <a href="/wiki/Linear_equation" title="Linear equation">linear equations</a> in <i>n</i> unknown <a href="/wiki/Coefficients" title="Coefficients" class="mw-redirect">coefficients</a>, <i>β</i><sub>1</sub>,<i>β</i><sub>2</sub>,…,<i>β</i><sub><i>n</i></sub>, with <i>m</i> &gt; <i>n</i>. (Note: for a linear model as above, not all of <img class="mwe-math-fallback-image-inline tex" alt="X" src="//upload.wikimedia.org/math/0/2/1/02129bb861061d1a052c592e2dc6b383.png" /> contains information on the data points. The first column is populated with ones, <img class="mwe-math-fallback-image-inline tex" alt="X_{j1} = 1" src="//upload.wikimedia.org/math/6/e/b/6eb759073146f4ae6421a57f81078f19.png" />, only the other columns contain actual data, and <i>n</i> = number of regressors + 1). This can be written in <a href="/wiki/Matrix_(mathematics)" title="Matrix (mathematics)">matrix</a> form as</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\mathbf {X} \boldsymbol {\beta} = \mathbf {y}," src="//upload.wikimedia.org/math/0/d/a/0dabb8eaa2426791c1a6cc6b4939f0d4.png" /></dd>
+</dl>
+<p>where</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\mathbf {X}=\begin{bmatrix}
+X_{11} &amp; X_{12} &amp; \cdots &amp; X_{1n} \\
+X_{21} &amp; X_{22} &amp; \cdots &amp; X_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+X_{m1} &amp; X_{m2} &amp; \cdots &amp; X_{mn}
+\end{bmatrix} , 
+\qquad \boldsymbol \beta = \begin{bmatrix} 
+\beta_1 \\ \beta_2 \\ \vdots \\ \beta_n \end{bmatrix} , 
+\qquad \mathbf y = \begin{bmatrix} 
+y_1 \\ y_2 \\ \vdots \\ y_m
+\end{bmatrix}. " src="//upload.wikimedia.org/math/3/6/1/36178377b529660b78b4d0b8998d7271.png" /></dd>
+</dl>
+<p>Such a system usually has no solution, so the goal is instead to find the coefficients <i><b>β</b></i> which fit the equations "best," in the sense of solving the <a href="/wiki/Quadratic_form_(statistics)" title="Quadratic form (statistics)">quadratic</a> <a href="/wiki/Mathematical_optimization" title="Mathematical optimization">minimization</a> problem</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol{\beta}} = \underset{\boldsymbol{\beta}}{\operatorname{arg\,min}}\,S(\boldsymbol{\beta}), " src="//upload.wikimedia.org/math/8/4/0/840577b54dd2764a3e534d9a4bf69651.png" /></dd>
+</dl>
+<p>where the objective function <i>S</i> is given by</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="S(\boldsymbol{\beta}) = \sum_{i=1}^{m}\bigl| y_i - \sum_{j=1}^{n} X_{ij}\beta_j\bigr|^2 = \bigl\|\mathbf y - \mathbf X \boldsymbol \beta \bigr\|^2." src="//upload.wikimedia.org/math/4/e/1/4e15cb1e76ae599131b8425328aa372e.png" /></dd>
+</dl>
+<p>A justification for choosing this criterion is given in <a href="#Properties_of_the_least-squares_estimators">properties</a> below. This minimization problem has a unique solution, provided that the <i>n</i> columns of the matrix <i>X</i> are <a href="/wiki/Linearly_independent" title="Linearly independent" class="mw-redirect">linearly independent</a>, given by solving the <a href="/wiki/Normal_equations" title="Normal equations" class="mw-redirect">normal equations</a></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="(\mathbf X^{\rm T} \mathbf X )\hat{\boldsymbol{\beta}}= \mathbf X^{\rm T} \mathbf y." src="//upload.wikimedia.org/math/f/f/2/ff2fa25332b1fbf9d2db19635785ec5b.png" /></dd>
+</dl>
+<p>The matrix <img class="mwe-math-fallback-image-inline tex" alt="\mathbf X^{\rm T} \mathbf X" src="//upload.wikimedia.org/math/f/c/e/fce443a4f411e10e3de0aa69748447f9.png" /> is known as the <a href="/wiki/Gramian_matrix" title="Gramian matrix">Gramian matrix</a> of <img class="mwe-math-fallback-image-inline tex" alt="\mathbf X" src="//upload.wikimedia.org/math/2/d/e/2de0ff974bf20e19dd84cc7457fc4395.png" />, which possesses several nice properties such as being a <a href="/wiki/Positive_semi-definite_matrix" title="Positive semi-definite matrix" class="mw-redirect">positive semi-definite matrix</a>.</p>
+<p>Following is one generalized example which shows how to find a best fit line using least squares method (in two dimension). Later, a MATLAB code implementation of the same is also written which can help one visualize graphically.</p>
+<p>Let us consider 3 points (x<sub>1</sub>,y<sub>1</sub>), (x<sub>2</sub>,y<sub>2</sub>) and (x<sub>3</sub>,y<sub>3</sub>) in a two dimensional frame. Now, assume that the best fit line is in the form: y = C + Dx. Substituting the three points in this equation will give us three equations.</p>
+<p>These three equations can be written in the form of a matrix equation of the type <b>Ax</b>=<b>b</b>. Projection of matrix A on b gives us x. This can be represented by the formula&#160;:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="(\mathbf A^{\rm T} \mathbf A )\hat{\boldsymbol{\beta}}= \mathbf A^{\rm T} \mathbf y." src="//upload.wikimedia.org/math/d/b/a/dba07e7663db85b9569f3fccc8391e75.png" /></dd>
+</dl>
+<p>We get beta from this expression; i.e. <img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol{\beta}}" src="//upload.wikimedia.org/math/2/d/4/2d4b41fa7c5a145f855901b972a0b6dc.png" /> is x. Hence, this follows that we have obtained C and D of the equation <b>y = C + Dx</b>. Hence, the best fit line obtained.</p>
+<p>Matlab code implementation for better understanding in visuals:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+ <span class="c">%MATLAB code for finding the best fit line using least squares method</span>
+ <span class="n">x</span><span class="p">=</span><span class="n">input</span><span class="p">(</span><span class="s">'enter a'</span><span class="p">)</span>                      <span class="c">%input in the form of matrix, rows contain points</span>
+     <span class="n">a</span><span class="p">=[</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>          <span class="c">%forming A of Ax=b</span>
+     <span class="n">b</span><span class="p">=[</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>                <span class="c">%forming b of Ax=b</span>
+     <span class="n">yy</span><span class="p">=</span><span class="n">inv</span><span class="p">(</span><span class="n">transpose</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">transpose</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">b</span>   <span class="c">%computing projection of matrix A on b, giving x</span>
+ <span class="c">%plotting the best fit line</span>
+   <span class="n">xx</span><span class="p">=</span><span class="nb">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+   <span class="n">y</span><span class="p">=</span><span class="n">yy</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">yy</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">xx</span><span class="p">;</span>
+   <span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+     <span class="c">%plotting the points(data) for which we found the best fit line</span>
+ <span class="n">hold</span> <span class="n">on</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s">'x'</span><span class="p">)</span>
+ <span class="n">hold</span> <span class="n">on</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s">'x'</span><span class="p">)</span>
+ <span class="n">hold</span> <span class="n">on</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s">'x'</span><span class="p">)</span>
+ <span class="n">hold</span> <span class="n">off</span>
+</pre></div>
+<p>Python code using the same variable naming as the Matlab code:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">matrix</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="kp">ones</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="n">x</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">matrix</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">yy</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">I</span> <span class="o">*</span> <span class="n">a</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">b</span>
+<span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">(</span><span class="n">yy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">yy</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">xx</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'r'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+<h2><span class="mw-headline" id="Derivation_of_the_normal_equations">Derivation of the normal equations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=4" title="Edit section: Derivation of the normal equations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Define the <img class="mwe-math-fallback-image-inline tex" alt="i" src="//upload.wikimedia.org/math/8/6/5/865c0c0b4ab0e063e5caa3387c1a8741.png" />th <b>residual</b> to be</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="r_i= y_i - \sum_{j=1}^{n} X_{ij}\beta_j" src="//upload.wikimedia.org/math/f/0/5/f053ce4d1bfc15a78a273b6607502955.png" />.</dd>
+</dl>
+<p>Then <img class="mwe-math-fallback-image-inline tex" alt="S" src="//upload.wikimedia.org/math/5/d/b/5dbc98dcc983a70728bd082d1a47546e.png" /> can be rewritten</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="S = \sum_{i=1}^m r_i^2." src="//upload.wikimedia.org/math/2/e/8/2e8949beb318e16f5cbbc305292d13d5.png" /></dd>
+</dl>
+<p><i>S</i> is <a href="/wiki/Maxima_and_minima" title="Maxima and minima">minimized</a> when its gradient vector is zero. (This follows by definition: if the gradient vector is not zero, there is a direction in which we can move to minimize it further - see <a href="/wiki/Maxima_and_minima" title="Maxima and minima">maxima and minima</a>.) The elements of the gradient vector are the partial derivatives of <i>S</i> with respect to the parameters:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\frac{\partial S}{\partial \beta_j}=2\sum_{i = 1}^m r_i\frac{\partial r_i}{\partial \beta_j} \ (j=1,2,\dots, n)." src="//upload.wikimedia.org/math/4/2/a/42a2982179322c90c52cdcbc94ae218c.png" /></dd>
+</dl>
+<p>The derivatives are</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\frac{\partial r_i}{\partial \beta_j}=-X_{ij}." src="//upload.wikimedia.org/math/a/2/4/a24aefb1093d6b0796394b70d0194a2d.png" /></dd>
+</dl>
+<p>Substitution of the expressions for the residuals and the derivatives into the gradient equations gives</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\frac{\partial S}{\partial \beta_j} = 2\sum_{i=1}^{m} \left( y_i-\sum_{k=1}^{n} X_{ik}\beta_k \right) (-X_{ij})\ (j=1,2,\dots, n)." src="//upload.wikimedia.org/math/f/c/6/fc6545f2374bf0d005bad195fd3f378d.png" /></dd>
+</dl>
+<p>Thus if <img class="mwe-math-fallback-image-inline tex" alt="\hat \beta" src="//upload.wikimedia.org/math/5/9/7/59744f666ff56f695bfe4d128a6784f4.png" /> minimizes <i>S</i>, we have</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="2\sum_{i=1}^{m} \left( y_i-\sum_{k=1}^{n} X_{ik}\hat \beta_k \right) (-X_{ij}) = 0\ (j=1,2,\dots, n)." src="//upload.wikimedia.org/math/d/e/c/dec7f20ae5464a0613a4f4fe292ad086.png" /></dd>
+</dl>
+<p>Upon rearrangement, we obtain the <b>normal equations</b>:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\sum_{i=1}^{m}\sum_{k=1}^{n} X_{ij}X_{ik}\hat \beta_k=\sum_{i=1}^{m} X_{ij}y_i\ (j=1,2,\dots, n)." src="//upload.wikimedia.org/math/6/4/a/64a51c516feee4022f536d5d37147bae.png" /></dd>
+</dl>
+<p>The normal equations are written in matrix notation as</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="(\mathbf X^\mathrm{T} \mathbf X) \hat{\boldsymbol{\beta}} = \mathbf X^\mathrm{T} \mathbf y" src="//upload.wikimedia.org/math/3/d/9/3d9e41d0ffbf3cbba31f844dcccf89f7.png" /> (where <i>X</i><sup>T</sup> is the <a href="/wiki/Matrix_transpose" title="Matrix transpose" class="mw-redirect">matrix transpose</a> of <i>X</i>).</dd>
+</dl>
+<p>The solution of the normal equations yields the vector <img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol{\beta}}" src="//upload.wikimedia.org/math/2/d/4/2d4b41fa7c5a145f855901b972a0b6dc.png" /> of the optimal parameter values.</p>
+<h3><span class="mw-headline" id="Derivation_directly_in_terms_of_matrices">Derivation directly in terms of matrices</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=5" title="Edit section: Derivation directly in terms of matrices">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The normal equations can be derived directly from a matrix representation of the problem as follows. The objective is to minimize</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="S(\boldsymbol{\beta}) 
+= \bigl\|\mathbf y - \mathbf X \boldsymbol \beta \bigr\|^2 
+= (\mathbf y-\mathbf X \boldsymbol \beta)^{\rm T}(\mathbf y-\mathbf X \boldsymbol \beta) 
+= \mathbf y ^{\rm T} \mathbf y - \boldsymbol \beta ^{\rm T} \mathbf X ^{\rm T} \mathbf y - \mathbf y ^{\rm T} \mathbf X \boldsymbol \beta + \boldsymbol \beta ^{\rm T} \mathbf X ^{\rm T} \mathbf X \boldsymbol \beta ." src="//upload.wikimedia.org/math/1/2/8/1287b3d81d657cf4edec134732e501da.png" /></dd>
+</dl>
+<p>Note that &#160;:<img class="mwe-math-fallback-image-inline tex" alt="( \boldsymbol \beta ^{\rm T} \mathbf X ^{\rm T} \mathbf y ) ^{\rm T} = \mathbf y ^{\rm T} \mathbf X \boldsymbol \beta" src="//upload.wikimedia.org/math/6/b/0/6b02974dc73b9d7a1484bd03c5e62f63.png" /> has the dimension 1x1 (the number of columns of <img class="mwe-math-fallback-image-inline tex" alt="\mathbf y" src="//upload.wikimedia.org/math/d/5/0/d502003b9eedf44e735adeab1046150d.png" />), so it is a scalar and equal to its own transpose, hence <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol \beta ^{\rm T} \mathbf X ^{\rm T} \mathbf y = \mathbf y ^{\rm T} \mathbf X \boldsymbol \beta" src="//upload.wikimedia.org/math/6/4/e/64e3d6fa9e91efece43ba4dd1d902d67.png" /> and the quantity to minimize becomes</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="S(\boldsymbol{\beta}) = \mathbf y ^{\rm T} \mathbf y - 2\boldsymbol \beta ^{\rm T} \mathbf X ^{\rm T} \mathbf y + \boldsymbol \beta ^{\rm T} \mathbf X ^{\rm T} \mathbf X \boldsymbol \beta ." src="//upload.wikimedia.org/math/4/5/0/4507bd0ebd3a67ffd90800d9112db05c.png" /></dd>
+</dl>
+<p><br />
+<a href="/wiki/Matrix_differentiation#Scalar-by-vector" title="Matrix differentiation" class="mw-redirect">Differentiating</a> this with respect to <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol \beta" src="//upload.wikimedia.org/math/6/b/f/6bf37cfb9e3eeb9f68c0a32699ac20aa.png" /> and equating to zero to satisfy the first-order conditions gives</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="- \mathbf X^{\rm T} \mathbf y+ (\mathbf X^{\rm T} \mathbf X ){\boldsymbol{\beta}} = 0," src="//upload.wikimedia.org/math/4/e/3/4e3d4cd6bac362d285c811d14b7e33f8.png" /></dd>
+</dl>
+<p>which is equivalent to the above-given normal equations. A sufficient condition for satisfaction of the second-order conditions for a minimum is that <img class="mwe-math-fallback-image-inline tex" alt="\mathbf X" src="//upload.wikimedia.org/math/2/d/e/2de0ff974bf20e19dd84cc7457fc4395.png" /> have full column rank, in which case <img class="mwe-math-fallback-image-inline tex" alt="\mathbf X^{\rm T} \mathbf X" src="//upload.wikimedia.org/math/f/c/e/fce443a4f411e10e3de0aa69748447f9.png" /> is <a href="/wiki/Positive_definite_matrix" title="Positive definite matrix" class="mw-redirect">positive definite</a>.</p>
+<h3><span class="mw-headline" id="Derivation_without_calculus">Derivation without calculus</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=6" title="Edit section: Derivation without calculus">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>When <img class="mwe-math-fallback-image-inline tex" alt="\mathbf X^{\rm T} \mathbf X" src="//upload.wikimedia.org/math/f/c/e/fce443a4f411e10e3de0aa69748447f9.png" /> is positive definite, the formula for the minimizing value of <img class="mwe-math-fallback-image-inline tex" alt=" \boldsymbol \beta " src="//upload.wikimedia.org/math/6/b/f/6bf37cfb9e3eeb9f68c0a32699ac20aa.png" /> can be derived without the use of derivatives. The quantity</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="S(\boldsymbol{\beta}) = \mathbf y ^{\rm T} \mathbf y - 2\boldsymbol \beta ^{\rm T} \mathbf X ^{\rm T} \mathbf y + \boldsymbol \beta ^{\rm T} \mathbf X ^{\rm T} \mathbf X \boldsymbol \beta " src="//upload.wikimedia.org/math/f/a/0/fa060731d971516752ebe21bfc6c25a4.png" /></dd>
+</dl>
+<p>can be written as</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" \langle \boldsymbol \beta, \boldsymbol \beta \rangle - 2\langle \boldsymbol \beta, (\mathbf X^{\rm T} \mathbf X)^{-1}\mathbf X ^{\rm T} \mathbf y \rangle + \langle(\mathbf X^{\rm T} \mathbf X)^{-1}\mathbf X ^{\rm T} \mathbf y,(\mathbf X^{\rm T} \mathbf X)^{-1}\mathbf X ^{\rm T} \mathbf y \rangle+ C, " src="//upload.wikimedia.org/math/9/d/3/9d32bdcd7e9e3c23ff8136599fbcac8e.png" /></dd>
+</dl>
+<p>where <img class="mwe-math-fallback-image-inline tex" alt=" C " src="//upload.wikimedia.org/math/0/d/6/0d61f8370cad1d412f80b84d143e1257.png" /> depends only on <img class="mwe-math-fallback-image-inline tex" alt=" \mathbf y " src="//upload.wikimedia.org/math/d/5/0/d502003b9eedf44e735adeab1046150d.png" /> and <img class="mwe-math-fallback-image-inline tex" alt=" \mathbf X " src="//upload.wikimedia.org/math/2/d/e/2de0ff974bf20e19dd84cc7457fc4395.png" />, and <img class="mwe-math-fallback-image-inline tex" alt=" \langle \cdot, \cdot \rangle " src="//upload.wikimedia.org/math/e/0/2/e02eaeb6eb365f078ca029f67f7a6973.png" /> is the <a href="/wiki/Dot_product" title="Dot product">inner product</a> defined by</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" \langle x, y \rangle = x ^{\rm T} (\mathbf X^{\rm T} \mathbf X) y. " src="//upload.wikimedia.org/math/0/4/d/04d7c47297e2ed2a791854cb8c14d4b8.png" /></dd>
+</dl>
+<p>It follows that <img class="mwe-math-fallback-image-inline tex" alt=" S(\boldsymbol{\beta}) " src="//upload.wikimedia.org/math/3/7/f/37f0fc626de648e4cf56cbd3d4576227.png" /> is equal to</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\langle \boldsymbol \beta - (\mathbf X^{\rm T} \mathbf X)^{-1}\mathbf X ^{\rm T} \mathbf y,\boldsymbol \beta - (\mathbf X^{\rm T} \mathbf X)^{-1}\mathbf X ^{\rm T} \mathbf y \rangle+ C " src="//upload.wikimedia.org/math/5/7/5/5753482c8141de4fac3b56f568c96702.png" /></dd>
+</dl>
+<p>and therefore minimized exactly when</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol \beta - (\mathbf X^{\rm T} \mathbf X)^{-1}\mathbf X ^{\rm T} \mathbf y = 0." src="//upload.wikimedia.org/math/4/b/0/4b0cc4f05c09a1db2c271474a437265b.png" /></dd>
+</dl>
+<h2><span class="mw-headline" id="Computation">Computation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=7" title="Edit section: Computation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A general approach to the least squares problem <img class="mwe-math-fallback-image-inline tex" alt="\operatorname{\,min} \, \big\|\mathbf y - X \boldsymbol \beta \big\|^2" src="//upload.wikimedia.org/math/3/6/0/360366fecd9b93ce8cab949f9fc26f1e.png" /> can be described as follows. Suppose that we can find an <i>n</i> by <i>m</i> matrix <b>S</b> such that <b>XS</b> is an <a href="/wiki/Linear_projection" title="Linear projection" class="mw-redirect">orthogonal projection</a> onto the image of <b>X</b>. Then a solution to our minimization problem is given by</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol \beta  =  S   \mathbf y  " src="//upload.wikimedia.org/math/a/e/f/aef45ec1b59ee662e220fa0721ff8862.png" /></dd>
+</dl>
+<p>simply because</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="  X \boldsymbol \beta  =  X ( S   \mathbf y) = (X  S)  \mathbf y" src="//upload.wikimedia.org/math/a/e/a/aea76e04648025f791a9603a885566e2.png" /></dd>
+</dl>
+<p>is exactly a sought for orthogonal projection of <img class="mwe-math-fallback-image-inline tex" alt="  \mathbf y " src="//upload.wikimedia.org/math/d/5/0/d502003b9eedf44e735adeab1046150d.png" /> onto an image of <b>X</b> (<a href="#Properties_of_the_least-squares_estimators">see the picture below</a> and note that as explained in the <a href="#Properties_of_the_least-squares_estimators">next section</a> the image of <b>X</b> is just a subspace generated by column vectors of <b>X</b>). A few popular ways to find such a matrix <i>S</i> are described below.</p>
+<h3><span class="mw-headline" id="Inverting_the_matrix_of_the_normal_equations">Inverting the matrix of the normal equations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=8" title="Edit section: Inverting the matrix of the normal equations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The algebraic solution of the normal equations can be written as</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" \hat{\boldsymbol{\beta}} = (\mathbf X^ {\rm T} \mathbf X )^{-1} \mathbf X^ {\rm T} \mathbf y 
+= \mathbf X^+ \mathbf y" src="//upload.wikimedia.org/math/2/c/e/2ce21b8e24ea7509a3295c3acd2ae0ea.png" /></dd>
+</dl>
+<p>where <i>X</i> <sup>+</sup> is the <a href="/wiki/Moore%E2%80%93Penrose_pseudoinverse" title="Moore–Penrose pseudoinverse">Moore–Penrose pseudoinverse</a> of <i>X</i>. Although this equation is correct, and can work in many applications, it is not computationally efficient to invert the normal equations matrix (the <a href="/wiki/Gramian_matrix" title="Gramian matrix">Gramian matrix</a>). An exception occurs in <a href="/wiki/Numerical_smoothing_and_differentiation" title="Numerical smoothing and differentiation" class="mw-redirect">numerical smoothing and differentiation</a> where an analytical expression is required.</p>
+<p>If the matrix <i>X</i><sup>T</sup><i>X</i> is <a href="/wiki/Condition_number" title="Condition number">well-conditioned</a> and <a href="/wiki/Positive-definite_matrix" title="Positive-definite matrix">positive definite</a>, implying that it has full <a href="/wiki/Rank_(linear_algebra)" title="Rank (linear algebra)">rank</a>, the normal equations can be solved directly by using the <a href="/wiki/Cholesky_decomposition" title="Cholesky decomposition">Cholesky decomposition</a> <i>R</i><sup>T</sup><i>R</i>, where <i>R</i> is an upper <a href="/wiki/Triangular_matrix" title="Triangular matrix">triangular matrix</a>, giving:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" R^{\rm T} R \hat{\boldsymbol{\beta}} =  X^{\rm T} \mathbf y. " src="//upload.wikimedia.org/math/2/b/a/2bae185f5507676ec08a69fde7659b21.png" /></dd>
+</dl>
+<p>The solution is obtained in two stages, a <a href="/wiki/Forward_substitution" title="Forward substitution" class="mw-redirect">forward substitution</a> step, solving for <b>z</b>:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" R^{\rm T} \mathbf z = X^{\rm T} \mathbf y," src="//upload.wikimedia.org/math/e/8/e/e8e378c18265617405e32fa410f7588b.png" /></dd>
+</dl>
+<p>followed by a backward substitution, solving for <img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol{\beta}}" src="//upload.wikimedia.org/math/2/d/4/2d4b41fa7c5a145f855901b972a0b6dc.png" /></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="R \hat{\boldsymbol{\beta}}= \mathbf z." src="//upload.wikimedia.org/math/8/d/1/8d14dbb620dee55ddd4fdb8a96197fd2.png" /></dd>
+</dl>
+<p>Both substitutions are facilitated by the triangular nature of <i>R</i>.</p>
+<p>See <a href="/wiki/Linear_regression#Example" title="Linear regression">example of linear regression</a> for a worked-out numerical example with three parameters.</p>
+<h3><span class="mw-headline" id="Orthogonal_decomposition_methods">Orthogonal decomposition methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=9" title="Edit section: Orthogonal decomposition methods">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Orthogonal decomposition methods of solving the least squares problem are slower than the normal equations method but are more <a href="/wiki/Numerical_stability" title="Numerical stability">numerically stable</a> because they avoid forming the product <i>X</i><sup>T</sup><i>X</i>.</p>
+<p>The residuals are written in matrix notation as</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\mathbf r= \mathbf y - X \hat{\boldsymbol{\beta}}." src="//upload.wikimedia.org/math/1/6/c/16c4685f291870603fe834ef78935d80.png" /></dd>
+</dl>
+<p>The matrix <i>X</i> is subjected to an orthogonal decomposition, e.g., the <a href="/wiki/QR_decomposition" title="QR decomposition">QR decomposition</a> as follows.</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="X=QR \ " src="//upload.wikimedia.org/math/1/8/9/1890c6610e063d3d55cb6edf227efb04.png" />,</dd>
+</dl>
+<p>where <i>Q</i> is an <i>m</i>×<i>n</i> <a href="/wiki/Orthogonal_matrix" title="Orthogonal matrix">orthogonal matrix</a> (<i>Q</i><sup>T</sup><i>Q=I</i>) and <i>R</i> is an <i>n</i>×<i>n</i> upper triangular matrix with <img class="mwe-math-fallback-image-inline tex" alt="r_{ii}&gt;0" src="//upload.wikimedia.org/math/6/0/a/60add5947e37f8c14b1242c986556880.png" />.</p>
+<p>The residual vector is left-multiplied by <i>Q</i><sup>T</sup>.</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="Q^{\rm T} \mathbf r = Q^{\rm T} \mathbf y - \left( Q^{\rm T} Q \right) R \hat{\boldsymbol{\beta}}= \begin{bmatrix}
+\left(Q^{\rm T} \mathbf y \right)_n - R \hat{\boldsymbol{\beta}}  \\
+\left(Q^{\rm T} \mathbf y \right)_{m-n} 
+\end{bmatrix}
+= \begin{bmatrix}
+\mathbf u \\
+\mathbf v
+\end{bmatrix}
+" src="//upload.wikimedia.org/math/8/7/2/8723510eac82c61dc631e0a22106aab6.png" /></dd>
+</dl>
+<p>Because <i>Q</i> is <a href="/wiki/Orthogonal_matrix" title="Orthogonal matrix">orthogonal</a>, the sum of squares of the residuals, <i>s</i>, may be written as:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="s = \|\mathbf r \|^2 = \mathbf r^{\rm T} \mathbf r = \mathbf r^{\rm T} Q Q^{\rm T} \mathbf r = \mathbf u^{\rm T} \mathbf u + \mathbf v^{\rm T} \mathbf v " src="//upload.wikimedia.org/math/4/3/e/43e582ad74e99a1f06ab8cdf18e71e4e.png" /></dd>
+</dl>
+<p>Since <b>v</b> doesn't depend on <i><b>β</b></i>, the minimum value of <i>s</i> is attained when the upper block, <b>u</b>, is zero. Therefore the parameters are found by solving:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" R \hat{\boldsymbol{\beta}} =\left(Q^{\rm T} \mathbf y \right)_n." src="//upload.wikimedia.org/math/6/3/c/63c258e8697267332eb1b38c885e8af6.png" /></dd>
+</dl>
+<p>These equations are easily solved as <i>R</i> is upper triangular.</p>
+<p>An alternative decomposition of <i>X</i> is the <a href="/wiki/Singular_value_decomposition" title="Singular value decomposition">singular value decomposition</a> (SVD)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" X = U \Sigma V^{\rm T} \ " src="//upload.wikimedia.org/math/e/c/9/ec97efefa54e76c8d900ded436ef4134.png" />,</dd>
+</dl>
+<p>where <i>U</i> is <i>m</i> by <i>m</i> orthogonal matrix, <i>V</i> is <i>n</i> by <i>n</i> orthogonal matrix and <img class="mwe-math-fallback-image-inline tex" alt="\Sigma" src="//upload.wikimedia.org/math/a/6/4/a643a0ef5974b64678111d03125054fc.png" /> is an <i>m</i> by <i>n</i> matrix with all its elements outside of the main diagonal equal to <i>0</i>. The <a href="/wiki/Pseudoinverse" title="Pseudoinverse" class="mw-redirect">pseudoinverse</a> of <img class="mwe-math-fallback-image-inline tex" alt="\Sigma" src="//upload.wikimedia.org/math/a/6/4/a643a0ef5974b64678111d03125054fc.png" /> is easily obtained by inverting its non-zero diagonal elements and transposing. Hence,</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="  \mathbf X \mathbf X^+ = U \Sigma V^{\rm T}  V \Sigma^+  U^{\rm T} =  U P  U^{\rm T}," src="//upload.wikimedia.org/math/5/a/3/5a3b9651b7f0c2f462519c32ced0e0a6.png" /></dd>
+</dl>
+<p>where <i>P</i> is obtained from <img class="mwe-math-fallback-image-inline tex" alt="\Sigma" src="//upload.wikimedia.org/math/a/6/4/a643a0ef5974b64678111d03125054fc.png" /> by replacing its non-zero diagonal elements with ones. Since <img class="mwe-math-fallback-image-inline tex" alt="(\mathbf X \mathbf X^+)^* = \mathbf X \mathbf X^+ " src="//upload.wikimedia.org/math/a/3/3/a332bb4179e3c7a01000fd2a1f119eb9.png" /> (the property of pseudoinverse), the matrix <img class="mwe-math-fallback-image-inline tex" alt="U P U^{\rm T}" src="//upload.wikimedia.org/math/7/6/c/76c5323437ccf9f2e215a5701e991892.png" /> is an orthogonal projection onto the image (column-space) of <i>X</i>. In accordance with a general approach described in the introduction above (find <b>XS</b> which is an orthogonal projection),</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" S = \mathbf X^+ " src="//upload.wikimedia.org/math/5/b/2/5b2c071f1383720dd8b87046b72fca92.png" />,</dd>
+</dl>
+<p>and thus,</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" \beta = V\Sigma^+ U^{\rm T} \mathbf y " src="//upload.wikimedia.org/math/7/7/a/77a79150afedfbb7ad124d52a47f9c50.png" /></dd>
+</dl>
+<p>is a solution of a least squares problem. This method is the most computationally intensive, but is particularly useful if the normal equations matrix, <i>X</i><sup>T</sup><i>X</i>, is very ill-conditioned (i.e. if its <a href="/wiki/Condition_number" title="Condition number">condition number</a> multiplied by the machine's relative <a href="/wiki/Round-off_error" title="Round-off error">round-off error</a> is appreciably large). In that case, including the smallest <a href="/wiki/Singular_value" title="Singular value">singular values</a> in the inversion merely adds numerical noise to the solution. This can be cured with the truncated SVD approach, giving a more stable and exact answer, by explicitly setting to zero all singular values below a certain threshold and so ignoring them, a process closely related to <a href="/wiki/Factor_analysis" title="Factor analysis">factor analysis</a>.</p>
+<h2><span class="mw-headline" id="Properties_of_the_least-squares_estimators">Properties of the least-squares estimators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=10" title="Edit section: Properties of the least-squares estimators">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Linear_least_squares_geometric_interpretation.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Linear_least_squares_geometric_interpretation.png/220px-Linear_least_squares_geometric_interpretation.png" width="220" height="243" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Linear_least_squares_geometric_interpretation.png/330px-Linear_least_squares_geometric_interpretation.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Linear_least_squares_geometric_interpretation.png/440px-Linear_least_squares_geometric_interpretation.png 2x" data-file-width="1021" data-file-height="1128" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Linear_least_squares_geometric_interpretation.png" class="internal" title="Enlarge"></a></div>
+The residual vector, <img class="mwe-math-fallback-image-inline tex" alt="y-X \hat{\boldsymbol\beta}," src="//upload.wikimedia.org/math/d/d/7/dd7133840c22aa72b4bb564ed7cb96c6.png" /> which corresponds to the solution of a least squares system, <img class="mwe-math-fallback-image-inline tex" alt="y=X\boldsymbol \beta +\epsilon," src="//upload.wikimedia.org/math/2/3/0/230e2b81fc498bc9a67305175870e389.png" /> is orthogonal to the <a href="/wiki/Column_space" title="Column space" class="mw-redirect">column space</a> of the matrix <img class="mwe-math-fallback-image-inline tex" alt="X." src="//upload.wikimedia.org/math/3/d/2/3d2f9e254afe4be361f104d3748e8570.png" /></div>
+</div>
+</div>
+<p>The gradient equations at the minimum can be written as</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="(\mathbf y - X \hat{\boldsymbol{\beta}})^{\rm T} X=0." src="//upload.wikimedia.org/math/5/0/6/5062c4efd96da9df74526e66d3d60ca1.png" /></dd>
+</dl>
+<p>A geometrical interpretation of these equations is that the vector of residuals, <img class="mwe-math-fallback-image-inline tex" alt="\mathbf y - X \hat{\boldsymbol{\beta}}" src="//upload.wikimedia.org/math/5/f/1/5f132d5593150f4b3a867fbc03a72a84.png" /> is orthogonal to the <a href="/wiki/Column_space" title="Column space" class="mw-redirect">column space</a> of <i>X</i>, since the dot product <img class="mwe-math-fallback-image-inline tex" alt="(\mathbf y-X\hat{\boldsymbol{\beta}})\cdot X \mathbf v" src="//upload.wikimedia.org/math/1/c/4/1c4ce3d42c8700e11f06c96ca1fcf946.png" /> is equal to zero for <i>any</i> conformal vector, <b>v</b>. This means that <img class="mwe-math-fallback-image-inline tex" alt="\mathbf y - X \boldsymbol{\hat \beta}" src="//upload.wikimedia.org/math/0/2/3/02373538c6fdc093073e834756a6ed91.png" /> is the shortest of all possible vectors <img class="mwe-math-fallback-image-inline tex" alt="\mathbf{y}- X \boldsymbol \beta" src="//upload.wikimedia.org/math/e/3/f/e3f2dad8354fbde34792282e51fb235e.png" />, that is, the variance of the residuals is the minimum possible. This is illustrated at the right.</p>
+<p>Introducing <img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol{\gamma}}" src="//upload.wikimedia.org/math/1/8/d/18d7bacdc926bf158aa22d62aacd40c7.png" /> and a matrix <i>K</i> with the assumption that a matrix <img class="mwe-math-fallback-image-inline tex" alt="[X \ K]" src="//upload.wikimedia.org/math/1/8/6/18644a6aa76a65aed1dccf88b11b661d.png" /> is non-singular and <i>K</i><sup>T</sup> <i>X</i> = 0 (cf. <a href="/wiki/Linear_projection#Orthogonal_projections" title="Linear projection" class="mw-redirect">Orthogonal projections</a>), the residual vector should satisfy the following equation:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat{\mathbf{r}} \triangleq \mathbf{y} - X \hat{\boldsymbol{\beta}} = K \hat{{\boldsymbol{\gamma}}}." src="//upload.wikimedia.org/math/2/0/6/206521a58158a3364b17b7e8540528b8.png" /></dd>
+</dl>
+<p>The equation and solution of linear least squares are thus described as follows:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" \mathbf{y} = \begin{bmatrix}X &amp; K\end{bmatrix} \begin{pmatrix} \hat{\boldsymbol{\beta}} \\ \hat{\boldsymbol{\gamma}} \end{pmatrix} ," src="//upload.wikimedia.org/math/9/7/e/97ec257fce8049d542de08ba1299b2f1.png" /></dd>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" \begin{pmatrix} \hat{\boldsymbol{\beta}} \\ \hat{\boldsymbol{\gamma}} \end{pmatrix} = \begin{bmatrix}X &amp; K\end{bmatrix}^{-1} \mathbf{y} = \begin{bmatrix} (X^{\rm T} X)^{-1} X^{\rm T} \\ (K^{\rm T} K)^{-1} K^{\rm T} \end{bmatrix} \mathbf{y} ." src="//upload.wikimedia.org/math/9/d/c/9dcffe381bd995e78b140c94ffc64e3d.png" /></dd>
+</dl>
+<p>If the experimental errors, <img class="mwe-math-fallback-image-inline tex" alt="\epsilon \," src="//upload.wikimedia.org/math/a/b/4/ab4a44edf45f22ea595d23054c8fc853.png" />, are uncorrelated, have a mean of zero and a constant variance, <img class="mwe-math-fallback-image-inline tex" alt="\sigma" src="//upload.wikimedia.org/math/9/d/4/9d43cb8bbcb702e9d5943de477f099e2.png" />, the <a href="/wiki/Gauss-Markov_theorem" title="Gauss-Markov theorem" class="mw-redirect">Gauss-Markov theorem</a> states that the least-squares estimator, <img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol{\beta}}" src="//upload.wikimedia.org/math/2/d/4/2d4b41fa7c5a145f855901b972a0b6dc.png" />, has the minimum variance of all estimators that are linear combinations of the observations. In this sense it is the best, or optimal, estimator of the parameters. Note particularly that this property is independent of the statistical <a href="/wiki/Distribution_function" title="Distribution function">distribution function</a> of the errors. In other words, <i>the distribution function of the errors need not be a <a href="/wiki/Normal_distribution" title="Normal distribution">normal distribution</a></i>. However, for some probability distributions, there is no guarantee that the least-squares solution is even possible given the observations; still, in such cases it is the best estimator that is both linear and unbiased.</p>
+<p>For example, it is easy to show that the <a href="/wiki/Arithmetic_mean" title="Arithmetic mean">arithmetic mean</a> of a set of measurements of a quantity is the least-squares estimator of the value of that quantity. If the conditions of the Gauss-Markov theorem apply, the arithmetic mean is optimal, whatever the distribution of errors of the measurements might be.</p>
+<p>However, in the case that the experimental errors do belong to a normal distribution, the least-squares estimator is also a <a href="/wiki/Maximum_likelihood" title="Maximum likelihood">maximum likelihood</a> estimator.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>These properties underpin the use of the method of least squares for all types of data fitting, even when the assumptions are not strictly valid.</p>
+<h3><span class="mw-headline" id="Limitations">Limitations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=11" title="Edit section: Limitations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An assumption underlying the treatment given above is that the independent variable, <i>x</i>, is free of error. In practice, the errors on the measurements of the independent variable are usually much smaller than the errors on the dependent variable and can therefore be ignored. When this is not the case, <a href="/wiki/Total_least_squares" title="Total least squares">total least squares</a> or more generally <a href="/wiki/Errors-in-variables_models" title="Errors-in-variables models">errors-in-variables models</a>, or <i>rigorous least squares</i>, should be used. This can be done by adjusting the weighting scheme to take into account errors on both the dependent and independent variables and then following the standard procedure.<sup id="cite_ref-pg_3-0" class="reference"><a href="#cite_note-pg-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p>In some cases the (weighted) normal equations matrix <i>X</i><sup>T</sup><i>X</i> is <a href="/wiki/Ill-conditioned" title="Ill-conditioned" class="mw-redirect">ill-conditioned</a>. When fitting polynomials the normal equations matrix is a <a href="/wiki/Vandermonde_matrix" title="Vandermonde matrix">Vandermonde matrix</a>. Vandermonde matrices become increasingly ill-conditioned as the order of the matrix increases.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2010)">citation needed</span></a></i>]</sup> In these cases, the least squares estimate amplifies the measurement noise and may be grossly inaccurate.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2010)">citation needed</span></a></i>]</sup> Various <a href="/wiki/Regularization_(mathematics)" title="Regularization (mathematics)">regularization</a> techniques can be applied in such cases, the most common of which is called <a href="/wiki/Tikhonov_regularization" title="Tikhonov regularization">ridge regression</a>. If further information about the parameters is known, for example, a range of possible values of <img class="mwe-math-fallback-image-inline tex" alt="\mathbf{\hat{\boldsymbol{\beta}}}" src="//upload.wikimedia.org/math/3/7/7/3777aba62ef10812258ba03d201939ca.png" />, then various techniques can be used to increase the stability of the solution. For example, see <a href="#Constrained_linear_least_squares">constrained least squares</a>.</p>
+<p>Another drawback of the least squares estimator is the fact that the norm of the residuals, <img class="mwe-math-fallback-image-inline tex" alt="\| \mathbf y - X\hat{\boldsymbol{\beta}} \|" src="//upload.wikimedia.org/math/2/8/b/28bcdea8824963c9e245257e7822a6af.png" /> is minimized, whereas in some cases one is truly interested in obtaining small error in the parameter <img class="mwe-math-fallback-image-inline tex" alt="\mathbf{\hat{\boldsymbol{\beta}}}" src="//upload.wikimedia.org/math/3/7/7/3777aba62ef10812258ba03d201939ca.png" />, e.g., a small value of <img class="mwe-math-fallback-image-inline tex" alt="\|{\boldsymbol{\beta}}-\hat{\boldsymbol{\beta}}\|" src="//upload.wikimedia.org/math/a/6/0/a60257c2e0466bd3ee0bcca1bc071c79.png" />.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2010)">citation needed</span></a></i>]</sup> However, since the true parameter <img class="mwe-math-fallback-image-inline tex" alt="{\boldsymbol{\beta}}" src="//upload.wikimedia.org/math/c/2/2/c22ebe51e9e272a070b01056e08b457a.png" /> is necessarily unknown, this quantity cannot be directly minimized. If a <a href="/wiki/Prior_probability" title="Prior probability">prior probability</a> on <img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol{\beta}}" src="//upload.wikimedia.org/math/2/d/4/2d4b41fa7c5a145f855901b972a0b6dc.png" /> is known, then a <a href="/wiki/Minimum_mean_square_error" title="Minimum mean square error">Bayes estimator</a> can be used to minimize the <a href="/wiki/Mean_squared_error" title="Mean squared error">mean squared error</a>, <img class="mwe-math-fallback-image-inline tex" alt="E \left\{ \| {\boldsymbol{\beta}} - \hat{\boldsymbol{\beta}} \|^2 \right\} " src="//upload.wikimedia.org/math/b/2/4/b24d008a0921ca665d892c000579a3ca.png" />. The least squares method is often applied when no prior is known. Surprisingly, when several parameters are being estimated jointly, better estimators can be constructed, an effect known as <a href="/wiki/Stein%27s_phenomenon" title="Stein's phenomenon" class="mw-redirect">Stein's phenomenon</a>. For example, if the measurement error is <a href="/wiki/Normal_distribution" title="Normal distribution">Gaussian</a>, several estimators are known which <a href="/wiki/Dominating_decision_rule" title="Dominating decision rule">dominate</a>, or outperform, the least squares technique; the best known of these is the <a href="/wiki/James%E2%80%93Stein_estimator" title="James–Stein estimator">James–Stein estimator</a>. This is an example of more general <a href="/wiki/Shrinkage_estimator" title="Shrinkage estimator">shrinkage estimators</a> that have been applied to regression problems.</p>
+<h2><span class="mw-headline" id="Weighted_linear_least_squares">Weighted linear least squares</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=12" title="Edit section: Weighted linear least squares">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote">See also: <a href="/wiki/Least_squares#Weighted_least_squares" title="Least squares">Least squares § Weighted least squares</a></div>
+<div role="note" class="hatnote">See also: <a href="/wiki/Weighted_mean" title="Weighted mean" class="mw-redirect">Weighted mean</a></div>
+<p>In some cases the observations may be weighted—for example, they may not be equally reliable. In this case, one can minimize the weighted sum of squares:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\underset{\boldsymbol \beta}{ \operatorname{arg\,min} }\, \sum_{i=1}^{m} w_i \left|y_i - \sum_{j=1}^{n} X_{ij}\beta_j\right|^2 = \underset{\boldsymbol \beta}{ \operatorname{arg\,min} } \, \big\|W^{1/2} (\mathbf y - X \boldsymbol \beta) \big\|^2." src="//upload.wikimedia.org/math/6/d/5/6d5f531f0503316061d8085a17f6f462.png" /></dd>
+</dl>
+<p>where <i>w</i><sub><i>i</i></sub> &gt; 0 is the weight of the <i>i</i>th observation, and <i>W</i> is the <a href="/wiki/Diagonal_matrix" title="Diagonal matrix">diagonal matrix</a> of such weights.</p>
+<p>The weights should, ideally, be equal to the <a href="/wiki/Multiplicative_inverse" title="Multiplicative inverse">reciprocal</a> of the <a href="/wiki/Variance" title="Variance">variance</a> of the measurement.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup> <sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup> The normal equations are then:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\left(X^{\rm T} W X \right)\hat{\boldsymbol{\beta}} = X^{\rm T} W \mathbf y." src="//upload.wikimedia.org/math/b/4/2/b420674aeac9e034704d245258bf8466.png" /></dd>
+</dl>
+<p>This method is used in <a href="/wiki/Iteratively_reweighted_least_squares" title="Iteratively reweighted least squares">iteratively reweighted least squares</a>.</p>
+<h3><span class="mw-headline" id="Parameter_errors_and_correlation">Parameter errors and correlation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=13" title="Edit section: Parameter errors and correlation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The estimated parameter values are linear combinations of the observed values</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol{\beta}} = (X^{\rm T} W X)^{-1} X^{\rm T} W \mathbf y. \, " src="//upload.wikimedia.org/math/9/e/8/9e8c3d8e5c008e50deaad2f963f1297d.png" /></dd>
+</dl>
+<p>Therefore an expression for the residuals (i.e., the <i>estimated</i> errors in the parameters) can be obtained by <a href="/wiki/Error_propagation" title="Error propagation" class="mw-redirect">error propagation</a> from the errors in the observations. Let the <a href="/wiki/Variance-covariance_matrix" title="Variance-covariance matrix" class="mw-redirect">variance-covariance matrix</a> for the observations be denoted by <i>M</i> and that of the parameters by <i>M<sup>β</sup></i>. Then,</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="M^\beta= (X^{\rm T} W X)^{-1} X^{\rm T} W M W^{\rm T} X (X^{\rm T} W^{\rm T} X)^{-1}." src="//upload.wikimedia.org/math/3/4/d/34d80947791417dbb67e9665a994cc56.png" /></dd>
+</dl>
+<p>When <i>W</i> = <i>M</i><sup>&#160;−1</sup> this simplifies to</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="M^\beta=(X^{\rm T} W X)^{-1}." src="//upload.wikimedia.org/math/4/1/8/418e18a4151150874f67e7d5d413ed00.png" /></dd>
+</dl>
+<p>When unit weights are used (<i>W</i> = <i>I</i>) it is implied that the experimental errors are uncorrelated and all equal: <i>M</i> = <i>σ</i><sup>2</sup><i>I</i>, where <i>σ</i><sup>2</sup> is the variance of an observation, and <i>I</i> is the <a href="/wiki/Identity_matrix" title="Identity matrix">identity matrix</a>. In this case <i>σ</i><sup>2</sup> is approximated by <img class="mwe-math-fallback-image-inline tex" alt="\frac{S}{m-n}" src="//upload.wikimedia.org/math/6/c/5/6c59847a0ed57bbfd3246d6c22b0ca54.png" />, where <i>S</i> is the minimum value of the objective function</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="M^\beta=\frac{S}{m-n}(X^{\rm T} X)^{-1}." src="//upload.wikimedia.org/math/9/9/f/99f86d33ba851db79d0e17ca3ef3598d.png" /></dd>
+</dl>
+<p>The denominator, <i>m</i> − <i>n</i>, is the number of <a href="/wiki/Degrees_of_freedom_(statistics)" title="Degrees of freedom (statistics)">degrees of freedom</a>; see <a href="/wiki/Degrees_of_freedom_(statistics)#Effective_degrees_of_freedom" title="Degrees of freedom (statistics)">effective degrees of freedom</a> for generalizations for the case of correlated observations. In all cases, the <a href="/wiki/Variance" title="Variance">variance</a> of the parameter <img class="mwe-math-fallback-image-inline tex" alt="\beta_i" src="//upload.wikimedia.org/math/d/a/5/da56050e63169ac896b7525e4a5af2fb.png" /> is given by <img class="mwe-math-fallback-image-inline tex" alt="M^\beta_{ii}" src="//upload.wikimedia.org/math/f/3/5/f352c14a7671b175a34cb37179c85d17.png" /> and the <a href="/wiki/Covariance" title="Covariance">covariance</a> between parameters <img class="mwe-math-fallback-image-inline tex" alt="\beta_i" src="//upload.wikimedia.org/math/d/a/5/da56050e63169ac896b7525e4a5af2fb.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\beta_j" src="//upload.wikimedia.org/math/5/c/2/5c203beeb482b1ff5fdf3b7b1ed20188.png" /> is given by <img class="mwe-math-fallback-image-inline tex" alt="M^\beta_{ij}" src="//upload.wikimedia.org/math/6/0/2/6025cffecbcd4695157bd44940c226fe.png" />. <a href="/wiki/Standard_deviation" title="Standard deviation">Standard deviation</a> is the square root of variance, and the correlation coefficient is given by <img class="mwe-math-fallback-image-inline tex" alt="\rho_{ij} = M^\beta_{ij}/(\sigma_i \sigma_j)" src="//upload.wikimedia.org/math/3/5/a/35af615461096e6e8ffdfa35829557df.png" />. These error estimates reflect only <a href="/wiki/Random_errors" title="Random errors" class="mw-redirect">random errors</a> in the measurements. The true uncertainty in the parameters is larger due to the presence of <a href="/wiki/Systematic_errors" title="Systematic errors" class="mw-redirect">systematic errors</a> which, by definition, cannot be quantified. Note that even though the observations may be un-correlated, the parameters are typically <a href="/wiki/Pearson_product-moment_correlation_coefficient" title="Pearson product-moment correlation coefficient">correlated</a>.</p>
+<h3><span class="mw-headline" id="Parameter_confidence_limits">Parameter confidence limits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=14" title="Edit section: Parameter confidence limits">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Confidence_interval" title="Confidence interval">Confidence interval</a></div>
+<p>It is often <i>assumed</i>, for want of any concrete evidence but often appealing to the <a href="/wiki/Central_limit_theorem" title="Central limit theorem">central limit theorem</a> -- see <a href="/wiki/Normal_distribution#Occurrence" title="Normal distribution">Normal distribution#Occurrence</a> -- that the error on each observation belongs to a <a href="/wiki/Normal_distribution" title="Normal distribution">normal distribution</a> with a mean of zero and standard deviation <img class="mwe-math-fallback-image-inline tex" alt="\sigma" src="//upload.wikimedia.org/math/9/d/4/9d43cb8bbcb702e9d5943de477f099e2.png" />. Under that assumption the following probabilities can be derived for a single scalar parameter estimate in terms of its estimated standard error <img class="mwe-math-fallback-image-inline tex" alt="se_{\beta}" src="//upload.wikimedia.org/math/c/7/b/c7b0182bc2fc8562b3a3775606e559df.png" /> (given <a href="/wiki/Ordinary_least_squares#Large_sample_properties" title="Ordinary least squares">here</a>):</p>
+<dl>
+<dd>68% that the interval <img class="mwe-math-fallback-image-inline tex" alt="\hat \beta \pm se_{\beta}" src="//upload.wikimedia.org/math/1/6/3/163cb125456b465be4dc71382e89490a.png" /> encompasses the true coefficient value</dd>
+<dd>95% that the interval <img class="mwe-math-fallback-image-inline tex" alt="\hat \beta \pm 2se_{\beta}" src="//upload.wikimedia.org/math/5/2/a/52a6633f170143db45f48609b377da77.png" /> encompasses the true coefficient value</dd>
+<dd>99% that the interval <img class="mwe-math-fallback-image-inline tex" alt="\hat \beta \pm 2.5se_{\beta}" src="//upload.wikimedia.org/math/f/2/3/f2335d483fde306a92ea605e092f844d.png" /> encompasses the true coefficient value</dd>
+</dl>
+<p>The assumption is not unreasonable when <i>m</i>&#160;&gt;&gt;&#160;<i>n</i>. If the experimental errors are normally distributed the parameters will belong to a <a href="/wiki/Student%27s_t-distribution" title="Student's t-distribution">Student's t-distribution</a> with <i>m</i>&#160;−&#160;<i>n</i> <a href="/wiki/Degrees_of_freedom_(statistics)" title="Degrees of freedom (statistics)">degrees of freedom</a>. When <i>m</i>&#160;&gt;&gt;&#160;<i>n</i> Student's t-distribution approximates a normal distribution. Note, however, that these confidence limits cannot take systematic error into account. Also, parameter errors should be quoted to one significant figure only, as they are subject to <a href="/wiki/Sampling_error" title="Sampling error">sampling error</a>.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<p>When the number of observations is relatively small, <a href="/wiki/Chebychev%27s_inequality" title="Chebychev's inequality" class="mw-redirect">Chebychev's inequality</a> can be used for an upper bound on probabilities, regardless of any assumptions about the distribution of experimental errors: the maximum probabilities that a parameter will be more than 1, 2 or 3 standard deviations away from its expectation value are 100%, 25% and 11% respectively.</p>
+<h3><span class="mw-headline" id="Residual_values_and_correlation">Residual values and correlation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=15" title="Edit section: Residual values and correlation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">residuals</a> are related to the observations by</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\mathbf{\hat r} = \mathbf y- X \hat{\boldsymbol{\beta}}= \mathbf y- H \mathbf y =  (I - H) \mathbf y " src="//upload.wikimedia.org/math/1/5/4/154e3faa952509b9d9e69e65f043dfc2.png" /></dd>
+</dl>
+<p>where <i>H</i> is the <a href="/wiki/Idempotent_matrix" title="Idempotent matrix">idempotent matrix</a> known as the <a href="/wiki/Hat_matrix" title="Hat matrix">hat matrix</a>:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="H = X \left(X^{\rm T} W X \right)^{-1}X^{\rm T} W " src="//upload.wikimedia.org/math/0/e/8/0e82fc15fc27333906822fb33a7a8b95.png" /></dd>
+</dl>
+<p>and <i>I</i> is the <a href="/wiki/Identity_matrix" title="Identity matrix">identity matrix</a>. The variance-covariance matrix of the residuals, <b>M<sup>r</sup></b> is given by</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="M^{\mathbf r}=\left(I-H \right) M \left(I-H \right)^{\rm T}." src="//upload.wikimedia.org/math/4/9/c/49c124a6fd56b826ecf8f2c26ab0a10d.png" /></dd>
+</dl>
+<p>Thus the residuals are correlated, even if the observations are not.</p>
+<p>When <img class="mwe-math-fallback-image-inline tex" alt="W = M^{-1}" src="//upload.wikimedia.org/math/6/3/7/6378f947aa8927bef5b5b90fb7cb44ed.png" />,</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="M^{\mathbf r}=\left(I-H \right) M." src="//upload.wikimedia.org/math/9/1/4/914de6e0791104e1bc8bc731ddd5ffdc.png" /></dd>
+</dl>
+<p>The sum of residual values is equal to zero whenever the model function contains a constant term. Left-multiply the expression for the residuals by <i>X</i><sup>T</sup>:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="X^{\rm T} \hat{\mathbf r}=X^{\rm T} \mathbf y- X^{\rm T} X \hat{\boldsymbol{\beta}} = X^{\rm T} \mathbf y- (X^{\rm T} X)(X^{\rm T} X)^{-1}X^{\rm T} \mathbf y= \mathbf 0" src="//upload.wikimedia.org/math/c/1/0/c10679857f21e0d4c5df2e5e78de9402.png" /></dd>
+</dl>
+<p>Say, for example, that the first term of the model is a constant, so that <img class="mwe-math-fallback-image-inline tex" alt="X_{i1}=1" src="//upload.wikimedia.org/math/f/4/d/f4dcbd51423455d2df3f7bd88927cb7f.png" /> for all <i>i</i>. In that case it follows that</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\sum_i^m X_{i1} \hat r_i=\sum_i^m \hat r_i=0." src="//upload.wikimedia.org/math/a/f/c/afcf4cf6d011411797e3cb45ee08c1c2.png" /></dd>
+</dl>
+<p>Thus, in the <a href="#Motivational_example">motivational example</a>, above, the fact that the sum of residual values is equal to zero it is not accidental but is a consequence of the presence of the constant term, α, in the model.</p>
+<p>If experimental error follows a <a href="/wiki/Normal_distribution" title="Normal distribution">normal distribution</a>, then, because of the linear relationship between residuals and observations, so should residuals,<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup> but since the observations are only a sample of the population of all possible observations, the residuals should belong to a <a href="/wiki/Student%27s_t-distribution" title="Student's t-distribution">Student's t-distribution</a>. <a href="/wiki/Studentized_residual" title="Studentized residual">Studentized residuals</a> are useful in making a statistical test for an <a href="/wiki/Outlier" title="Outlier">outlier</a> when a particular residual appears to be excessively large.</p>
+<h2><span class="mw-headline" id="Objective_function">Objective function</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=16" title="Edit section: Objective function">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The optimal value of the objective function, found by substituting in the optimal expression for the coefficient vector, can be written as</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="S=\mathbf y^{\rm T} (I-H)^{\rm T} (I-H) \mathbf y= \mathbf y^{\rm T} (I-H) \mathbf y," src="//upload.wikimedia.org/math/9/4/5/945b4e89d2443cb72d0911c43b1238e2.png" /></dd>
+</dl>
+<p>the latter equality holding since (<i>I</i> – <i>H</i>) is symmetric and idempotent. It can be shown from this<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> that under an appropriate assignment of weights the <a href="/wiki/Expected_value" title="Expected value">expected value</a> of <i>S</i> is <i>m</i>-<i>n</i>. If instead unit weights are assumed, the expected value of <i>S</i> is <img class="mwe-math-fallback-image-inline tex" alt="(m-n)\sigma^2" src="//upload.wikimedia.org/math/5/c/0/5c0a417d17139c3383559bdf70ca178d.png" />, where <img class="mwe-math-fallback-image-inline tex" alt="\sigma^2" src="//upload.wikimedia.org/math/3/c/6/3c6a93fc922fbfa19aea78961760cefb.png" /> is the variance of each observation.</p>
+<p>If it is assumed that the residuals belong to a normal distribution, the objective function, being a sum of weighted squared residuals, will belong to a <a href="/wiki/Chi-squared_distribution" title="Chi-squared distribution">chi-squared (<img class="mwe-math-fallback-image-inline tex" alt="\chi ^2" src="//upload.wikimedia.org/math/3/f/1/3f1654642bee437631079661bd54ddc4.png" />) distribution</a> with <i>m</i>-<i>n</i> <a href="/wiki/Degrees_of_freedom_(statistics)" title="Degrees of freedom (statistics)">degrees of freedom</a>. Some illustrative percentile values of <img class="mwe-math-fallback-image-inline tex" alt="\chi ^2" src="//upload.wikimedia.org/math/3/f/1/3f1654642bee437631079661bd54ddc4.png" /> are given in the following table.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+\begin{array}{r|ccc}
+m-n &amp;\chi ^2 _{0.50} &amp;\chi ^2 _{0.95} &amp;\chi ^2 _{0.99}\\
+\hline
+10 &amp; 9.34 &amp;18.3 &amp;23.2 \\
+25 &amp;24.3 &amp;37.7 &amp;44.3 \\
+100 &amp;99.3 &amp;124 &amp;136
+\end{array}
+" src="//upload.wikimedia.org/math/3/1/2/31297c0fc74e3ef5bd25dc14d88fd3f5.png" /></dd>
+</dl>
+<p>These values can be used for a statistical criterion as to the <a href="/wiki/Goodness-of-fit" title="Goodness-of-fit" class="mw-redirect">goodness-of-fit</a>. When unit weights are used, the numbers should be divided by the variance of an observation.</p>
+<h2><span class="mw-headline" id="Constrained_linear_least_squares">Constrained linear least squares</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=17" title="Edit section: Constrained linear least squares">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Often it is of interest to solve a linear least squares problem with an additional constraint on the solution. With constrained linear least squares, the original equation</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\mathbf {X} \boldsymbol {\beta} = \mathbf {y}" src="//upload.wikimedia.org/math/c/9/4/c94cfaca74b9335de82841fb4f77cff9.png" /></dd>
+</dl>
+<p>must be fit as closely as possible (in the least squares sense) while ensuring that some other property of <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol {\beta}" src="//upload.wikimedia.org/math/5/4/a/54a5ec40c2505ed1d2a2166830f5cdee.png" /> is maintained. There are often special purpose algorithms for solving such problems efficiently. Some examples of constraints are given below:</p>
+<ul>
+<li><a href="/wiki/Constrained_generalized_inverse" title="Constrained generalized inverse">Equality constrained</a> least squares: the elements of <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol {\beta}" src="//upload.wikimedia.org/math/5/4/a/54a5ec40c2505ed1d2a2166830f5cdee.png" /> must exactly satisfy <img class="mwe-math-fallback-image-inline tex" alt="\mathbf {L} \boldsymbol {\beta} = \mathbf {d}" src="//upload.wikimedia.org/math/a/5/e/a5eb9bc7d6c8e7bc32987c632586737e.png" /> (see <a href="/wiki/Ordinary_least_squares#Constrained_estimation" title="Ordinary least squares">Ordinary least squares#Constrained estimation</a>.)</li>
+<li><a href="/wiki/Tikhonov_regularization" title="Tikhonov regularization">Regularized</a> least squares: the elements of <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol {\beta}" src="//upload.wikimedia.org/math/5/4/a/54a5ec40c2505ed1d2a2166830f5cdee.png" /> must satisfy <img class="mwe-math-fallback-image-inline tex" alt="\| \mathbf {L} \boldsymbol {\beta} - \mathbf {d} \| \le \rho " src="//upload.wikimedia.org/math/c/e/f/cef7273f052b7f107fb16a31b1fdab13.png" /></li>
+<li><a href="/wiki/Non-negative_least_squares" title="Non-negative least squares">Non-negative least squares</a> (NNLS): The vector <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol {\beta}" src="//upload.wikimedia.org/math/5/4/a/54a5ec40c2505ed1d2a2166830f5cdee.png" /> must satisfy the <a href="/wiki/Ordered_vector_space" title="Ordered vector space">vector inequality</a> <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol {\beta} \geq \boldsymbol{0}" src="//upload.wikimedia.org/math/2/6/e/26e2352cc86f636a492639614bf25e05.png" /> defined componentwise—that is, each component must be either positive or zero.</li>
+<li>Box-constrained least squares: The vector <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol {\beta}" src="//upload.wikimedia.org/math/5/4/a/54a5ec40c2505ed1d2a2166830f5cdee.png" /> must satisfy the <a href="/wiki/Ordered_vector_space" title="Ordered vector space">vector inequalities</a> <img class="mwe-math-fallback-image-inline tex" alt=" \boldsymbol{lb} \leq \boldsymbol{\beta} \leq \boldsymbol{ub}" src="//upload.wikimedia.org/math/d/6/8/d6802d32af9460005772dde14f52a917.png" />, each of which is defined componentwise.</li>
+<li>Integer constrained least squares: all elements of <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol {\beta}" src="//upload.wikimedia.org/math/5/4/a/54a5ec40c2505ed1d2a2166830f5cdee.png" /> must be <a href="/wiki/Integer" title="Integer">integers</a> (instead of <a href="/wiki/Real_number" title="Real number">real numbers</a>).</li>
+<li>Phase constrained least squares: all elements of <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol {\beta}" src="//upload.wikimedia.org/math/5/4/a/54a5ec40c2505ed1d2a2166830f5cdee.png" /> must have the same <a href="/wiki/Arg_(mathematics)" title="Arg (mathematics)" class="mw-redirect">phase</a> (or must be real rather than <a href="/wiki/Complex_numbers" title="Complex numbers" class="mw-redirect">complex numbers</a>, i.e. phase = 0).</li>
+</ul>
+<p>When the constraint only applies to some of the variables, the mixed problem may be solved using <b>separable least squares</b> by letting <img class="mwe-math-fallback-image-inline tex" alt="\mathbf {X} = [\mathbf {X_1} \mathbf {X_2} ]" src="//upload.wikimedia.org/math/8/6/c/86c4ea1b9dce373c8fe0f73531c9d0f4.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\mathbf {\beta}^{\rm T} = [\mathbf {\beta_1}^{\rm T} \mathbf {\beta_2}^{\rm T}]" src="//upload.wikimedia.org/math/c/e/e/cee116df702c2846a7c33d5bc1c9d2c4.png" /> represent the unconstrained (1) and constrained (2) components. Then substituting the least squares solution for <img class="mwe-math-fallback-image-inline tex" alt="\mathbf {\beta_1}" src="//upload.wikimedia.org/math/5/4/d/54d56db206f37ca4ae75f0102e48fe23.png" />, i.e.</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol {\beta_1}} = \mathbf {X_1}^+ (\mathbf {y} - \mathbf {X_2} \boldsymbol {\beta_2})" src="//upload.wikimedia.org/math/4/0/6/4060f4ccbd52a7eb82be0f63f476acaf.png" /></dd>
+</dl>
+<p>back into the original expression gives (following some rearrangement) an equation that can be solved as a purely constrained problem in <img class="mwe-math-fallback-image-inline tex" alt="\mathbf {\beta_2}" src="//upload.wikimedia.org/math/f/8/a/f8a5b9d05120799b48e3fee9a3bd9847.png" />.</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt=" \mathbf{P} \mathbf {X_2} \boldsymbol {\beta_2} = \mathbf{P}\mathbf {y}" src="//upload.wikimedia.org/math/7/6/6/766d731e41a1738c867b6ba8614156f3.png" /></dd>
+</dl>
+<p>where <img class="mwe-math-fallback-image-inline tex" alt="\mathbf{P}:=\mathbf{I}-\mathbf {X_1} \mathbf {X_1}^+" src="//upload.wikimedia.org/math/3/a/3/3a37c56ea15bb4f2b2610ea1eca29ca9.png" /> is a <a href="/wiki/Projection_matrix" title="Projection matrix" class="mw-redirect">projection matrix</a>. Following the constrained estimation of <img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol {\beta_2}}" src="//upload.wikimedia.org/math/4/c/d/4cde9f810e525e447e723c0ba252c364.png" /> the vector <img class="mwe-math-fallback-image-inline tex" alt="\hat{\boldsymbol {\beta_1}}" src="//upload.wikimedia.org/math/b/9/c/b9c39cf06121b2bfc84ae346e56b8f7a.png" /> is obtained from the expression above.</p>
+<h2><span class="mw-headline" id="Typical_uses_and_applications">Typical uses and applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=18" title="Edit section: Typical uses and applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Polynomial_regression" title="Polynomial regression">Polynomial fitting</a>: models are <a href="/wiki/Polynomial" title="Polynomial">polynomials</a> in an independent variable, <i>x</i>:
+<ul>
+<li>Straight line: <img class="mwe-math-fallback-image-inline tex" alt="f(x, \boldsymbol \beta)=\beta_1 +\beta_2 x" src="//upload.wikimedia.org/math/d/3/c/d3c31ead4b59a51cb5181cf2c3f01110.png" />.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup></li>
+<li>Quadratic: <img class="mwe-math-fallback-image-inline tex" alt="f(x, \boldsymbol \beta)=\beta_1  + \beta_2 x +\beta_3 x^2" src="//upload.wikimedia.org/math/a/d/6/ad67c7ebcc9e7191c4c70d1d551ea9b0.png" />.</li>
+<li>Cubic, quartic and higher polynomials. For <a href="/wiki/Polynomial_regression" title="Polynomial regression">regression with high-order polynomials</a>, the use of <a href="/wiki/Orthogonal_polynomials" title="Orthogonal polynomials">orthogonal polynomials</a> is recommended.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup></li>
+</ul>
+</li>
+<li><a href="/wiki/Numerical_smoothing_and_differentiation" title="Numerical smoothing and differentiation" class="mw-redirect">Numerical smoothing and differentiation</a> — this is an application of polynomial fitting.</li>
+<li>Multinomials in more than one independent variable, including surface fitting</li>
+<li>Curve fitting with <a href="/wiki/B-spline" title="B-spline">B-splines</a> <sup id="cite_ref-pg_3-1" class="reference"><a href="#cite_note-pg-3"><span>[</span>3<span>]</span></a></sup></li>
+<li><a href="/wiki/Chemometrics" title="Chemometrics">Chemometrics</a>, <a href="/wiki/Calibration_curve" title="Calibration curve">Calibration curve</a>, <a href="/wiki/Standard_addition" title="Standard addition">Standard addition</a>, <a href="/wiki/Gran_plot" title="Gran plot">Gran plot</a>, <a href="/wiki/Beer-Lambert_law#Chemical_analysis" title="Beer-Lambert law" class="mw-redirect">analysis of mixtures</a></li>
+</ul>
+<h3><span class="mw-headline" id="Uses_in_data_fitting">Uses in data fitting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=19" title="Edit section: Uses in data fitting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The primary application of linear least squares is in <a href="/wiki/Data_fitting" title="Data fitting" class="mw-redirect">data fitting</a>. Given a set of <i>m</i> data points <img class="mwe-math-fallback-image-inline tex" alt="y_1, y_2,\dots, y_m," src="//upload.wikimedia.org/math/4/7/9/4795873898b0cfdd4624be8a63571e7c.png" /> consisting of experimentally measured values taken at <i>m</i> values <img class="mwe-math-fallback-image-inline tex" alt="x_1, x_2,\dots, x_m" src="//upload.wikimedia.org/math/f/3/3/f333fff88fc055911fb1665fdbfe7437.png" /> of an independent variable (<img class="mwe-math-fallback-image-inline tex" alt="x_i" src="//upload.wikimedia.org/math/0/5/e/05e42209d67fe1eb15a055e9d3b3770e.png" /> may be scalar or vector quantities), and given a model function <img class="mwe-math-fallback-image-inline tex" alt="y=f(x, \boldsymbol \beta)," src="//upload.wikimedia.org/math/1/c/d/1cddcbe99db604106598f9f490ce271e.png" /> with <img class="mwe-math-fallback-image-inline tex" alt="\boldsymbol \beta = (\beta_1, \beta_2, \dots, \beta_n)," src="//upload.wikimedia.org/math/4/9/c/49cb733e01cb6d802c18696dbae7ad72.png" /> it is desired to find the parameters <img class="mwe-math-fallback-image-inline tex" alt="\beta_j" src="//upload.wikimedia.org/math/5/c/2/5c203beeb482b1ff5fdf3b7b1ed20188.png" /> such that the model function "best" fits the data. In linear least squares, linearity is meant to be with respect to parameters <img class="mwe-math-fallback-image-inline tex" alt="\beta_j," src="//upload.wikimedia.org/math/3/b/e/3be8fe9b5c767341c51eae656ad2bc06.png" /> so</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="f(x, \boldsymbol \beta) = \sum_{j=1}^{n} \beta_j \phi_j(x)." src="//upload.wikimedia.org/math/a/a/a/aaa7a7d4d7609885822e84a405ed718e.png" /></dd>
+</dl>
+<p>Here, the functions <img class="mwe-math-fallback-image-inline tex" alt="\phi_j" src="//upload.wikimedia.org/math/f/0/b/f0bd293fda5d89971350e81b49b1d7db.png" /> may be <b>nonlinear</b> with respect to the variable <b>x</b>.</p>
+<p>Ideally, the model function fits the data exactly, so</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="y_i = f(x_i, \boldsymbol \beta)" src="//upload.wikimedia.org/math/6/4/5/645938adf739f612d5919574c07d6337.png" /></dd>
+</dl>
+<p>for all <img class="mwe-math-fallback-image-inline tex" alt="i=1, 2, \dots, m." src="//upload.wikimedia.org/math/f/8/4/f84848d757cd257a791b19c971710ab0.png" /> This is usually not possible in practice, as there are more data points than there are parameters to be determined. The approach chosen then is to find the minimal possible value of the sum of squares of the <a href="/wiki/Residual_(statistics)" title="Residual (statistics)" class="mw-redirect">residuals</a></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="r_i(\boldsymbol \beta)= y_i - f(x_i, \boldsymbol \beta),\  (i=1, 2, \dots, m) " src="//upload.wikimedia.org/math/7/9/1/7919fdd4301bc842c33a9c3913897d77.png" /></dd>
+</dl>
+<p>so to minimize the function</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="S(\boldsymbol \beta)=\sum_{i=1}^{m}r_i^2(\boldsymbol \beta)." src="//upload.wikimedia.org/math/3/0/5/3058f73566b63bb55216e07cfd3d1187.png" /></dd>
+</dl>
+<p>After substituting for <img class="mwe-math-fallback-image-inline tex" alt="r_i" src="//upload.wikimedia.org/math/b/e/d/bedcf2f74ea8e1f0f46880c0c79592ff.png" /> and then for <img class="mwe-math-fallback-image-inline tex" alt="f" src="//upload.wikimedia.org/math/8/f/a/8fa14cdd754f91cc6554c9e71929cce7.png" />, this minimization problem becomes the quadratic minimization problem above with</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="X_{ij}=\phi_j(x_i)," src="//upload.wikimedia.org/math/d/a/9/da981ea41e47a5bd422eb52714e78afd.png" /></dd>
+</dl>
+<p>and the best fit can be found by solving the normal equations.</p>
+<h2><span class="mw-headline" id="Further_discussion">Further discussion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=20" title="Edit section: Further discussion">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <i>numerical methods for linear least squares</i> are important because <a href="/wiki/Linear_regression" title="Linear regression">linear regression</a> models are among the most important types of model, both as formal <a href="/wiki/Statistical_model" title="Statistical model">statistical models</a> and for exploration of data-sets. The majority of <a href="/wiki/Comparison_of_statistical_packages" title="Comparison of statistical packages">statistical computer packages</a> contain facilities for regression analysis that make use of linear least squares computations. Hence it is appropriate that considerable effort has been devoted to the task of ensuring that these computations are undertaken efficiently and with due regard to <a href="/wiki/Round-off_error" title="Round-off error">round-off error</a>.</p>
+<p>Individual statistical analyses are seldom undertaken in isolation, but rather are part of a sequence of investigatory steps. Some of the topics involved in considering numerical methods for linear least squares relate to this point. Thus important topics can be</p>
+<ul>
+<li>Computations where a number of similar, and often <a href="/wiki/Statistical_model#Nested_models" title="Statistical model">nested</a>, models are considered for the same data-set. That is, where models with the same <a href="/wiki/Dependent_variable" title="Dependent variable" class="mw-redirect">dependent variable</a> but different sets of <a href="/wiki/Independent_variables" title="Independent variables" class="mw-redirect">independent variables</a> are to be considered, for essentially the same set of data-points.</li>
+<li>Computations for analyses that occur in a sequence, as the number of data-points increases.</li>
+<li>Special considerations for very extensive data-sets.</li>
+</ul>
+<p>Fitting of linear models by least squares often, but not always, arise in the context of <a href="/wiki/Statistical_analysis" title="Statistical analysis" class="mw-redirect">statistical analysis</a>. It can therefore be important that considerations of computation efficiency for such problems extend to all of the auxiliary quantities required for such analyses, and are not restricted to the formal solution of the <strong class="selflink">linear least squares</strong> problem.</p>
+<h3><span class="mw-headline" id="Rounding_errors">Rounding errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=21" title="Edit section: Rounding errors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Matrix calculations, like any other, are affected by <a href="/wiki/Rounding_error" title="Rounding error" class="mw-redirect">rounding errors</a>. An early summary of these effects, regarding the choice of computation methods for matrix inversion, was provided by Wilkinson.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=22" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Line-line_intersection#Nearest_point_to_non-intersecting_lines" title="Line-line intersection" class="mw-redirect">Line-line intersection#Nearest point to non-intersecting lines</a>, an application</li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=23" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation book">Lawson, C. L.; Hanson, R. J. (1974). <i>Solving Least Squares Problems</i>. Englewood Cliffs, NJ: Prentice-Hall. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-822585-0" title="Special:BookSources/0-13-822585-0">0-13-822585-0</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=C.+L.&amp;rft.au=Hanson%2C+R.+J.&amp;rft.aulast=Lawson&amp;rft.btitle=Solving+Least+Squares+Problems&amp;rft.date=1974&amp;rft.genre=book&amp;rft.isbn=0-13-822585-0&amp;rft.place=Englewood+Cliffs%2C+NJ&amp;rft.pub=Prentice-Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation book">Margenau, Henry; Murphy, George Moseley (1956). <i>The Mathematics of Physics and Chemistry</i>. Princeton: Van Nostrand.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=Henry&amp;rft.aulast=Margenau&amp;rft.au=Murphy%2C+George+Moseley&amp;rft.btitle=The+Mathematics+of+Physics+and+Chemistry&amp;rft.date=1956&amp;rft.genre=book&amp;rft.place=Princeton&amp;rft.pub=Van+Nostrand&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-pg-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-pg_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-pg_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Gans, Peter (1992). <i>Data fitting in the Chemical Sciences</i>. New York: Wiley. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-93412-7" title="Special:BookSources/0-471-93412-7">0-471-93412-7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=Peter&amp;rft.aulast=Gans&amp;rft.btitle=Data+fitting+in+the+Chemical+Sciences&amp;rft.date=1992&amp;rft.genre=book&amp;rft.isbn=0-471-93412-7&amp;rft.place=New+York&amp;rft.pub=Wiley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation book">Deming, W. E. (1943). <i>Statistical adjustment of Data</i>. New York: Wiley.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=W.+E.&amp;rft.aulast=Deming&amp;rft.btitle=Statistical+adjustment+of+Data&amp;rft.date=1943&amp;rft.genre=book&amp;rft.place=New+York&amp;rft.pub=Wiley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">This implies that the observations are uncorrelated. If the observations are <a href="/wiki/Correlated" title="Correlated" class="mw-redirect">correlated</a>, the expression <img class="mwe-math-fallback-image-inline tex" alt="\textstyle S=\sum_k \sum_j r_k W_{kj} r_j\," src="//upload.wikimedia.org/math/5/0/b/50b7134aa23d39670fb79f099b1e7c23.png" /> applies. In this case the weight matrix should ideally be equal to the inverse of the <a href="/wiki/Variance-covariance_matrix" title="Variance-covariance matrix" class="mw-redirect">variance-covariance matrix</a> of the observations.</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation book">Strutz, T. (2016). <i>Data Fitting and Uncertainty (A practical introduction to weighted least squares and beyond)</i>. Springer Vieweg. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-658-11455-8" title="Special:BookSources/978-3-658-11455-8">978-3-658-11455-8</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.au=Strutz%2C+T.&amp;rft.btitle=Data+Fitting+and+Uncertainty+%28A+practical+introduction+to+weighted+least+squares+and+beyond%29&amp;rft.date=2016&amp;rft.genre=book&amp;rft.isbn=978-3-658-11455-8&amp;rft.pub=Springer+Vieweg&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span>, chapter 3</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation book">Mandel, John (1964). <i>The Statistical Analysis of Experimental Data</i>. New York: Interscience.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=John&amp;rft.aulast=Mandel&amp;rft.btitle=The+Statistical+Analysis+of+Experimental+Data&amp;rft.date=1964&amp;rft.genre=book&amp;rft.place=New+York&amp;rft.pub=Interscience&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation book">Mardia, K. V.; Kent, J. T.; Bibby, J. M. (1979). <i>Multivariate analysis</i>. New York: Academic Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-12-471250-9" title="Special:BookSources/0-12-471250-9">0-12-471250-9</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.au=Bibby%2C+J.+M.&amp;rft.aufirst=K.+V.&amp;rft.au=Kent%2C+J.+T.&amp;rft.aulast=Mardia&amp;rft.btitle=Multivariate+analysis&amp;rft.date=1979&amp;rft.genre=book&amp;rft.isbn=0-12-471250-9&amp;rft.place=New+York&amp;rft.pub=Academic+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation book">Hamilton, W. C. (1964). <i>Statistics in Physical Science</i>. New York: Ronald Press.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=W.+C.&amp;rft.aulast=Hamilton&amp;rft.btitle=Statistics+in+Physical+Science&amp;rft.date=1964&amp;rft.genre=book&amp;rft.place=New+York&amp;rft.pub=Ronald+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation book">Spiegel, Murray R. (1975). <i>Schaum's outline of theory and problems of probability and statistics</i>. New York: McGraw-Hill. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-585-26739-1" title="Special:BookSources/0-585-26739-1">0-585-26739-1</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=Murray+R.&amp;rft.aulast=Spiegel&amp;rft.btitle=Schaum%27s+outline+of+theory+and+problems+of+probability+and+statistics&amp;rft.date=1975&amp;rft.genre=book&amp;rft.isbn=0-585-26739-1&amp;rft.place=New+York&amp;rft.pub=McGraw-Hill&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation book">Acton, F. S. (1959). <i>Analysis of Straight-Line Data</i>. New York: Wiley.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=F.+S.&amp;rft.aulast=Acton&amp;rft.btitle=Analysis+of+Straight-Line+Data&amp;rft.date=1959&amp;rft.genre=book&amp;rft.place=New+York&amp;rft.pub=Wiley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation book">Guest, P. G. (1961). <i>Numerical Methods of Curve Fitting</i>. Cambridge: Cambridge University Press.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=P.+G.&amp;rft.aulast=Guest&amp;rft.btitle=Numerical+Methods+of+Curve+Fitting&amp;rft.date=1961&amp;rft.genre=book&amp;rft.place=Cambridge&amp;rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span><sup class="noprint Inline-Template" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources"><span title="This citation requires a reference to the specific page or range of pages in which the material appears. (December 2010)">page&#160;needed</span></a></i>]</sup></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text">Wilkinson, J.H. (1963) "Chapter 3: Matrix Computations", <i>Rounding Errors in Algebraic Processes</i>, London: Her Majesty's Stationery Office (National Physical Laboratory, Notes in Applied Science, No.32)</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=24" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite class="citation book">Bevington, Philip R; Robinson, Keith D (2003). <i>Data Reduction and Error Analysis for the Physical Sciences</i>. McGraw Hill. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-07-247227-8" title="Special:BookSources/0-07-247227-8">0-07-247227-8</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.au=Bevington%2C+Philip+R&amp;rft.au=Robinson%2C+Keith+D&amp;rft.btitle=Data+Reduction+and+Error+Analysis+for+the+Physical+Sciences&amp;rft.date=2003&amp;rft.genre=book&amp;rft.isbn=0-07-247227-8&amp;rft.pub=McGraw+Hill&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFBarlow1993" class="citation">Barlow, Jesse L. (1993), "Chapter 9: Numerical aspects of Solving Linear Least Squares Problems", in Rao, C.R., <i>Computational Statistics</i>, Handbook of Statistics <b>9</b>, North-Holland, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-444-88096-8" title="Special:BookSources/0-444-88096-8">0-444-88096-8</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.atitle=Chapter+9%3A+Numerical+aspects+of+Solving+Linear+Least+Squares+Problems&amp;rft.aufirst=Jesse+L.&amp;rft.aulast=Barlow&amp;rft.btitle=Computational+Statistics&amp;rft.date=1993&amp;rft.genre=bookitem&amp;rft.isbn=0-444-88096-8&amp;rft.pub=North-Holland&amp;rft.series=Handbook+of+Statistics&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">Björck, Åke (1996). <i>Numerical methods for least squares problems</i>. Philadelphia: SIAM. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-89871-360-9" title="Special:BookSources/0-89871-360-9">0-89871-360-9</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.aufirst=%C3%85ke&amp;rft.aulast=Bj%C3%B6rck&amp;rft.btitle=Numerical+methods+for+least+squares+problems&amp;rft.date=1996&amp;rft.genre=book&amp;rft.isbn=0-89871-360-9&amp;rft.place=Philadelphia&amp;rft.pub=SIAM&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFGoodall1993" class="citation">Goodall, Colin R. (1993), "Chapter 13: Computation using the QR decomposition", in Rao, C.R., <i>Computational Statistics</i>, Handbook of Statistics <b>9</b>, North-Holland, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-444-88096-8" title="Special:BookSources/0-444-88096-8">0-444-88096-8</a></cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.atitle=Chapter+13%3A+Computation+using+the+QR+decomposition&amp;rft.aufirst=Colin+R.&amp;rft.aulast=Goodall&amp;rft.btitle=Computational+Statistics&amp;rft.date=1993&amp;rft.genre=bookitem&amp;rft.isbn=0-444-88096-8&amp;rft.pub=North-Holland&amp;rft.series=Handbook+of+Statistics&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFNational_Physical_Laboratory1961" class="citation">National Physical Laboratory (1961), "Chapter 1: Linear Equations and Matrices: Direct Methods", <i>Modern Computing Methods</i>, Notes on Applied Science <b>16</b> (2nd ed.), Her Majesty's Stationery Office</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.atitle=Chapter+1%3A+Linear+Equations+and+Matrices%3A+Direct+Methods&amp;rft.au=National+Physical+Laboratory&amp;rft.btitle=Modern+Computing+Methods&amp;rft.date=1961&amp;rft.edition=2nd&amp;rft.genre=bookitem&amp;rft.pub=Her+Majesty%27s+Stationery+Office&amp;rft.series=Notes+on+Applied+Science&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFNational_Physical_Laboratory1961" class="citation">National Physical Laboratory (1961), "Chapter 2: Linear Equations and Matrices: Direct Methods on Automatic Computers", <i>Modern Computing Methods</i>, Notes on Applied Science <b>16</b> (2nd ed.), Her Majesty's Stationery Office</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALinear+least+squares+%28mathematics%29&amp;rft.atitle=Chapter+2%3A+Linear+Equations+and+Matrices%3A+Direct+Methods+on+Automatic+Computers&amp;rft.au=National+Physical+Laboratory&amp;rft.btitle=Modern+Computing+Methods&amp;rft.date=1961&amp;rft.edition=2nd&amp;rft.genre=bookitem&amp;rft.pub=Her+Majesty%27s+Stationery+Office&amp;rft.series=Notes+on+Applied+Science&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit&amp;section=25" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/LeastSquaresFitting.html">Least Squares Fitting – From MathWorld</a></li>
+<li><a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/LeastSquaresFittingPolynomial.html">Least Squares Fitting-Polynomial – From MathWorld</a></li>
+</ul>
+<table class="navbox" style="border-spacing:0">
+<tr>
+<td style="padding:2px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Least_squares_and_regression_analysis" title="Template:Least squares and regression analysis"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Least_squares_and_regression_analysis" title="Template talk:Least squares and regression analysis"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Least_squares_and_regression_analysis&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div style="font-size:114%"><b><a href="/wiki/Least_squares" title="Least squares">Least squares</a></b> and <b><a href="/wiki/Regression_analysis" title="Regression analysis">regression analysis</a></b></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Computational_statistics" title="Computational statistics">Computational statistics</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Least_squares" title="Least squares">Least squares</a></li>
+<li><strong class="selflink">Linear least squares</strong></li>
+<li><a href="/wiki/Non-linear_least_squares" title="Non-linear least squares">Non-linear least squares</a></li>
+<li><a href="/wiki/Iteratively_reweighted_least_squares" title="Iteratively reweighted least squares">Iteratively reweighted least squares</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Correlation_and_dependence" title="Correlation and dependence">Correlation and dependence</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Pearson_product-moment_correlation_coefficient" title="Pearson product-moment correlation coefficient">Pearson product-moment correlation</a></li>
+<li><a href="/wiki/Rank_correlation" title="Rank correlation">Rank correlation</a> (<a href="/wiki/Spearman%27s_rank_correlation_coefficient" title="Spearman's rank correlation coefficient">Spearman's rho</a></li>
+<li><a href="/wiki/Kendall_tau_rank_correlation_coefficient" title="Kendall tau rank correlation coefficient" class="mw-redirect">Kendall's tau</a>)</li>
+<li><a href="/wiki/Partial_correlation" title="Partial correlation">Partial correlation</a></li>
+<li><a href="/wiki/Confounding" title="Confounding">Confounding variable</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">Ordinary least squares</a></li>
+<li><a href="/wiki/Partial_least_squares" title="Partial least squares" class="mw-redirect">Partial least squares</a></li>
+<li><a href="/wiki/Total_least_squares" title="Total least squares">Total least squares</a></li>
+<li><a href="/wiki/Ridge_regression" title="Ridge regression" class="mw-redirect">Ridge regression</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Regression as a<br />
+<a href="/wiki/Statistical_model" title="Statistical model">statistical model</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="/wiki/Linear_regression" title="Linear regression">Linear regression</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Simple_linear_regression" title="Simple linear regression">Simple linear regression</a></li>
+<li><a href="/wiki/Ordinary_least_squares" title="Ordinary least squares">Ordinary least squares</a></li>
+<li><a href="/wiki/Generalized_least_squares" title="Generalized least squares">Generalized least squares</a></li>
+<li><a href="/wiki/Weighted_least_squares" title="Weighted least squares" class="mw-redirect">Weighted least squares</a></li>
+<li><a href="/wiki/General_linear_model" title="General linear model">General linear model</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Predictor structure</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Polynomial_regression" title="Polynomial regression">Polynomial regression</a></li>
+<li><a href="/wiki/Growth_curve_(statistics)" title="Growth curve (statistics)">Growth curve (statistics)</a></li>
+<li><a href="/wiki/Segmented_regression" title="Segmented regression">Segmented regression</a></li>
+<li><a href="/wiki/Local_regression" title="Local regression">Local regression</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Non-standard</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Nonlinear_regression" title="Nonlinear regression">Nonlinear regression</a></li>
+<li><a href="/wiki/Nonparametric_regression" title="Nonparametric regression">Nonparametric</a></li>
+<li><a href="/wiki/Semiparametric_regression" title="Semiparametric regression">Semiparametric</a></li>
+<li><a href="/wiki/Robust_regression" title="Robust regression">Robust</a></li>
+<li><a href="/wiki/Quantile_regression" title="Quantile regression">Quantile</a></li>
+<li><a href="/wiki/Isotonic_regression" title="Isotonic regression">Isotonic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Non-normal errors</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Generalized_linear_model" title="Generalized linear model">Generalized linear model</a></li>
+<li><a href="/wiki/Binomial_regression" title="Binomial regression">Binomial</a></li>
+<li><a href="/wiki/Poisson_regression" title="Poisson regression">Poisson</a></li>
+<li><a href="/wiki/Logistic_regression" title="Logistic regression">Logistic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Partition_of_sums_of_squares" title="Partition of sums of squares">Decomposition of variance</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Analysis_of_variance" title="Analysis of variance">Analysis of variance</a></li>
+<li><a href="/wiki/Analysis_of_covariance" title="Analysis of covariance">Analysis of covariance</a></li>
+<li><a href="/wiki/Multivariate_analysis_of_variance" title="Multivariate analysis of variance">Multivariate AOV</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Model exploration</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Mallows%27s_Cp" title="Mallows's Cp">Mallows's <i>C<sub>p</sub></i></a></li>
+<li><a href="/wiki/Stepwise_regression" title="Stepwise regression">Stepwise regression</a></li>
+<li><a href="/wiki/Model_selection" title="Model selection">Model selection</a></li>
+<li><a href="/wiki/Regression_model_validation" title="Regression model validation" class="mw-redirect">Regression model validation</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Background</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Mean_and_predicted_response" title="Mean and predicted response">Mean and predicted response</a></li>
+<li><a href="/wiki/Gauss%E2%80%93Markov_theorem" title="Gauss–Markov theorem">Gauss–Markov theorem</a></li>
+<li><a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">Errors and residuals</a></li>
+<li><a href="/wiki/Goodness_of_fit" title="Goodness of fit">Goodness of fit</a></li>
+<li><a href="/wiki/Studentized_residual" title="Studentized residual">Studentized residual</a></li>
+<li><a href="/wiki/Minimum_mean-square_error" title="Minimum mean-square error" class="mw-redirect">Minimum mean-square error</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Design_of_experiments" title="Design of experiments">Design of experiments</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Response_surface_methodology" title="Response surface methodology">Response surface methodology</a></li>
+<li><a href="/wiki/Optimal_design" title="Optimal design">Optimal design</a></li>
+<li><a href="/wiki/Bayesian_experimental_design" title="Bayesian experimental design">Bayesian design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Numerical_analysis" title="Numerical analysis">Numerical</a> <a href="/wiki/Approximation_theory" title="Approximation theory">approximation</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Numerical_analysis" title="Numerical analysis">Numerical analysis</a></li>
+<li><a href="/wiki/Approximation_theory" title="Approximation theory">Approximation theory</a></li>
+<li><a href="/wiki/Numerical_integration" title="Numerical integration">Numerical integration</a></li>
+<li><a href="/wiki/Gaussian_quadrature" title="Gaussian quadrature">Gaussian quadrature</a></li>
+<li><a href="/wiki/Orthogonal_polynomials" title="Orthogonal polynomials">Orthogonal polynomials</a></li>
+<li><a href="/wiki/Chebyshev_polynomials" title="Chebyshev polynomials">Chebyshev polynomials</a></li>
+<li><a href="/wiki/Chebyshev_nodes" title="Chebyshev nodes">Chebyshev nodes</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Applications</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Curve_fitting" title="Curve fitting">Curve fitting</a></li>
+<li><a href="/wiki/Calibration_curve" title="Calibration curve">Calibration curve</a></li>
+<li><a href="/wiki/Numerical_smoothing_and_differentiation" title="Numerical smoothing and differentiation" class="mw-redirect">Numerical smoothing and differentiation</a></li>
+<li><a href="/wiki/System_identification" title="System identification">System identification</a></li>
+<li><a href="/wiki/Moving_least_squares" title="Moving least squares">Moving least squares</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="/wiki/Category:Regression_analysis" title="Category:Regression analysis">Regression analysis category</a></li>
+<li><a href="/wiki/Category:Statistics" title="Category:Statistics">Statistics category</a></li>
+<li><a href="/wiki/Portal:Statistics" title="Portal:Statistics">Statistics portal</a></li>
+<li><a href="/wiki/Outline_of_statistics" title="Outline of statistics">Statistics outline</a></li>
+<li><a href="/wiki/List_of_statistics_articles" title="List of statistics articles">Statistics topics</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1014
+Cached time: 20160224191256
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.684 seconds
+Real time usage: 1.063 seconds
+Preprocessor visited node count: 3497/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 77030/2097152 bytes
+Template argument size: 3722/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 2/500
+Lua time usage: 0.224/10.000 seconds
+Lua memory usage: 4.15 MB/50 MB
+Number of Wikibase entities loaded: 0-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  855.650      1 - -total
+ 20.65%  176.678      1 - Template:Reflist
+ 16.45%  140.745     13 - Template:Cite_book
+  8.08%   69.141      3 - Template:Citation_needed
+  7.42%   63.516      2 - Template:Navbox
+  7.10%   60.793      4 - Template:Fix
+  6.47%   55.374      1 - Template:Least_Squares_and_Regression_Analysis
+  6.19%   52.976      8 - Template:Category_handler
+  5.60%   47.911      1 - Template:Regression_bar
+  5.19%   44.399      1 - Template:Sidebar
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:484872-0!*!0!!en!4!*!math=0 and timestamp 20160224191255 and revision id 706689920
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Linear_least_squares_(mathematics)&amp;oldid=706689920">https://en.wikipedia.org/w/index.php?title=Linear_least_squares_(mathematics)&amp;oldid=706689920</a>"					</div>
+				<div id='catlinks' class='catlinks' data-mw='interface'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Regression_analysis" title="Category:Regression analysis">Regression analysis</a></li><li><a href="/wiki/Category:Computational_statistics" title="Category:Computational statistics">Computational statistics</a></li><li><a href="/wiki/Category:Numerical_linear_algebra" title="Category:Numerical linear algebra">Numerical linear algebra</a></li><li><a href="/wiki/Category:Least_squares" title="Category:Least squares">Least squares</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Wikipedia_articles_needing_page_number_citations_from_December_2010" title="Category:Wikipedia articles needing page number citations from December 2010">Wikipedia articles needing page number citations from December 2010</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_December_2010" title="Category:Articles with unsourced statements from December 2010">Articles with unsourced statements from December 2010</a></li><li><a href="/wiki/Category:Articles_with_example_MATLAB/Octave_code" title="Category:Articles with example MATLAB/Octave code">Articles with example MATLAB/Octave code</a></li><li><a href="/wiki/Category:Articles_with_example_Python_code" title="Category:Articles with example Python code">Articles with example Python code</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Linear+least+squares+%28mathematics%29&amp;type=signup" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Linear+least+squares+%28mathematics%29" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Linear_least_squares_(mathematics)"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Talk:Linear_least_squares_(mathematics)"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Linear_least_squares_(mathematics)" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton" />							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Linear_least_squares_(mathematics)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Linear_least_squares_(mathematics)" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;oldid=706689920" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q17086259" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Linear_least_squares_%28mathematics%29&amp;id=706689920" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Linear+least+squares+%28mathematics%29">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Linear+least+squares+%28mathematics%29&amp;returnto=Linear+least+squares+%28mathematics%29&amp;oldid=706689920&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Linear_least_squares_(mathematics)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-af"><a href="//af.wikipedia.org/wiki/Kleinste-kwadratemetode" title="Kleinste-kwadratemetode – Afrikaans" lang="af" hreflang="af">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D9%85%D8%B1%D8%A8%D8%B9%D8%A7%D8%AA_%D8%AF%D9%86%D9%8A%D8%A7_%D8%AE%D8%B7%D9%8A%D8%A9_(%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA)" title="مربعات دنيا خطية (رياضيات) – Arabic" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-cs"><a href="//cs.wikipedia.org/wiki/Metoda_nejmen%C5%A1%C3%ADch_%C4%8Dtverc%C5%AF" title="Metoda nejmenších čtverců – Czech" lang="cs" hreflang="cs">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="//de.wikipedia.org/wiki/Methode_der_kleinsten_Quadrate" title="Methode der kleinsten Quadrate – German" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="//es.wikipedia.org/wiki/M%C3%ADnimos_cuadrados" title="Mínimos cuadrados – Spanish" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="//fa.wikipedia.org/wiki/%DA%A9%D9%85%DB%8C%D9%86%D9%87_%D9%85%D8%B1%D8%A8%D8%B9%D8%A7%D8%AA_%D8%AE%D8%B7%DB%8C" title="کمینه مربعات خطی – Persian" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="//fr.wikipedia.org/wiki/M%C3%A9thode_des_moindres_carr%C3%A9s" title="Méthode des moindres carrés – French" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="//gl.wikipedia.org/wiki/M%C3%ADnimos_cadrados" title="Mínimos cadrados – Galician" lang="gl" hreflang="gl">Galego</a></li><li class="interlanguage-link interwiki-it"><a href="//it.wikipedia.org/wiki/Minimi_Quadrati" title="Minimi Quadrati – Italian" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="//he.wikipedia.org/wiki/%D7%A9%D7%99%D7%98%D7%AA_%D7%94%D7%A8%D7%99%D7%91%D7%95%D7%A2%D7%99%D7%9D_%D7%94%D7%A4%D7%97%D7%95%D7%AA%D7%99%D7%9D" title="שיטת הריבועים הפחותים – Hebrew" lang="he" hreflang="he">עברית</a></li><li class="interlanguage-link interwiki-la"><a href="//la.wikipedia.org/wiki/Methodus_quadratorum_minimorum" title="Methodus quadratorum minimorum – Latin" lang="la" hreflang="la">Latina</a></li><li class="interlanguage-link interwiki-hu"><a href="//hu.wikipedia.org/wiki/Legkisebb_n%C3%A9gyzetek_m%C3%B3dszere" title="Legkisebb négyzetek módszere – Hungarian" lang="hu" hreflang="hu">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="//nl.wikipedia.org/wiki/Kleinste-kwadratenmethode" title="Kleinste-kwadratenmethode – Dutch" lang="nl" hreflang="nl">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="//ja.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95" title="最小二乗法 – Japanese" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="//pl.wikipedia.org/wiki/Metoda_najmniejszych_kwadrat%C3%B3w" title="Metoda najmniejszych kwadratów – Polish" lang="pl" hreflang="pl">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="//pt.wikipedia.org/wiki/M%C3%A9todo_dos_m%C3%ADnimos_quadrados" title="Método dos mínimos quadrados – Portuguese" lang="pt" hreflang="pt">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="//ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%BD%D0%B0%D0%B8%D0%BC%D0%B5%D0%BD%D1%8C%D1%88%D0%B8%D1%85_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82%D0%BE%D0%B2" title="Метод наименьших квадратов – Russian" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-su"><a href="//su.wikipedia.org/wiki/Kuadrat_leutik" title="Kuadrat leutik – Sundanese" lang="su" hreflang="su">Basa Sunda</a></li><li class="interlanguage-link interwiki-fi"><a href="//fi.wikipedia.org/wiki/Pienimm%C3%A4n_neli%C3%B6summan_menetelm%C3%A4" title="Pienimmän neliösumman menetelmä – Finnish" lang="fi" hreflang="fi">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="//sv.wikipedia.org/wiki/Minstakvadratmetoden" title="Minstakvadratmetoden – Swedish" lang="sv" hreflang="sv">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="//tr.wikipedia.org/wiki/En_k%C3%BC%C3%A7%C3%BCk_kareler_y%C3%B6ntemi" title="En küçük kareler yöntemi – Turkish" lang="tr" hreflang="tr">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="//uk.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%BD%D0%B0%D0%B9%D0%BC%D0%B5%D0%BD%D1%88%D0%B8%D1%85_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82%D1%96%D0%B2" title="Метод найменших квадратів – Ukrainian" lang="uk" hreflang="uk">Українська</a></li><li class="interlanguage-link interwiki-ur"><a href="//ur.wikipedia.org/wiki/%D9%84%DA%A9%DB%8C%D8%B1%DB%8C_%D8%A7%D9%82%D9%84_%D9%85%D8%B1%D8%A8%D8%B9%D8%A7%D8%AA" title="لکیری اقل مربعات – Urdu" lang="ur" hreflang="ur">اردو</a></li><li class="interlanguage-link interwiki-vi"><a href="//vi.wikipedia.org/wiki/B%C3%ACnh_ph%C6%B0%C6%A1ng_t%E1%BB%91i_thi%E1%BB%83u" title="Bình phương tối thiểu – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="//zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95" title="最小二乘法 – Chinese" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="//www.wikidata.org/wiki/Q17086259#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 24 February 2016, at 19:12.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="//wikimediafoundation.org/wiki/Cookie_statement">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Linear_least_squares_(mathematics)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="//wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ = window.RLQ || []).push(function () {
+mw.loader.state({"ext.globalCssJs.site":"ready","ext.globalCssJs.user":"ready","user":"ready","user.groups":"ready"});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.eventLogging.subscriber","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.switcher","ext.gadget.featured-articles-links","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.wikimediaEvents","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage"]);
+} );</script><script>(window.RLQ = window.RLQ || []).push(function () {
+mw.config.set({"wgBackendResponseTime":86,"wgHostname":"mw1100"}); /* @nomin */
+} );</script>
+	</body>
+</html>

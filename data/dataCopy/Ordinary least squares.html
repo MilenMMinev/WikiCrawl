@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Ordinary least squares - Wikipedia, the free encyclopedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ = window.RLQ || []).push(function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Ordinary_least_squares","wgTitle":"Ordinary least squares","wgCurRevisionId":699616180,"wgRevisionId":699616180,"wgArticleId":1651906,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from February 2010","Articles to be expanded from July 2010","All articles to be expanded","Articles with empty sections from July 2010","All articles with empty sections","Articles using small message boxes","Regression analysis","Estimation theory","Parametric statistics","Least squares"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Ordinary_least_squares","wgRelevantArticleId":1651906,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wikilove-recipient":"","wikilove-anon":0,"wgGatherShouldShowTutorial":true,"wgGatherEnableSample":0,"wgGatherPageImageThumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/100px-Linear_regression.svg.png","wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCentralAuthMobileDomain":false,"wgWikibaseItemId":"Q2912993","wgVisualEditorToolbarScrollOffset":0}); /* @nomin */mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function ( $, jQuery ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"}); /* @nomin */ ;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.gadget.WatchlistBase","ext.gadget.WatchlistGreenIndicators","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","ext.centralNotice.bannerController","skins.vector.js"]);
+} );</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.gadget.DRN-wizard%2CReferenceTooltips%2CWatchlistBase%2CWatchlistGreenIndicators%2Ccharinsert%2Cfeatured-articles-links%2CrefToolbar%2Cswitcher%2Cteahouse%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.raggett%2CsectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector" />
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="generator" content="MediaWiki 1.27.0-wmf.14" />
+<meta name="referrer" content="origin-when-cross-origin" />
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Ordinary_least_squares" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Ordinary_least_squares&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Ordinary_least_squares&amp;action=edit" />
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Ordinary_least_squares" />
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins/Vector/csshover.min.htc")}</style><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Ordinary_least_squares skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Ordinary least squares</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div role="note" class="hatnote">This article is about the statistical properties of unweighted <a href="/wiki/Linear_regression" title="Linear regression">linear regression</a> analysis.  For more general regression analysis, see <a href="/wiki/Regression_analysis" title="Regression analysis">regression analysis</a>.  For linear regression on a single variable, see <a href="/wiki/Simple_linear_regression" title="Simple linear regression">simple linear regression</a>.  For the computation of least squares curve fits, see <a href="/wiki/Numerical_methods_for_linear_least_squares" title="Numerical methods for linear least squares" class="mw-redirect">numerical methods for linear least squares</a>.</div>
+<table class="vertical-navbox nowraplinks hlist" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%">
+<tr>
+<td style="padding-top:0.4em;line-height:1.2em">Part of a series on <a href="/wiki/Statistics" title="Statistics">Statistics</a></td>
+</tr>
+<tr>
+<th style="padding:0.2em 0.4em 0.2em;padding-top:0;font-size:145%;line-height:1.2em"><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></th>
+</tr>
+<tr>
+<td style="padding:0.2em 0 0.4em"><a href="/wiki/File:Linear_regression.svg" class="image"><img alt="Linear regression.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/220px-Linear_regression.svg.png" width="220" height="145" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/330px-Linear_regression.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/440px-Linear_regression.svg.png 2x" data-file-width="438" data-file-height="289" /></a></td>
+</tr>
+<tr>
+<th style="padding:0.1em">Models</th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Linear_regression" title="Linear regression">Linear regression</a></li>
+<li><a href="/wiki/Simple_linear_regression" title="Simple linear regression">Simple regression</a></li>
+<li><strong class="selflink">Ordinary least squares</strong></li>
+<li><a href="/wiki/Polynomial_regression" title="Polynomial regression">Polynomial regression</a></li>
+<li><a href="/wiki/General_linear_model" title="General linear model">General linear model</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Generalized_linear_model" title="Generalized linear model">Generalized linear model</a></li>
+<li><a href="/wiki/Discrete_choice" title="Discrete choice">Discrete choice</a></li>
+<li><a href="/wiki/Logistic_regression" title="Logistic regression">Logistic regression</a></li>
+<li><a href="/wiki/Multinomial_logit" title="Multinomial logit" class="mw-redirect">Multinomial logit</a></li>
+<li><a href="/wiki/Mixed_logit" title="Mixed logit">Mixed logit</a></li>
+<li><a href="/wiki/Probit_model" title="Probit model">Probit</a></li>
+<li><a href="/wiki/Multinomial_probit" title="Multinomial probit">Multinomial probit</a></li>
+<li><a href="/wiki/Ordered_logit" title="Ordered logit">Ordered logit</a></li>
+<li><a href="/wiki/Ordered_probit" title="Ordered probit">Ordered probit</a></li>
+<li><a href="/wiki/Poisson_regression" title="Poisson regression">Poisson</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Multilevel_model" title="Multilevel model">Multilevel model</a></li>
+<li><a href="/wiki/Fixed_effects_model" title="Fixed effects model">Fixed effects</a></li>
+<li><a href="/wiki/Random_effects_model" title="Random effects model">Random effects</a></li>
+<li><a href="/wiki/Mixed_model" title="Mixed model">Mixed model</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Nonlinear_regression" title="Nonlinear regression">Nonlinear regression</a></li>
+<li><a href="/wiki/Nonparametric_regression" title="Nonparametric regression">Nonparametric</a></li>
+<li><a href="/wiki/Semiparametric_regression" title="Semiparametric regression">Semiparametric</a></li>
+<li><a href="/wiki/Robust_regression" title="Robust regression">Robust</a></li>
+<li><a href="/wiki/Quantile_regression" title="Quantile regression">Quantile</a></li>
+<li><a href="/wiki/Isotonic_regression" title="Isotonic regression">Isotonic</a></li>
+<li><a href="/wiki/Principal_component_regression" title="Principal component regression">Principal components</a></li>
+<li><a href="/wiki/Least-angle_regression" title="Least-angle regression">Least angle</a></li>
+<li><a href="/wiki/Local_regression" title="Local regression">Local</a></li>
+<li><a href="/wiki/Segmented_regression" title="Segmented regression">Segmented</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Errors-in-variables_models" title="Errors-in-variables models">Errors-in-variables</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em">Estimation</th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Least_squares" title="Least squares">Least squares</a></li>
+<li><strong class="selflink">Ordinary least squares</strong></li>
+<li><a href="/wiki/Linear_least_squares_(mathematics)" title="Linear least squares (mathematics)">Linear (math)</a></li>
+<li><a href="/wiki/Partial_least_squares_regression" title="Partial least squares regression">Partial</a></li>
+<li><a href="/wiki/Total_least_squares" title="Total least squares">Total</a></li>
+<li><a href="/wiki/Generalized_least_squares" title="Generalized least squares">Generalized</a></li>
+<li><a href="/wiki/Weighted_least_squares" title="Weighted least squares" class="mw-redirect">Weighted</a></li>
+<li><a href="/wiki/Non-linear_least_squares" title="Non-linear least squares">Non-linear</a></li>
+<li><a href="/wiki/Non-negative_least_squares" title="Non-negative least squares">Non-negative</a></li>
+<li><a href="/wiki/Iteratively_reweighted_least_squares" title="Iteratively reweighted least squares">Iteratively reweighted</a></li>
+<li><a href="/wiki/Tikhonov_regularization" title="Tikhonov regularization">Ridge regression</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Least_absolute_deviations" title="Least absolute deviations">Least absolute deviations</a></li>
+<li><a href="/wiki/Bayesian_linear_regression" title="Bayesian linear regression">Bayesian</a></li>
+<li><a href="/wiki/Bayesian_multivariate_linear_regression" title="Bayesian multivariate linear regression">Bayesian multivariate</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em">Background</th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Regression_model_validation" title="Regression model validation" class="mw-redirect">Regression model validation</a></li>
+<li><a href="/wiki/Mean_and_predicted_response" title="Mean and predicted response">Mean and predicted response</a></li>
+<li><a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">Errors and residuals</a></li>
+<li><a href="/wiki/Goodness_of_fit" title="Goodness of fit">Goodness of fit</a></li>
+<li><a href="/wiki/Studentized_residual" title="Studentized residual">Studentized residual</a></li>
+<li><a href="/wiki/Gauss%E2%80%93Markov_theorem" title="Gauss–Markov theorem">Gauss–Markov theorem</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="padding:0.3em 0.4em 0.3em;font-weight:bold">
+<ul>
+<li><span class="metadata"><a href="/wiki/File:Fisher_iris_versicolor_sepalwidth.svg" class="image"><img alt="Portal icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/16px-Fisher_iris_versicolor_sepalwidth.svg.png" width="16" height="11" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/24px-Fisher_iris_versicolor_sepalwidth.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Fisher_iris_versicolor_sepalwidth.svg/32px-Fisher_iris_versicolor_sepalwidth.svg.png 2x" data-file-width="822" data-file-height="567" /></a></span> <a href="/wiki/Portal:Statistics" title="Portal:Statistics">Statistics portal</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Regression_bar" title="Template:Regression bar"><abbr title="View this template">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Regression_bar" title="Template talk:Regression bar"><abbr title="Discuss this template">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Regression_bar&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Okuns_law_quarterly_differences.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Okuns_law_quarterly_differences.svg/300px-Okuns_law_quarterly_differences.svg.png" width="300" height="198" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Okuns_law_quarterly_differences.svg/450px-Okuns_law_quarterly_differences.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Okuns_law_quarterly_differences.svg/600px-Okuns_law_quarterly_differences.svg.png 2x" data-file-width="301" data-file-height="199" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Okuns_law_quarterly_differences.svg" class="internal" title="Enlarge"></a></div>
+<a href="/wiki/Okun%27s_law" title="Okun's law">Okun's law</a> in <a href="/wiki/Macroeconomics" title="Macroeconomics">macroeconomics</a> states that in an economy the GDP growth should depend linearly on the changes in the unemployment rate. Here the <b>ordinary least squares</b> method is used to construct the regression line describing this law.</div>
+</div>
+</div>
+<p>In <a href="/wiki/Statistics" title="Statistics">statistics</a>, <b>ordinary least squares</b> (<b>OLS</b>) or <b>linear least squares</b> is a method for estimating the unknown parameters in a <a href="/wiki/Linear_regression_model" title="Linear regression model" class="mw-redirect">linear regression model</a>, with the goal of minimizing the differences between the observed responses in some arbitrary <a href="/wiki/Dataset" title="Dataset" class="mw-redirect">dataset</a> and the responses predicted by the linear approximation of the data (visually this is seen as the sum of the vertical distances between each data point in the set and the corresponding point on the regression line - the smaller the differences, the better the model fits the data). The resulting <a href="/wiki/Statistical_estimation" title="Statistical estimation" class="mw-redirect">estimator</a> can be expressed by a simple formula, especially in the case of a <a href="/wiki/Simple_linear_regression" title="Simple linear regression">single regressor</a> on the right-hand side.</p>
+<p>The OLS estimator is <a href="/wiki/Consistent_estimator" title="Consistent estimator">consistent</a> when the regressors are <a href="/wiki/Exogenous" title="Exogenous" class="mw-redirect">exogenous</a> and there is no perfect <a href="/wiki/Multicollinearity" title="Multicollinearity">multicollinearity</a>, and optimal in the class of linear unbiased estimators when the <a href="/wiki/Statistical_error" title="Statistical error" class="mw-redirect">errors</a> are <a href="/wiki/Homoscedastic" title="Homoscedastic" class="mw-redirect">homoscedastic</a> and <a href="/wiki/Autocorrelation" title="Autocorrelation">serially uncorrelated</a>. Under these conditions, the method of OLS provides <a href="/wiki/UMVU" title="UMVU" class="mw-redirect">minimum-variance mean-unbiased</a> estimation when the errors have finite variances. Under the additional assumption that the errors be <a href="/wiki/Normal_distribution" title="Normal distribution">normally distributed</a>, OLS is the <a href="/wiki/Maximum_likelihood_estimator" title="Maximum likelihood estimator" class="mw-redirect">maximum likelihood estimator</a>. OLS is used in economics (<a href="/wiki/Econometrics" title="Econometrics">econometrics</a>), political science and electrical engineering (<a href="/wiki/Control_theory" title="Control theory">control theory</a> and <a href="/wiki/Signal_processing" title="Signal processing">signal processing</a>), among many areas of application. The <a href="/wiki/Multi-fractional_order_estimator" title="Multi-fractional order estimator">Multi-fractional order estimator</a> is an expanded version of OLS.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Linear_model"><span class="tocnumber">1</span> <span class="toctext">Linear model</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Assumptions"><span class="tocnumber">1.1</span> <span class="toctext">Assumptions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#Classical_linear_regression_model"><span class="tocnumber">1.1.1</span> <span class="toctext">Classical linear regression model</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Independent_and_identically_distributed_.28iid.29"><span class="tocnumber">1.1.2</span> <span class="toctext">Independent and identically distributed (iid)</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Time_series_model"><span class="tocnumber">1.1.3</span> <span class="toctext">Time series model</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Estimation"><span class="tocnumber">2</span> <span class="toctext">Estimation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Simple_regression_model"><span class="tocnumber">2.1</span> <span class="toctext">Simple regression model</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Alternative_derivations"><span class="tocnumber">3</span> <span class="toctext">Alternative derivations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Geometric_approach"><span class="tocnumber">3.1</span> <span class="toctext">Geometric approach</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Maximum_likelihood"><span class="tocnumber">3.2</span> <span class="toctext">Maximum likelihood</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Generalized_method_of_moments"><span class="tocnumber">3.3</span> <span class="toctext">Generalized method of moments</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Finite_sample_properties"><span class="tocnumber">4</span> <span class="toctext">Finite sample properties</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Assuming_normality"><span class="tocnumber">4.1</span> <span class="toctext">Assuming normality</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Influential_observations"><span class="tocnumber">4.2</span> <span class="toctext">Influential observations</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Partitioned_regression"><span class="tocnumber">4.3</span> <span class="toctext">Partitioned regression</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Constrained_estimation"><span class="tocnumber">4.4</span> <span class="toctext">Constrained estimation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Large_sample_properties"><span class="tocnumber">5</span> <span class="toctext">Large sample properties</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Intervals"><span class="tocnumber">5.1</span> <span class="toctext">Intervals</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Hypothesis_testing"><span class="tocnumber">6</span> <span class="toctext">Hypothesis testing</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Example_with_real_data"><span class="tocnumber">7</span> <span class="toctext">Example with real data</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Sensitivity_to_rounding"><span class="tocnumber">7.1</span> <span class="toctext">Sensitivity to rounding</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Further_reading"><span class="tocnumber">10</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Linear_model">Linear model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=1" title="Edit section: Linear model">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Linear_regression_model" title="Linear regression model" class="mw-redirect">Linear regression model</a></div>
+<p>Suppose the data consists of <i>n</i> <a href="/wiki/Statistical_unit" title="Statistical unit">observations</a> { <i>y<span style="display:inline-block;margin-bottom:-0.3em;vertical-align:-0.4em;line-height:1.2em;font-size:85%;text-align:left"><br />
+i</span>, x<span style="display:inline-block;margin-bottom:-0.3em;vertical-align:-0.4em;line-height:1.2em;font-size:85%;text-align:left"><br />
+i</span></i> }<span style="display:inline-block;margin-bottom:-0.3em;vertical-align:-0.4em;line-height:1.2em;font-size:85%;text-align:left"><i>n</i><br />
+<i>i</i>=1</span>. Each observation includes a scalar response <i>y<sub>i</sub></i> and a vector of <i>p</i> predictors (or regressors) <i>x<sub>i</sub></i>. In a <a href="/wiki/Linear_regression_model" title="Linear regression model" class="mw-redirect">linear regression model</a> the response variable is a linear function of the regressors:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    y_i = x_i ^T \beta + \varepsilon_i, \,
+  " src="//upload.wikimedia.org/math/9/5/7/95715375266a17ca44aaa015bf9d6d42.png" /></dd>
+</dl>
+<p>where <i>β</i> is a <i>p×</i>1 vector of unknown parameters; <i>ε<sub>i</sub>'</i>s are unobserved scalar random variables (<a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">errors</a>) which account for the discrepancy between the actually observed responses <i>y<sub>i</sub></i> and the "predicted outcomes" <i>x<sub>i</sub><sup>T</sup>β</i>; and <i><sup>T</sup></i> denotes <a href="/wiki/Matrix_transpose" title="Matrix transpose" class="mw-redirect">matrix transpose</a>, so that <span class="nowrap"><i>x<sup>T</sup>β</i></span> is the <a href="/wiki/Dot_product" title="Dot product">dot product</a> between the vectors <i>x</i> and <i>β</i>. This model can also be written in matrix notation as</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    y = X\beta + \varepsilon, \,
+  " src="//upload.wikimedia.org/math/2/b/b/2bb683a623c76f6df70b40b350456d59.png" /></dd>
+</dl>
+<p>where <i>y</i> and <i>ε</i> are <i>n×</i>1 vectors, and <i>X</i> is an <i>n×p</i> matrix of regressors, which is also sometimes called the <a href="/wiki/Design_matrix" title="Design matrix">design matrix</a>.</p>
+<p>As a rule, the constant term is always included in the set of regressors <i>X</i>, say, by taking <i>x</i><sub><i>i</i>1</sub>&#160;=&#160;1 for all <span class="nowrap"><i>i</i> = 1, …, <i>n</i></span>. The coefficient <i>β</i><sub>1</sub> corresponding to this regressor is called the <i>intercept</i>.</p>
+<p>There may be some relationship between the regressors. For instance, the third regressor may be the square of the second regressor. In this case (assuming that the first regressor is constant) we have a quadratic model in the second regressor. But this is still considered a linear model because it is linear in the <i>β</i>s.</p>
+<h3><span class="mw-headline" id="Assumptions">Assumptions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=2" title="Edit section: Assumptions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are several different frameworks in which the <a href="/wiki/Linear_regression_model" title="Linear regression model" class="mw-redirect">linear regression model</a> can be cast in order to make the OLS technique applicable. Each of these settings produces the same formulas and same results. The only difference is the interpretation and the assumptions which have to be imposed in order for the method to give meaningful results. The choice of the applicable framework depends mostly on the nature of data in hand, and on the inference task which has to be performed.</p>
+<p>One of the lines of difference in interpretation is whether to treat the regressors as random variables, or as predefined constants. In the first case (<b>random design</b>) the regressors <i>x<sub>i</sub></i> are random and sampled together with the <i>y<sub>i</sub></i>'s from some <a href="/wiki/Statistical_population" title="Statistical population">population</a>, as in an <a href="/wiki/Observational_study" title="Observational study">observational study</a>. This approach allows for more natural study of the <a href="/wiki/Asymptotic_theory_(statistics)" title="Asymptotic theory (statistics)">asymptotic properties</a> of the estimators. In the other interpretation (<b>fixed design</b>), the regressors <i>X</i> are treated as known constants set by a <a href="/wiki/Design_of_experiments" title="Design of experiments">design</a>, and <i>y</i> is sampled conditionally on the values of <i>X</i> as in an <a href="/wiki/Experiment" title="Experiment">experiment</a>. For practical purposes, this distinction is often unimportant, since estimation and inference is carried out while conditioning on <i>X</i>. All results stated in this article are within the random design framework.</p>
+<p><b>The primary assumption of OLS is that there are zero or negligible errors in the independent variable, since this method only attempts to minimise the mean squared error in the dependent variable.</b></p>
+<h4><span class="mw-headline" id="Classical_linear_regression_model">Classical linear regression model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=3" title="Edit section: Classical linear regression model">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The classical model focuses on the "finite sample" estimation and inference, meaning that the number of observations <i>n</i> is fixed. This contrasts with the other approaches, which study the <a href="/wiki/Asymptotic_theory_(statistics)" title="Asymptotic theory (statistics)">asymptotic behavior</a> of OLS, and in which the number of observations is allowed to grow to infinity.</p>
+<ul>
+<li><b>Correct specification</b>. The linear functional form is correctly specified.</li>
+</ul>
+<ul>
+<li><b>Strict exogeneity</b>. The errors in the regression should have <a href="/wiki/Conditional_expectation" title="Conditional expectation">conditional mean</a> zero:<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \operatorname{E}[\,\varepsilon|X\,] = 0.
+  " src="//upload.wikimedia.org/math/e/9/e/e9e8f5ad21a01e409bd90ad0950dfa62.png" /></dd>
+</dl>
+</li>
+</ul>
+<dl>
+<dd>The immediate consequence of the exogeneity assumption is that the errors have mean zero: <span class="nowrap">E[<i>ε</i>] = 0</span>, and that the regressors are uncorrelated with the errors: <span class="nowrap">E[<i>X<sup>T</sup>ε</i>] = 0</span>.</dd>
+</dl>
+<dl>
+<dd>The exogeneity assumption is critical for the OLS theory. If it holds then the regressor variables are called <i>exogenous</i>. If it doesn't, then those regressors that are correlated with the error term are called <i>endogenous</i>,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> and then the OLS estimates become invalid. In such case the <a href="/wiki/Instrumental_variable" title="Instrumental variable">method of instrumental variables</a> may be used to carry out inference.</dd>
+</dl>
+<ul>
+<li><b>No linear dependence</b>. The regressors in <i>X</i> must all be <a href="/wiki/Linearly_independent" title="Linearly independent" class="mw-redirect">linearly independent</a>. Mathematically it means that the matrix <i>X</i> must have full <a href="/wiki/Column_rank" title="Column rank" class="mw-redirect">column rank</a> almost surely:<sup id="cite_ref-Hayashi_2000_loc.3Dpage_10_3-0" class="reference"><a href="#cite_note-Hayashi_2000_loc.3Dpage_10-3"><span>[</span>3<span>]</span></a></sup>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \Pr\!\big[\,\operatorname{rank}(X) = p\,\big] = 1.
+  " src="//upload.wikimedia.org/math/e/d/5/ed59f3ebd5ce2298221d44c7978f158e.png" /></dd>
+</dl>
+</li>
+</ul>
+<dl>
+<dd>Usually, it is also assumed that the regressors have finite moments up to at least second. In such case the matrix <span class="nowrap"><i>Q<sub>xx</sub></i> = E[<i>X<sup>T</sup>X / n</i>]</span> will be finite and positive semi-definite.</dd>
+<dd>When this assumption is violated the regressors are called linearly dependent or <a href="/wiki/Multicollinearity" title="Multicollinearity">perfectly multicollinear</a>. In such case the value of the regression coefficient <i>β</i> cannot be learned, although prediction of <i>y</i> values is still possible for new values of the regressors that lie in the same linearly dependent subspace.</dd>
+</dl>
+<ul>
+<li><b>Spherical errors</b>:<sup id="cite_ref-Hayashi_2000_loc.3Dpage_10_3-1" class="reference"><a href="#cite_note-Hayashi_2000_loc.3Dpage_10-3"><span>[</span>3<span>]</span></a></sup>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \operatorname{Var}[\,\varepsilon \mid X\,] = \sigma^2 I_n,
+  " src="//upload.wikimedia.org/math/7/b/a/7baab90ca15037cb25221ad053c8b4f6.png" /></dd>
+</dl>
+</li>
+</ul>
+<dl>
+<dd>where <i>I<sub>n</sub></i> is an <i>n×n</i> <a href="/wiki/Identity_matrix" title="Identity matrix">identity matrix</a>, and <i>σ</i><sup>2</sup> is a parameter which determines the variance of each observation. This <i>σ</i><sup>2</sup> is considered a <a href="/wiki/Nuisance_parameter" title="Nuisance parameter">nuisance parameter</a> in the model, although usually it is also estimated. If this assumption is violated then the OLS estimates are still valid, but no longer efficient.</dd>
+<dd>It is customary to split this assumption into two parts:
+<ul>
+<li><b><a href="/wiki/Homoscedasticity" title="Homoscedasticity">Homoscedasticity</a></b>: <span class="nowrap">E[ <i>ε<sub>i</sub></i><sup>2</sup> | <i>X</i> ] = <i>σ</i><sup>2</sup></span>, which means that the error term has the same variance <i>σ</i><sup>2</sup> in each observation. When this requirement is violated this is called <a href="/wiki/Heteroscedasticity" title="Heteroscedasticity">heteroscedasticity</a>, in such case a more efficient estimator would be <a href="/wiki/Weighted_least_squares" title="Weighted least squares" class="mw-redirect">weighted least squares</a>. If the errors have infinite variance then the OLS estimates will also have infinite variance (although by the <a href="/wiki/Law_of_large_numbers" title="Law of large numbers">law of large numbers</a> they will nonetheless tend toward the true values so long as the errors have zero mean). In this case, <a href="/wiki/Robust_regression" title="Robust regression">robust estimation</a> techniques are recommended.</li>
+<li><b>No autocorrelation</b>: the errors are <a href="/wiki/Correlation" title="Correlation" class="mw-redirect">uncorrelated</a> between observations: <span class="nowrap">E[ <i>ε<sub>i</sub>ε<sub>j</sub></i> | <i>X</i> ] = 0</span> for <span class="nowrap"><i>i</i> ≠ <i>j</i></span>. This assumption may be violated in the context of <a href="/wiki/Time_series" title="Time series">time series</a> data, <a href="/wiki/Panel_data" title="Panel data">panel data</a>, cluster samples, hierarchical data, repeated measures data, longitudinal data, and other data with dependencies. In such cases <a href="/wiki/Generalized_least_squares" title="Generalized least squares">generalized least squares</a> provides a better alternative than the OLS. Another expression for autocorrelation is <i>serial correlation</i>.</li>
+</ul>
+</dd>
+</dl>
+<ul>
+<li><b>Normality</b>. It is sometimes additionally assumed that the errors have <a href="/wiki/Multivariate_normal_distribution" title="Multivariate normal distribution">normal distribution</a> conditional on the regressors:<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \varepsilon \mid X\sim \mathcal{N}(0, \sigma^2I_n).
+  " src="//upload.wikimedia.org/math/5/e/7/5e7e3c2f85b734c3b83e1cf3d712af12.png" /></dd>
+</dl>
+</li>
+</ul>
+<dl>
+<dd>This assumption is not needed for the validity of the OLS method, although certain additional finite-sample properties can be established in case when it does (especially in the area of hypotheses testing). Also when the errors are normal, the OLS estimator is equivalent to the <a href="/wiki/Maximum_likelihood_estimator" title="Maximum likelihood estimator" class="mw-redirect">maximum likelihood estimator</a> (MLE), and therefore it is asymptotically efficient in the class of all <a href="/w/index.php?title=Regular_estimator&amp;action=edit&amp;redlink=1" class="new" title="Regular estimator (page does not exist)">regular estimators</a>.</dd>
+</dl>
+<h4><span class="mw-headline" id="Independent_and_identically_distributed_.28iid.29"><a href="/wiki/Independent_and_identically_distributed" title="Independent and identically distributed" class="mw-redirect">Independent and identically distributed</a> (iid)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=4" title="Edit section: Independent and identically distributed (iid)">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In some applications, especially with <a href="/wiki/Cross-sectional_data" title="Cross-sectional data">cross-sectional data</a>, an additional assumption is imposed — that all observations are independent and identically distributed. This means that all observations are taken from a <a href="/wiki/Random_sample" title="Random sample" class="mw-redirect">random sample</a> which makes all the assumptions listed earlier simpler and easier to interpret. Also this framework allows one to state asymptotic results (as the sample size <span class="nowrap"><i>n</i> → ∞</span>), which are understood as a theoretical possibility of fetching new independent observations from the <a href="/wiki/Data_collection" title="Data collection">data generating process</a>. The list of assumptions in this case is:</p>
+<ul>
+<li><b>iid observations</b>: (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>) is <a href="/wiki/Independent_random_variables" title="Independent random variables" class="mw-redirect">independent</a> from, and has the same <a href="/wiki/Probability_distribution" title="Probability distribution">distribution</a> as, (<i>x<sub>j</sub></i>, <i>y<sub>j</sub></i>) for all <span class="nowrap"><i>i ≠ j</i></span>;</li>
+<li><b>no perfect multicollinearity</b>: <i>Q<sub>xx</sub></i> = E[ <i>x<sub>i</sub> x<sub>i</sub><sup>T</sup></i> ] is a <a href="/wiki/Positive-definite_matrix" title="Positive-definite matrix">positive-definite matrix</a>;</li>
+<li><b>exogeneity</b>: E[ <i>ε<sub>i</sub></i> | <i>x<sub>i</sub></i> ] = 0;</li>
+<li><b>homoscedasticity</b>: Var[ <i>ε<sub>i</sub></i> | <i>x<sub>i</sub></i> ] = <i>σ</i><sup>2</sup>.</li>
+</ul>
+<h4><span class="mw-headline" id="Time_series_model">Time series model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=5" title="Edit section: Time series model">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul>
+<li>The <a href="/wiki/Stochastic_process" title="Stochastic process">stochastic process</a> {<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>} is <a href="/wiki/Stationary_process" title="Stationary process">stationary</a> and <a href="/wiki/Ergodic_process" title="Ergodic process">ergodic</a>;</li>
+<li>The regressors are <i>predetermined</i>: E[<i>x<sub>i</sub>ε<sub>i</sub></i>] = 0 for all <i>i</i> = 1, …, <i>n</i>;</li>
+<li>The <i>p×p</i> matrix <i>Q<sub>xx</sub></i> = E[ <i>x<sub>i</sub> x<sub>i</sub><sup>T</sup></i> ] is of full rank, and hence <a href="/wiki/Positive-definite_matrix" title="Positive-definite matrix">positive-definite</a>;</li>
+<li>{<i>x<sub>i</sub>ε<sub>i</sub></i>} is a <a href="/wiki/Martingale_difference_sequence" title="Martingale difference sequence">martingale difference sequence</a>, with a finite matrix of second moments <i>Q<sub>xxε²</sub></i> = E[ <i>ε<sub>i</sub><sup>2</sup>x<sub>i</sub> x<sub>i</sub><sup>T</sup></i> ].</li>
+</ul>
+<h2><span class="mw-headline" id="Estimation">Estimation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=6" title="Edit section: Estimation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Suppose <i>b</i> is a "candidate" value for the parameter <i>β</i>. The quantity <span class="nowrap"><i>y<sub>i</sub></i> − <i>x<sub>i</sub></i><sup>T</sup><i>b</i></span>, called the <b><a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">residual</a></b> for the <i>i</i>-th observation, measures the vertical distance between the data point <span class="nowrap">(<i>x<sub>i</sub></i> <i>y<sub>i</sub></i>)</span> and the hyperplane <span class="nowrap"><i>y = x<sup>T</sup>b</i></span>, and thus assesses the degree of fit between the actual data and the model. The <b>sum of squared residuals</b> (<b>SSR</b>) (also called the <b>error sum of squares</b> (<b>ESS</b>) or <b>residual sum of squares</b> (<b>RSS</b>))<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup> is a measure of the overall model fit:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    S(b) = \sum_{i=1}^n (y_i - x_i ^T b)^2 = (y-Xb)^T(y-Xb),
+  " src="//upload.wikimedia.org/math/f/1/e/f1e5c19363372184ce1fb5a956b109ea.png" /></dd>
+</dl>
+<p>where <i>T</i> denotes the matrix <a href="/wiki/Transpose" title="Transpose">transpose</a>. The value of <i>b</i> which minimizes this sum is called the <b>OLS estimator for <i>β</i></b>. The function <i>S</i>(<i>b</i>) is quadratic in <i>b</i> with positive-definite <a href="/wiki/Hessian_matrix" title="Hessian matrix">Hessian</a>, and therefore this function possesses a unique global minimum at <img class="mwe-math-fallback-image-inline tex" alt="b =\hat\beta" src="//upload.wikimedia.org/math/1/0/7/107e3b5d10d8cb60dad5b920de125139.png" />, which can be given by the explicit formula:<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup><sup><a href="/wiki/Proofs_involving_ordinary_least_squares#Least_squares_estimator_for_.CE.B2" title="Proofs involving ordinary least squares">[proof]</a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat\beta = {\rm arg}\min_{b\in\mathbb{R}^p} S(b) =  \bigg(\frac{1}{n}\sum_{i=1}^n x_ix_i ^T \bigg)^{\!-1} \!\!\cdot\, \frac{1}{n}\sum_{i=1}^n x_iy_i 
+  " src="//upload.wikimedia.org/math/8/3/0/830c2e2bf0666594a677e1ec89508bfd.png" /></dd>
+</dl>
+<p>or equivalently in matrix form,</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\hat\beta = (X^TX)^{-1}X^Ty\ . " src="//upload.wikimedia.org/math/a/9/0/a9040af85160a10a0b3af1244180ebc1.png" /></dd>
+</dl>
+<p>After we have estimated <i>β</i>, the <b>fitted values</b> (or <b>predicted values</b>) from the regression will be</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat{y} = X\hat\beta = Py,
+  " src="//upload.wikimedia.org/math/b/8/4/b84f50da8b252c93b5ce88cd0e83595b.png" /></dd>
+</dl>
+<p>where <i>P</i> = <i>X</i>(<i>X<sup>T</sup>X</i>)<sup>−1</sup><i>X<sup>T</sup></i> is the <a href="/wiki/Projection_matrix" title="Projection matrix" class="mw-redirect">projection matrix</a> onto the space spanned by the columns of <i>X</i>. This matrix <i>P</i> is also sometimes called the <a href="/wiki/Hat_matrix" title="Hat matrix">hat matrix</a> because it "puts a hat" onto the variable <i>y</i>. Another matrix, closely related to <i>P</i> is the <i>annihilator</i> matrix <span class="nowrap"><i>M</i> = <i>I<sub>n</sub></i> − <i>P</i></span>, this is a projection matrix onto the space orthogonal to <i>X</i>. Both matrices <i>P</i> and <i>M</i> are <a href="/wiki/Symmetric_matrix" title="Symmetric matrix">symmetric</a> and <a href="/wiki/Idempotent_matrix" title="Idempotent matrix">idempotent</a> (meaning that <span class="nowrap"><i>P</i><sup>2</sup> = <i>P</i></span>), and relate to the data matrix <i>X</i> via identities <span class="nowrap"><i>PX = X</i></span> and <span class="nowrap"><i>MX</i> = 0</span>.<sup id="cite_ref-Hayashi_2000_loc.3Dpage_19_7-0" class="reference"><a href="#cite_note-Hayashi_2000_loc.3Dpage_19-7"><span>[</span>7<span>]</span></a></sup> Matrix <i>M</i> creates the <b>residuals</b> from the regression:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat\varepsilon = y - X\hat\beta = My = M\varepsilon.
+  " src="//upload.wikimedia.org/math/7/7/c/77c7e6ef9a67afd71c218274027056f0.png" /></dd>
+</dl>
+<p>Using these residuals we can estimate the value of <i>σ</i><sup>2</sup>:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    s^2 = \frac{\hat\varepsilon ^T \hat\varepsilon}{n-p} = \frac{y ^T My}{n-p} = \frac{S(\hat\beta)}{n-p},\qquad
+    \hat\sigma^2 = \frac{n-p}{n}\;s^2
+  " src="//upload.wikimedia.org/math/6/4/e/64e783eeee0b87581f9ac9528a580366.png" /></dd>
+</dl>
+<p>The numerator, <i>n</i>−<i>p</i>, is the <a href="/wiki/Degrees_of_freedom_(statistics)" title="Degrees of freedom (statistics)">statistical degrees of freedom</a>. The first quantity, <i>s</i><sup>2</sup>, is the OLS estimate for <i>σ</i><sup>2</sup>, whereas the second, <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\sigma^2" style="vertical-align:0" src="//upload.wikimedia.org/math/f/4/5/f45a85a9bac2fb9b91469244fad04230.png" />, is the MLE estimate for <i>σ</i><sup>2</sup>. The two estimators are quite similar in large samples; the first one is always <a href="/wiki/Estimator_bias" title="Estimator bias" class="mw-redirect">unbiased</a>, while the second is biased but minimizes the <a href="/wiki/Mean_squared_error" title="Mean squared error">mean squared error</a> of the estimator. In practice <i>s</i><sup>2</sup> is used more often, since it is more convenient for the hypothesis testing. The square root of <i>s</i><sup>2</sup> is called the <b>standard error of the regression</b> (<b>SER</b>), or <b>standard error of the equation</b> (<b>SEE</b>).<sup id="cite_ref-Hayashi_2000_loc.3Dpage_19_7-1" class="reference"><a href="#cite_note-Hayashi_2000_loc.3Dpage_19-7"><span>[</span>7<span>]</span></a></sup></p>
+<p>It is common to assess the goodness-of-fit of the OLS regression by comparing how much the initial variation in the sample can be reduced by regressing onto <i>X</i>. The <b><a href="/wiki/Coefficient_of_determination" title="Coefficient of determination">coefficient of determination</a> <i>R</i><sup>2</sup></b> is defined as a ratio of "explained" variance to the "total" variance of the dependent variable <i>y</i>:<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    R^2 = \frac{\sum(\hat y_i-\overline{y})^2}{\sum(y_i-\overline{y})^2} = \frac{y ^T P ^T LPy}{y ^T Ly} = 1 - \frac{y ^T My}{y ^T Ly} = 1 - \frac{\rm SSR}{\rm TSS}
+  " src="//upload.wikimedia.org/math/5/4/e/54e142dd33a44ee2f2a8b8c48d103cee.png" /></dd>
+</dl>
+<p>where TSS is the <b>total sum of squares</b> for the dependent variable, <i>L = I<sub>n</sub> − <b>11</b><sup>T</sup>/ n</i>, and <i><b>1</b></i> is an <i>n×1</i> vector of ones. (<i>L</i> is a "centering matrix" which is equivalent to regression on a constant; it simply subtracts the mean from a variable.) In order for <i>R</i><sup>2</sup> to be meaningful, the matrix <i>X</i> of data on regressors must contain a column vector of ones to represent the constant whose coefficient is the regression intercept. In that case, <i>R</i><sup>2</sup> will always be a number between 0 and 1, with values close to 1 indicating a good degree of fit.</p>
+<p>The variance in the prediction of the independent variable as a function of the dependent variable is given in <a href="/wiki/Polynomial_least_squares" title="Polynomial least squares">polynomial least squares</a></p>
+<h3><span class="mw-headline" id="Simple_regression_model">Simple regression model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=7" title="Edit section: Simple regression model">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Simple_linear_regression" title="Simple linear regression">Simple linear regression</a></div>
+<p>If the data matrix <i>X</i> contains only two variables, a constant and a scalar regressor <i>x<sub>i</sub></i>, then this is called the "simple regression model".<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> This case is often considered in the beginner statistics classes, as it provides much simpler formulas even suitable for manual calculation. The parameters are commonly denoted as <span class="nowrap">(<i>α</i>, <i>β</i>)</span>:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    y_i = \alpha + \beta x_i + \varepsilon_i.
+  " src="//upload.wikimedia.org/math/c/1/4/c14ff3f9686f07997b661c5369c3f316.png" /></dd>
+</dl>
+<p>The least squares estimates in this case are given by simple formulas</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat\beta = \frac{ \sum{x_iy_i} - \frac{1}{n}\sum{x_i}\sum{y_i} }
+                     { \sum{x_i^2} - \frac{1}{n}(\sum{x_i})^2 } = \frac{ \mathrm{Cov}[x,y] }{ \sigma^2_x } , \quad
+    \hat\alpha = \overline{y} - \hat\beta\,\overline{x}\ .
+  " src="//upload.wikimedia.org/math/6/3/f/63faa5c5c13185569a5818568c02b62e.png" /></dd>
+</dl>
+<p>Where <img class="mwe-math-fallback-image-inline tex" alt="\sigma_x^2" src="//upload.wikimedia.org/math/2/f/6/2f637941b163c57230852e75ab4e5ec0.png" /> is the variance of x.</p>
+<h2><span class="mw-headline" id="Alternative_derivations">Alternative derivations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=8" title="Edit section: Alternative derivations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the previous section the least squares estimator <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/c/4/2/c426823a255248ceba328af28fa2343b.png" /> was obtained as a value that minimizes the sum of squared residuals of the model. However it is also possible to derive the same estimator from other approaches. In all cases the formula for OLS estimator remains the same: <span class="nowrap"><i><sup style="position:relative;left:.6em;top:-.2em">^</sup>β</i> = (<i>X<sup>T</sup>X</i>)<sup>−1</sup><i>X<sup>T</sup>y</i></span>, the only difference is in how we interpret this result.</p>
+<h3><span class="mw-headline" id="Geometric_approach">Geometric approach</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=9" title="Edit section: Geometric approach">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="/wiki/File:OLS_geometric_interpretation.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/OLS_geometric_interpretation.svg/250px-OLS_geometric_interpretation.svg.png" width="250" height="167" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/87/OLS_geometric_interpretation.svg/375px-OLS_geometric_interpretation.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/87/OLS_geometric_interpretation.svg/500px-OLS_geometric_interpretation.svg.png 2x" data-file-width="658" data-file-height="440" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:OLS_geometric_interpretation.svg" class="internal" title="Enlarge"></a></div>
+OLS estimation can be viewed as a projection onto the linear space spanned by the regressors.</div>
+</div>
+</div>
+<div role="note" class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Linear_least_squares_(mathematics)" title="Linear least squares (mathematics)">Linear least squares (mathematics)</a></div>
+<p>For mathematicians, OLS is an approximate solution to an overdetermined system of linear equations <span class="nowrap"><i>Xβ</i> ≈ <i>y</i></span>, where <i>β</i> is the unknown. Assuming the system cannot be solved exactly (the number of equations <i>n</i> is much larger than the number of unknowns <i>p</i>), we are looking for a solution that could provide the smallest discrepancy between the right- and left- hand sides. In other words, we are looking for the solution that satisfies</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat\beta = {\rm arg}\min_\beta\,\lVert y - X\beta \rVert,
+  " src="//upload.wikimedia.org/math/c/b/0/cb012b272e69ffa2e24f830f3f828917.png" /></dd>
+</dl>
+<p>where ||·|| is the standard <a href="/wiki/Norm_(mathematics)#Euclidean_norm" title="Norm (mathematics)"><i>L</i><sup>2</sup>&#160;norm</a> in the <i>n</i>-dimensional <a href="/wiki/Euclidean_space" title="Euclidean space">Euclidean space</a> <b>R</b><sup><i>n</i></sup>. The predicted quantity <i>Xβ</i> is just a certain linear combination of the vectors of regressors. Thus, the residual vector <span class="nowrap"><i>y − Xβ</i></span> will have the smallest length when <i>y</i> is <a href="/wiki/Projection_(linear_algebra)" title="Projection (linear algebra)">projected orthogonally</a> onto the <a href="/wiki/Linear_subspace" title="Linear subspace">linear subspace</a> <a href="/wiki/Linear_span" title="Linear span">spanned</a> by the columns of <i>X</i>. The OLS estimator <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/c/4/2/c426823a255248ceba328af28fa2343b.png" /> in this case can be interpreted as the coefficients of <a href="/wiki/Vector_decomposition" title="Vector decomposition">vector decomposition</a> of <span class="nowrap"><i><sup style="position:relative;left:.5em;">^</sup>y = Py</i></span> along the basis of <i>X</i>.</p>
+<p>Another way of looking at it is to consider the regression line to be a weighted average of the lines passing through the combination of any two points in the dataset.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup> Although this way of calculation is more computationally expensive, it provides a better intuition on OLS.</p>
+<h3><span class="mw-headline" id="Maximum_likelihood">Maximum likelihood</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=10" title="Edit section: Maximum likelihood">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The OLS estimator is identical to the <a href="/wiki/Maximum_likelihood_estimator" title="Maximum likelihood estimator" class="mw-redirect">maximum likelihood estimator</a> (MLE) under the normality assumption for the error terms.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup><sup><a href="/wiki/Proofs_involving_ordinary_least_squares#Maximum_likelihood_approach" title="Proofs involving ordinary least squares">[proof]</a></sup> This normality assumption has historical importance, as it provided the basis for the early work in linear regression analysis by <a href="/wiki/Udny_Yule" title="Udny Yule">Yule</a> and <a href="/wiki/Karl_Pearson" title="Karl Pearson">Pearson</a>.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (February 2010)">citation needed</span></a></i>]</sup> From the properties of MLE, we can infer that the OLS estimator is asymptotically efficient (in the sense of attaining the <a href="/wiki/Cram%C3%A9r-Rao_bound" title="Cramér-Rao bound" class="mw-redirect">Cramér-Rao bound</a> for variance) if the normality assumption is satisfied.<sup id="cite_ref-Hayashi_2000_loc.3Dpage_52_12-0" class="reference"><a href="#cite_note-Hayashi_2000_loc.3Dpage_52-12"><span>[</span>12<span>]</span></a></sup></p>
+<h3><span class="mw-headline" id="Generalized_method_of_moments">Generalized method of moments</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=11" title="Edit section: Generalized method of moments">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="/wiki/Iid" title="Iid" class="mw-redirect">iid</a> case the OLS estimator can also be viewed as a <a href="/wiki/Generalized_method_of_moments" title="Generalized method of moments">GMM</a> estimator arising from the moment conditions</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \mathrm{E}\big[\, x_i(y_i - x_i ^T \beta) \,\big] = 0.
+  " src="//upload.wikimedia.org/math/6/7/7/677c0e545e1202eaac4db0333b7bef6b.png" /></dd>
+</dl>
+<p>These moment conditions state that the regressors should be uncorrelated with the errors. Since <i>x<sub>i</sub></i> is a <i>p</i>-vector, the number of moment conditions is equal to the dimension of the parameter vector <i>β</i>, and thus the system is exactly identified. This is the so-called classical GMM case, when the estimator does not depend on the choice of the weighting matrix.</p>
+<p>Note that the original strict exogeneity assumption <span class="nowrap">E[<i>ε<sub>i</sub></i> | <i>x<sub>i</sub></i>] = 0</span> implies a far richer set of moment conditions than stated above. In particular, this assumption implies that for any vector-function <i>ƒ</i>, the moment condition <span class="nowrap">E[<i>ƒ</i>(<i>x<sub>i</sub></i>)·<i>ε<sub>i</sub></i>] = 0</span> will hold. However it can be shown using the <a href="/wiki/Gauss%E2%80%93Markov_theorem" title="Gauss–Markov theorem">Gauss–Markov theorem</a> that the optimal choice of function <i>ƒ</i> is to take <span class="nowrap"><i>ƒ</i>(<i>x</i>) = <i>x</i></span>, which results in the moment equation posted above.</p>
+<h2><span class="mw-headline" id="Finite_sample_properties">Finite sample properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=12" title="Edit section: Finite sample properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>First of all, under the <i>strict exogeneity</i> assumption the OLS estimators <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/c/4/2/c426823a255248ceba328af28fa2343b.png" /> and <i>s</i><sup>2</sup> are <a href="/wiki/Bias_of_an_estimator" title="Bias of an estimator">unbiased</a>, meaning that their expected values coincide with the true values of the parameters:<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup><sup><a href="/wiki/Proofs_involving_ordinary_least_squares#Unbiasedness_of_.CE.B2.CC.82" title="Proofs involving ordinary least squares">[proof]</a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \operatorname{E}[\, \hat\beta \mid X \,] = \beta, \quad \operatorname{E}[\,s^2 \mid X\,] = \sigma^2.
+  " src="//upload.wikimedia.org/math/8/3/2/832a5b235bfb5b292867f4e99c5be36f.png" /></dd>
+</dl>
+<p>If the strict exogeneity does not hold (as is the case with many <a href="/wiki/Time_series" title="Time series">time series</a> models, where exogeneity is assumed only with respect to the past shocks but not the future ones), then these estimators will be biased in finite samples.</p>
+<p>The <a href="/wiki/Variance-covariance_matrix" title="Variance-covariance matrix" class="mw-redirect">variance-covariance matrix</a> of <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/c/4/2/c426823a255248ceba328af28fa2343b.png" /> is equal to <sup id="cite_ref-HayashiFSP_14-0" class="reference"><a href="#cite_note-HayashiFSP-14"><span>[</span>14<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \operatorname{Var}[\, \hat\beta \mid X \,] = \sigma^2(X ^T X)^{-1}.
+  " src="//upload.wikimedia.org/math/5/b/5/5b55cd02609d9fedddd52f67d2fcf206.png" /></dd>
+</dl>
+<p>In particular, the standard error of each coefficient <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta_j" style="vertical-align:-.4em" src="//upload.wikimedia.org/math/6/4/8/6487030401ff8defac38a3ef1dc5837f.png" /> is equal to square root of the <i>j</i>-th diagonal element of this matrix. The estimate of this standard error is obtained by replacing the unknown quantity <i>σ</i><sup>2</sup> with its estimate <i>s</i><sup>2</sup>. Thus,</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \widehat{\operatorname{s.\!e.}}(\hat{\beta}_j) = \sqrt{s^2 (X ^T X)^{-1}_{jj}}
+  " src="//upload.wikimedia.org/math/3/0/4/304a04e0c2e0552c44865fad977f92a2.png" /></dd>
+</dl>
+<p>It can also be easily shown that the estimator <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/c/4/2/c426823a255248ceba328af28fa2343b.png" /> is uncorrelated with the residuals from the model:<sup id="cite_ref-HayashiFSP_14-1" class="reference"><a href="#cite_note-HayashiFSP-14"><span>[</span>14<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \operatorname{Cov}[\, \hat\beta,\hat\varepsilon \mid X\,] = 0.
+  " src="//upload.wikimedia.org/math/9/3/5/9354b171fa7ac57fb2e2b1c4800b1bf5.png" /></dd>
+</dl>
+<p>The <b><a href="/wiki/Gauss%E2%80%93Markov_theorem" title="Gauss–Markov theorem">Gauss–Markov theorem</a></b> states that under the <i>spherical errors</i> assumption (that is, the errors should be <a href="/wiki/Uncorrelated" title="Uncorrelated" class="mw-redirect">uncorrelated</a> and <a href="/wiki/Homoscedastic" title="Homoscedastic" class="mw-redirect">homoscedastic</a>) the estimator <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/c/4/2/c426823a255248ceba328af28fa2343b.png" /> is efficient in the class of linear unbiased estimators. This is called the <b>best linear unbiased estimator (BLUE)</b>. Efficiency should be understood as if we were to find some other estimator <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\tilde\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/5/a/5/5a58da869ba37586e3dd5527bf367e2b.png" /> which would be linear in <i>y</i> and unbiased, then <sup id="cite_ref-HayashiFSP_14-2" class="reference"><a href="#cite_note-HayashiFSP-14"><span>[</span>14<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \operatorname{Var}[\, \tilde\beta \mid X \,] - \operatorname{Var}[\, \hat\beta \mid X \,] \geq 0
+  " src="//upload.wikimedia.org/math/d/2/0/d209a147802fe1074b807b0c3cc68fb4.png" /></dd>
+</dl>
+<p>in the sense that this is a <a href="/wiki/Nonnegative-definite_matrix" title="Nonnegative-definite matrix" class="mw-redirect">nonnegative-definite matrix</a>. This theorem establishes optimality only in the class of linear unbiased estimators, which is quite restrictive. Depending on the distribution of the error terms <i>ε</i>, other, non-linear estimators may provide better results than OLS.</p>
+<h3><span class="mw-headline" id="Assuming_normality">Assuming normality</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=13" title="Edit section: Assuming normality">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The properties listed so far are all valid regardless of the underlying distribution of the error terms. However if you are willing to assume that the <i>normality assumption</i> holds (that is, that <span class="nowrap"><i>ε</i> ~ <i>N</i>(0, <i>σ</i><sup>2</sup><i>I<sub>n</sub></i>)</span>), then additional properties of the OLS estimators can be stated.</p>
+<p>The estimator <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/c/4/2/c426823a255248ceba328af28fa2343b.png" /> is normally distributed, with mean and variance as given before:<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat\beta\ \sim\ \mathcal{N}\big(\beta,\ \sigma^2(X ^T X)^{-1}\big)
+  " src="//upload.wikimedia.org/math/6/0/4/6043711ee4b030643be71940687ff9fd.png" /></dd>
+</dl>
+<p>This estimator reaches the <a href="/wiki/Cram%C3%A9r%E2%80%93Rao_bound" title="Cramér–Rao bound">Cramér–Rao bound</a> for the model, and thus is optimal in the class of all unbiased estimators.<sup id="cite_ref-Hayashi_2000_loc.3Dpage_52_12-1" class="reference"><a href="#cite_note-Hayashi_2000_loc.3Dpage_52-12"><span>[</span>12<span>]</span></a></sup> Note that unlike the <a href="/wiki/Gauss%E2%80%93Markov_theorem" title="Gauss–Markov theorem">Gauss–Markov theorem</a>, this result establishes optimality among both linear and non-linear estimators, but only in the case of normally distributed error terms.</p>
+<p>The estimator <i>s</i><sup>2</sup> will be proportional to the <a href="/wiki/Chi-squared_distribution" title="Chi-squared distribution">chi-squared distribution</a>:<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    s^2\ \sim\ \frac{\sigma^2}{n-p} \cdot \chi^2_{n-p}
+  " src="//upload.wikimedia.org/math/8/4/a/84aa9e9b9169ea87770f79150b13d64f.png" /></dd>
+</dl>
+<p>The variance of this estimator is equal to <span class="nowrap">2<i>σ</i><sup>4</sup>/(<i>n − p</i>)</span>, which does not attain the <a href="/wiki/Cram%C3%A9r%E2%80%93Rao_bound" title="Cramér–Rao bound">Cramér–Rao bound</a> of 2<i>σ</i><sup>4</sup>/<i>n</i>. However it was shown that there are no unbiased estimators of <i>σ</i><sup>2</sup> with variance smaller than that of the estimator <i>s</i><sup>2</sup>.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup> If we are willing to allow biased estimators, and consider the class of estimators that are proportional to the sum of squared residuals (SSR) of the model, then the best (in the sense of the <a href="/wiki/Mean_squared_error" title="Mean squared error">mean squared error</a>) estimator in this class will be <span class="nowrap"><sup style="position:relative;left:.7em;top:-.1em">~</sup><i>σ</i><sup>2</sup> = SSR <i>/</i> (<i>n − p</i> + 2)</span>, which even beats the Cramér–Rao bound in case when there is only one regressor (<span class="nowrap"><i>p</i> = 1</span>).<sup id="cite_ref-18" class="reference"><a href="#cite_note-18"><span>[</span>18<span>]</span></a></sup></p>
+<p>Moreover, the estimators <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/c/4/2/c426823a255248ceba328af28fa2343b.png" /> and <i>s</i><sup>2</sup> are <a href="/wiki/Independent_random_variables" title="Independent random variables" class="mw-redirect">independent</a>,<sup id="cite_ref-19" class="reference"><a href="#cite_note-19"><span>[</span>19<span>]</span></a></sup> the fact which comes in useful when constructing the t- and F-tests for the regression.</p>
+<h3><span class="mw-headline" id="Influential_observations">Influential observations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=14" title="Edit section: Influential observations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Influential_observation" title="Influential observation">Influential observation</a></div>
+<div role="note" class="hatnote">See also: <a href="/wiki/Leverage_(statistics)" title="Leverage (statistics)">Leverage (statistics)</a></div>
+<p>As was mentioned before, the estimator <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/c/4/2/c426823a255248ceba328af28fa2343b.png" /> is linear in <i>y</i>, meaning that it represents a linear combination of the dependent variables <i>y<sub>i</sub>'</i>s. The weights in this linear combination are functions of the regressors <i>X</i>, and generally are unequal. The observations with high weights are called <b>influential</b> because they have a more pronounced effect on the value of the estimator.</p>
+<p>To analyze which observations are influential we remove a specific <i>j</i>-th observation and consider how much the estimated quantities are going to change (similarly to the <a href="/wiki/Jackknife_method" title="Jackknife method" class="mw-redirect">jackknife method</a>). It can be shown that the change in the OLS estimator for <i>β</i> will be equal to <sup id="cite_ref-DvdMck33_20-0" class="reference"><a href="#cite_note-DvdMck33-20"><span>[</span>20<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat\beta^{(j)} - \hat\beta = - \frac{1}{1-h_j} (X ^T X)^{-1}x_j ^T \hat\varepsilon_j\,,
+  " src="//upload.wikimedia.org/math/3/a/8/3a85a812e679283f6647b0a39b72bedf.png" /></dd>
+</dl>
+<p>where <span class="nowrap"><i>h<sub>j</sub></i> = <i>x<sub>j</sub></i><sup>T</sup> (<i>X<sup>T</sup>X</i>)<sup>−1</sup><i>x<sub>j</sub></i></span> is the <i>j</i>-th diagonal element of the hat matrix <i>P</i>, and <i>x<sub>j</sub></i> is the vector of regressors corresponding to the <i>j</i>-th observation. Similarly, the change in the predicted value for <i>j</i>-th observation resulting from omitting that observation from the dataset will be equal to <sup id="cite_ref-DvdMck33_20-1" class="reference"><a href="#cite_note-DvdMck33-20"><span>[</span>20<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat{y}_j^{(j)} - \hat{y}_j = x_j ^T \hat\beta^{(j)} - x_j ^T \hat\beta = - \frac{h_j}{1-h_j}\,\hat\varepsilon_j
+  " src="//upload.wikimedia.org/math/1/5/e/15e50f6ad19fc247deae1e3b23598027.png" /></dd>
+</dl>
+<p>From the properties of the hat matrix, <span class="nowrap">0 ≤ <i>h<sub>j</sub></i> ≤ 1</span>, and they sum up to <i>p</i>, so that on average <span class="nowrap"><i>h<sub>j</sub></i> ≈ <i>p/n</i></span>. These quantities <i>h<sub>j</sub></i> are called the <b>leverages</b>, and observations with high <i>h<sub>j</sub></i> are called <b>leverage points</b>.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>21<span>]</span></a></sup> Usually the observations with high leverage ought to be scrutinized more carefully, in case they are erroneous, or outliers, or in some other way atypical of the rest of the dataset.</p>
+<h3><span class="mw-headline" id="Partitioned_regression">Partitioned regression</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=15" title="Edit section: Partitioned regression">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Sometimes the variables and corresponding parameters in the regression can be logically split into two groups, so that the regression takes form</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    y = X_1\beta_1 + X_2\beta_2 + \varepsilon,
+  " src="//upload.wikimedia.org/math/0/a/4/0a491683e413bf515bf1a5b94a53b6fc.png" /></dd>
+</dl>
+<p>where <i>X</i><sub>1</sub> and <i>X</i><sub>2</sub> have dimensions <i>n×p</i><sub>1</sub>, <i>n×p</i><sub>2</sub>, and <i>β</i><sub>1</sub>, <i>β</i><sub>2</sub> are <i>p</i><sub>1</sub>×1 and <i>p</i><sub>2</sub>×1 vectors, with <span class="nowrap"><i>p</i><sub>1</sub> + <i>p</i><sub>2</sub> = <i>p</i></span>.</p>
+<p>The <b><a href="/wiki/Frisch%E2%80%93Waugh%E2%80%93Lovell_theorem" title="Frisch–Waugh–Lovell theorem">Frisch–Waugh–Lovell theorem</a></b> states that in this regression the residuals <img class="mwe-math-fallback-image-inline tex" alt="\hat\varepsilon" style="vertical-align:0" src="//upload.wikimedia.org/math/7/f/2/7f22340fa2885286709cf5213f8d6eb1.png" /> and the OLS estimate <img class="mwe-math-fallback-image-inline tex" alt="\scriptstyle\hat\beta_2" style="vertical-align:-.3em" src="//upload.wikimedia.org/math/7/4/2/7423be48c34d278b8373a68565ee77ad.png" /> will be numerically identical to the residuals and the OLS estimate for <i>β</i><sub>2</sub> in the following regression:<sup id="cite_ref-22" class="reference"><a href="#cite_note-22"><span>[</span>22<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    M_1y = M_1X_2\beta_2 + \eta\,,
+  " src="//upload.wikimedia.org/math/f/2/d/f2df4aebfbb304d667e211f058ebed40.png" /></dd>
+</dl>
+<p>where <i>M</i><sub>1</sub> is the annihilator matrix for regressors <i>X</i><sub>1</sub>.</p>
+<p>The theorem can be used to establish a number of theoretical results. For example, having a regression with a constant and another regressor is equivalent to subtracting the means from the dependent variable and the regressor and then running the regression for the demeaned variables but without the constant term.</p>
+<h3><span class="mw-headline" id="Constrained_estimation">Constrained estimation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=16" title="Edit section: Constrained estimation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Ridge_regression" title="Ridge regression" class="mw-redirect">Ridge regression</a></div>
+<p>Suppose it is known that the coefficients in the regression satisfy a system of linear equations</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    H_0\colon\quad Q ^T \beta = c, \,
+  " src="//upload.wikimedia.org/math/1/9/5/195d581da925ae0a69a00889b81e8679.png" /></dd>
+</dl>
+<p>where <i>Q</i> is a <i>p×q</i> matrix of full rank, and <i>c</i> is a <i>q×</i>1 vector of known constants, where <span class="nowrap"><i>q &lt; p</i></span>. In this case least squares estimation is equivalent to minimizing the sum of squared residuals of the model subject to the constraint <i>H</i><sub>0</sub>. The <b>constrained least squares (CLS)</b> estimator can be given by an explicit formula:<sup id="cite_ref-23" class="reference"><a href="#cite_note-23"><span>[</span>23<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat\beta^c = \hat\beta - (X ^T X)^{-1}Q\Big(Q ^T (X ^T X)^{-1}Q\Big)^{-1}(Q ^T \hat\beta - c)
+  " src="//upload.wikimedia.org/math/6/e/3/6e30b6084fd1becc25eb5e44a48113ca.png" /></dd>
+</dl>
+<p>This expression for the constrained estimator is valid as long as the matrix <i>X<sup>T</sup>X</i> is invertible. It was assumed from the beginning of this article that this matrix is of full rank, and it was noted that when the rank condition fails, <i>β</i> will not be identifiable. However it may happen that adding the restriction <i>H</i><sub>0</sub> makes <i>β</i> identifiable, in which case one would like to find the formula for the estimator. The estimator is equal to <sup id="cite_ref-Amemiya22_24-0" class="reference"><a href="#cite_note-Amemiya22-24"><span>[</span>24<span>]</span></a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="
+    \hat\beta^c = R(R ^T X ^T XR)^{-1}R ^T X ^T y + \Big(I_p - R(R ^T X ^T XR)^{-1}R ^T X ^T X\Big)Q(Q ^T Q)^{-1}c,
+  " src="//upload.wikimedia.org/math/6/3/7/63716071678b54a9f81ee97116dc3a00.png" /></dd>
+</dl>
+<p>where <i>R</i> is a <i>p×</i>(<i>p−q</i>) matrix such that the matrix <span class="nowrap">[<i>Q R</i>]</span> is non-singular, and <span class="nowrap"><i>R<sup>T</sup>Q</i> = 0</span>. Such a matrix can always be found, although generally it is not unique. The second formula coincides with the first in case when <i>X<sup>T</sup>X</i> is invertible.<sup id="cite_ref-Amemiya22_24-1" class="reference"><a href="#cite_note-Amemiya22-24"><span>[</span>24<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Large_sample_properties">Large sample properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=17" title="Edit section: Large sample properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The least squares estimators are <a href="/wiki/Point_estimate" title="Point estimate" class="mw-redirect">point estimates</a> of the linear regression model parameters <i>β</i>. However, generally we also want to know how close those estimates might be to the true values of parameters. In other words, we want to construct the <a href="/wiki/Interval_estimate" title="Interval estimate" class="mw-redirect">interval estimates</a>.</p>
+<p>Since we haven't made any assumption about the distribution of error term <i>ε<sub>i</sub></i>, it is impossible to infer the distribution of the estimators <img class="mwe-math-fallback-image-inline tex" alt="\hat\beta" src="//upload.wikimedia.org/math/5/9/7/59744f666ff56f695bfe4d128a6784f4.png" /> and <img class="mwe-math-fallback-image-inline tex" alt="\hat\sigma^2" src="//upload.wikimedia.org/math/a/1/e/a1e7e8e2eb9f9575948aff1a2e672402.png" />. Nevertheless, we can apply the <a href="/wiki/Central_limit_theorem" title="Central limit theorem">central limit theorem</a> to derive their <i>asymptotic</i> properties as sample size <i>n</i> goes to infinity. While the sample size is necessarily finite, it is customary to assume that <i>n</i> is "large enough" so that the true distribution of the OLS estimator is close to its asymptotic limit.</p>
+<p>We can show that under the model assumptions, the least squares estimator for <i>β</i> is <a href="/wiki/Consistent_estimator" title="Consistent estimator">consistent</a> (that is <img class="mwe-math-fallback-image-inline tex" alt="\hat\beta" src="//upload.wikimedia.org/math/5/9/7/59744f666ff56f695bfe4d128a6784f4.png" /> <a href="/wiki/Convergence_of_random_variables#Convergence_in_probability" title="Convergence of random variables">converges in probability</a> to <i>β</i>) and asymptotically normal:<sup><a href="/wiki/Proofs_involving_ordinary_least_squares#Consistency_and_asymptotic_normality_of_.CE.B2.CC.82" title="Proofs involving ordinary least squares">[proof]</a></sup></p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="(\hat\beta - \beta)\ \xrightarrow{d}\ \mathcal{N}\big(0,\;\sigma^2Q_{xx}^{-1}\big)," src="//upload.wikimedia.org/math/4/6/4/4643db007d7c5f7803eed2a41a3e6aa1.png" /></dd>
+</dl>
+<p>where <img class="mwe-math-fallback-image-inline tex" alt="Q_{xx} = X ^T X." src="//upload.wikimedia.org/math/e/1/b/e1bcb773d6362a2edda11a89876b3164.png" /></p>
+<h3><span class="mw-headline" id="Intervals">Intervals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=18" title="Edit section: Intervals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote relarticle mainarticle">Main articles: <a href="/wiki/Confidence_interval" title="Confidence interval">Confidence interval</a> and <a href="/wiki/Prediction_interval" title="Prediction interval">Prediction interval</a></div>
+<p>Using this asymptotic distribution, approximate two-sided confidence intervals for the <i>j</i>-th component of the vector <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" /> can be constructed as</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\beta_j \in \bigg[\ 
+    \hat\beta_j \pm q^{\mathcal{N}(0, 1)}_{1 - \frac{\alpha}{2}}\!\sqrt{\hat{\sigma}^2 \left[Q_{xx}^{-1}\right]_{jj}}\ 
+  \bigg]
+" src="//upload.wikimedia.org/math/7/4/b/74b6cdbbc742b8c3cc06cdf331d1a926.png" /> &#160; at the 1&#160;−&#160;<i>α</i> confidence level,</dd>
+</dl>
+<p>where <i>q</i> denotes the <a href="/wiki/Quantile_function" title="Quantile function">quantile function</a> of standard normal distribution, and [·]<sub><i>jj</i></sub> is the <i>j</i>-th diagonal element of a matrix.</p>
+<p>Similarly, the least squares estimator for <i>σ</i><sup>2</sup> is also consistent and asymptotically normal (provided that the fourth moment of <i>ε<sub>i</sub></i> exists) with limiting distribution</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\left(\hat{\sigma}^2 - \sigma^2\right)\ \xrightarrow{d}\ \mathcal{N}\left(0,\;\operatorname{E}\left[\varepsilon_i^4\right] - \sigma^4\right). " src="//upload.wikimedia.org/math/1/2/a/12ade3ee0b7d6ce9f16edeca7eca1184.png" /></dd>
+</dl>
+<p>These asymptotic distributions can be used for prediction, testing hypotheses, constructing other estimators, etc.. As an example consider the problem of prediction. Suppose <img class="mwe-math-fallback-image-inline tex" alt="x_0" src="//upload.wikimedia.org/math/0/b/2/0b21a666a81629962ade8afd967826ed.png" /> is some point within the domain of distribution of the regressors, and one wants to know what the response variable would have been at that point. The <a href="/wiki/Mean_response" title="Mean response" class="mw-redirect">mean response</a> is the quantity <img class="mwe-math-fallback-image-inline tex" alt="y_0 = x_0^T \beta" src="//upload.wikimedia.org/math/f/4/f/f4f25606784d1b5054e5060d04e4b6a9.png" />, whereas the <a href="/wiki/Predicted_response" title="Predicted response" class="mw-redirect">predicted response</a> is <img class="mwe-math-fallback-image-inline tex" alt="\hat{y}_0 = x_0^T \hat\beta" src="//upload.wikimedia.org/math/c/b/5/cb52adb09d71fe41ff871e116d09c81b.png" />. Clearly the predicted response is a random variable, its distribution can be derived from that of <img class="mwe-math-fallback-image-inline tex" alt="\hat{\beta}" src="//upload.wikimedia.org/math/5/9/e/59e7a0027ecbfe68dfba72292a2db279.png" />:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\left(\hat{y}_0 - y_0\right)\ \xrightarrow{d}\ \mathcal{N}\left(0,\;\sigma^2 x_0^T Q_{xx}^{-1} x_0\right)," src="//upload.wikimedia.org/math/8/9/b/89b8ec31b8b8a87a3c9ca9705ae9ca9f.png" /></dd>
+</dl>
+<p>which allows construct confidence intervals for mean response <img class="mwe-math-fallback-image-inline tex" alt="y_0" src="//upload.wikimedia.org/math/8/e/2/8e28d43bbeb35deeebf9eca9de21bf33.png" /> to be constructed:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="y_0 \in \left[\ x_0^T \hat{\beta} \pm q^{\mathcal{N}(0, 1)}_{1 - \frac{\alpha}{2}}\!\sqrt{\hat\sigma^2 x_0^T Q_{xx}^{-1} x_0}\ \right]" src="//upload.wikimedia.org/math/6/0/5/6057e8c5908c8fad00e608c9d4051d92.png" /> &#160; at the 1&#160;−&#160;<i>α</i> confidence level.</dd>
+</dl>
+<h2><span class="mw-headline" id="Hypothesis_testing">Hypothesis testing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=19" title="Edit section: Hypothesis testing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Hypothesis_testing" title="Hypothesis testing" class="mw-redirect">Hypothesis testing</a></div>
+<table class="metadata plainlinks ambox mbox-small-left ambox-content" role="presentation">
+<tr>
+<td class="mbox-image"><a href="/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" data-file-width="44" data-file-height="31" /></a></td>
+<td class="mbox-text"><span class="mbox-text-span"><b>This section is empty.</b> <small>You can help by <a class="external text" href="//en.wikipedia.org/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=">adding to it</a>.</small> <small><i>(July 2010)</i></small></span></td>
+</tr>
+</table>
+<h2><span class="mw-headline" id="Example_with_real_data">Example with real data</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=20" title="Edit section: Example with real data">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:OLS_example_weight_vs_height_scatterplot.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/OLS_example_weight_vs_height_scatterplot.svg/220px-OLS_example_weight_vs_height_scatterplot.svg.png" width="220" height="146" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/OLS_example_weight_vs_height_scatterplot.svg/330px-OLS_example_weight_vs_height_scatterplot.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/OLS_example_weight_vs_height_scatterplot.svg/440px-OLS_example_weight_vs_height_scatterplot.svg.png 2x" data-file-width="360" data-file-height="239" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:OLS_example_weight_vs_height_scatterplot.svg" class="internal" title="Enlarge"></a></div>
+<a href="/wiki/Scatterplot" title="Scatterplot" class="mw-redirect">Scatterplot</a> of the data; the relationship is slightly curved but close to linear.</div>
+</div>
+</div>
+<p>NB. this example exhibits the common mistake of ignoring the condition of having zero error in the dependent variable.</p>
+<p>The following data set gives average heights and weights for American women aged 30–39 (source: <i>The World Almanac and Book of Facts, 1975</i>).</p>
+<div style="clear:both;"></div>
+<dl>
+<dd>
+<table class="wikitable">
+<tr style="text-align:right;">
+<th style="text-align:left;">&#160;Height (m):&#160;</th>
+<td>1.47</td>
+<td>1.50</td>
+<td>1.52</td>
+<td>1.55</td>
+<td>1.57</td>
+<td>1.60</td>
+<td>1.63</td>
+<td>1.65</td>
+<td>1.68</td>
+<td>1.70</td>
+<td>1.73</td>
+<td>1.75</td>
+<td>1.78</td>
+<td>1.80</td>
+<td>1.83</td>
+</tr>
+<tr style="text-align:right;">
+<th style="text-align:left;">&#160;Weight (kg):&#160;</th>
+<td>52.21</td>
+<td>53.12</td>
+<td>54.48</td>
+<td>55.84</td>
+<td>57.20</td>
+<td>58.57</td>
+<td>59.93</td>
+<td>61.29</td>
+<td>63.11</td>
+<td>64.47</td>
+<td>66.28</td>
+<td>68.10</td>
+<td>69.92</td>
+<td>72.19</td>
+<td>74.46</td>
+</tr>
+</table>
+</dd>
+</dl>
+<p>When only one dependent variable is being modeled, a <a href="/wiki/Scatterplot" title="Scatterplot" class="mw-redirect">scatterplot</a> will suggest the form and strength of the relationship between the dependent variable and regressors. It might also reveal outliers, heteroscedasticity, and other aspects of the data that may complicate the interpretation of a fitted regression model. The scatterplot suggests that the relationship is strong and can be approximated as a quadratic function. OLS can handle non-linear relationships by introducing the regressor <tt>HEIGHT</tt><sup>2</sup>. The regression model then becomes a multiple linear model:</p>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="w_i = \beta_1 + \beta_2 h_i + \beta_3 h_i^2 + \varepsilon_i." src="//upload.wikimedia.org/math/d/c/7/dc79614d735160bccd638def56e82540.png" /></dd>
+</dl>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:OLS_example_weight_vs_height_fitted_line.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/OLS_example_weight_vs_height_fitted_line.svg/300px-OLS_example_weight_vs_height_fitted_line.svg.png" width="300" height="199" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/OLS_example_weight_vs_height_fitted_line.svg/450px-OLS_example_weight_vs_height_fitted_line.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/OLS_example_weight_vs_height_fitted_line.svg/600px-OLS_example_weight_vs_height_fitted_line.svg.png 2x" data-file-width="360" data-file-height="239" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:OLS_example_weight_vs_height_fitted_line.svg" class="internal" title="Enlarge"></a></div>
+Fitted regression</div>
+</div>
+</div>
+<p>The output from most popular <a href="/wiki/List_of_statistical_packages" title="List of statistical packages">statistical packages</a> will look similar to this:</p>
+<dl>
+<dd>
+<table style="border:1px solid #aaa; padding:2pt 10pt">
+<tr>
+<td colspan="6">Method: Least Squares<br />
+Dependent variable: WEIGHT<br />
+Included observations: 15</td>
+</tr>
+<tr>
+<td colspan="6">
+<hr /></td>
+</tr>
+<tr align="right">
+<th align="left">Variable</th>
+<th align="right">Coefficient</th>
+<th></th>
+<th align="right"><a href="/wiki/Standard_error" title="Standard error">Std. Error</a></th>
+<th style="padding-left:6pt;"><a href="/wiki/T-statistic" title="T-statistic">t-statistic</a></th>
+<th style="padding-left:6pt;"><a href="/wiki/P-value" title="P-value">p-value</a></th>
+</tr>
+<tr>
+<td colspan="6">
+<hr /></td>
+</tr>
+<tr align="right">
+<td align="left"><img class="mwe-math-fallback-image-inline tex" alt="\beta_1" src="//upload.wikimedia.org/math/9/f/2/9f26b68b727cdcf2c659189280f6ce55.png" /></td>
+<td>128.8128</td>
+<td></td>
+<td>16.3083</td>
+<td>7.8986</td>
+<td>0.0000</td>
+</tr>
+<tr align="right">
+<td align="left"><img class="mwe-math-fallback-image-inline tex" alt="\beta_2" src="//upload.wikimedia.org/math/6/7/1/6716d7289516889f04c804964a686d62.png" /></td>
+<td>–143.1620</td>
+<td></td>
+<td>19.8332</td>
+<td>–7.2183</td>
+<td>0.0000</td>
+</tr>
+<tr align="right">
+<td align="left"><img class="mwe-math-fallback-image-inline tex" alt="\beta_3" src="//upload.wikimedia.org/math/4/e/4/4e41100322890bbbfa1bc602a512753d.png" /></td>
+<td>61.9603</td>
+<td></td>
+<td>6.0084</td>
+<td>10.3122</td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td colspan="6">
+<hr /></td>
+</tr>
+<tr>
+<td><a href="/wiki/Coefficient_of_determination" title="Coefficient of determination">R<sup>2</sup></a></td>
+<td align="right">0.9989</td>
+<td rowspan="6">&#160; &#160;</td>
+<td colspan="2">S.E. of regression</td>
+<td align="right">0.2516</td>
+</tr>
+<tr>
+<td>Adjusted R<sup>2</sup></td>
+<td align="right">0.9987</td>
+<td colspan="2">Model sum-of-sq.</td>
+<td align="right">692.61</td>
+</tr>
+<tr>
+<td>Log-likelihood</td>
+<td align="right">1.0890</td>
+<td colspan="2">Residual sum-of-sq.</td>
+<td align="right">0.7595</td>
+</tr>
+<tr>
+<td><a href="/wiki/Durbin%E2%80%93Watson_statistic" title="Durbin–Watson statistic">Durbin–Watson stats.</a></td>
+<td align="right">2.1013</td>
+<td colspan="2">Total sum-of-sq.</td>
+<td align="right">693.37</td>
+</tr>
+<tr>
+<td><a href="/wiki/Akaike_information_criterion" title="Akaike information criterion">Akaike criterion</a></td>
+<td align="right">0.2548</td>
+<td colspan="2">F-statistic</td>
+<td align="right">5471.2</td>
+</tr>
+<tr>
+<td><a href="/wiki/Schwarz_criterion" title="Schwarz criterion" class="mw-redirect">Schwarz criterion</a></td>
+<td align="right">0.3964</td>
+<td colspan="2">p-value (F-stat)</td>
+<td align="right">0.0000</td>
+</tr>
+</table>
+</dd>
+</dl>
+<p>In this table:</p>
+<ul>
+<li>The <i>Coefficient</i> column gives the least squares estimates of parameters <i>β<sub>j</sub></i></li>
+<li>The <i>Std. errors</i> column shows <a href="/wiki/Standard_error_(statistics)" title="Standard error (statistics)" class="mw-redirect">standard errors</a> of each coefficient estimate: <img class="mwe-math-fallback-image-inline tex" alt="\hat\sigma_j = \left(\hat{\sigma}^2\left[Q_{xx}^{-1}\right]_{jj}\right)^\frac{1}{2}" src="//upload.wikimedia.org/math/e/5/7/e57c99c1bbd99c8b39ba058a27710b8b.png" /></li>
+<li>The <i><a href="/wiki/T-statistic" title="T-statistic">t-statistic</a></i> and <i>p-value</i> columns are testing whether any of the coefficients might be equal to zero. The <i>t</i>-statistic is calculated simply as <img class="mwe-math-fallback-image-inline tex" alt="t=\hat\beta_j/\hat\sigma_j" src="//upload.wikimedia.org/math/c/7/d/c7da8f5106493e820f056ee26b536a36.png" />. If the errors ε follow a normal distribution, <i>t</i> follows a Student-t distribution. Under weaker conditions, <i>t</i> is asymptotically normal. Large values of <i>t</i> indicate that the null hypothesis can be rejected and that the corresponding coefficient is not zero. The second column, <a href="/wiki/P-value" title="P-value"><i>p</i>-value</a>, expresses the results of the hypothesis test as a <a href="/wiki/Statistical_significance" title="Statistical significance">significance level</a>. Conventionally, <i>p</i>-values smaller than 0.05 are taken as evidence that the population coefficient is nonzero.</li>
+<li><i>R-squared</i> is the <a href="/wiki/Coefficient_of_determination" title="Coefficient of determination">coefficient of determination</a> indicating goodness-of-fit of the regression. This statistic will be equal to one if fit is perfect, and to zero when regressors <i>X</i> have no explanatory power whatsoever. This is a biased estimate of the population <i>R-squared</i>, and will never decrease if additional regressors are added, even if they are irrelevant.</li>
+<li><i>Adjusted R-squared</i> is a slightly modified version of <img class="mwe-math-fallback-image-inline tex" alt="R^2" src="//upload.wikimedia.org/math/c/7/6/c7655279e138e783ceaa224a6a52815a.png" />, designed to penalize for the excess number of regressors which do not add to the explanatory power of the regression. This statistic is always smaller than <img class="mwe-math-fallback-image-inline tex" alt="R^2" src="//upload.wikimedia.org/math/c/7/6/c7655279e138e783ceaa224a6a52815a.png" />, can decrease as new regressors are added, and even be negative for poorly fitting models:</li>
+</ul>
+<dl>
+<dd>
+<dl>
+<dd><img class="mwe-math-fallback-image-inline tex" alt="\overline{R}^2 = 1 - \frac{n - 1}{n - p}(1 - R^2)" src="//upload.wikimedia.org/math/b/7/5/b757ce59ecb9e6332180dcb1879549fa.png" /></dd>
+</dl>
+</dd>
+</dl>
+<ul>
+<li><i>Log-likelihood</i> is calculated under the assumption that errors follow normal distribution. Even though the assumption is not very reasonable, this statistic may still find its use in conducting LR tests.</li>
+<li><i><a href="/wiki/Durbin%E2%80%93Watson_statistic" title="Durbin–Watson statistic">Durbin–Watson statistic</a></i> tests whether there is any evidence of serial correlation between the residuals. As a rule of thumb, the value smaller than 2 will be an evidence of positive correlation.</li>
+<li><i><a href="/wiki/Akaike_information_criterion" title="Akaike information criterion">Akaike information criterion</a></i> and <i><a href="/wiki/Schwarz_criterion" title="Schwarz criterion" class="mw-redirect">Schwarz criterion</a></i> are both used for model selection. Generally when comparing two alternative models, smaller values of one of these criteria will indicate a better model.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25"><span>[</span>25<span>]</span></a></sup></li>
+<li><i>Standard error of regression</i> is an estimate of <i>σ</i>, standard error of the error term.</li>
+<li><i>Total sum of squares</i>, <i>model sum of squared</i>, and <i>residual sum of squares</i> tell us how much of the initial variation in the sample were explained by the regression.</li>
+<li><i>F-statistic</i> tries to test the hypothesis that all coefficients (except the intercept) are equal to zero. This statistic has <i>F</i>(<i>p–1</i>,<i>n–p</i>) distribution under the null hypothesis and normality assumption, and its <i>p-value</i> indicates probability that the hypothesis is indeed true. Note that when errors are not normal this statistic becomes invalid, and other tests such as for example <a href="/wiki/Wald_test" title="Wald test">Wald test</a> or <a href="/wiki/Likelihood_ratio_test" title="Likelihood ratio test" class="mw-redirect">LR test</a> should be used.</li>
+</ul>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:OLS_example_weight_vs_height_residuals.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e2/OLS_example_weight_vs_height_residuals.svg/300px-OLS_example_weight_vs_height_residuals.svg.png" width="300" height="169" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e2/OLS_example_weight_vs_height_residuals.svg/450px-OLS_example_weight_vs_height_residuals.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e2/OLS_example_weight_vs_height_residuals.svg/600px-OLS_example_weight_vs_height_residuals.svg.png 2x" data-file-width="360" data-file-height="203" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:OLS_example_weight_vs_height_residuals.svg" class="internal" title="Enlarge"></a></div>
+Residuals plot</div>
+</div>
+</div>
+<p>Ordinary least squares analysis often includes the use of diagnostic plots designed to detect departures of the data from the assumed form of the model. These are some of the common diagnostic plots:</p>
+<ul>
+<li>Residuals against the explanatory variables in the model. A non-linear relation between these variables suggests that the linearity of the conditional mean function may not hold. Different levels of variability in the residuals for different levels of the explanatory variables suggests possible heteroscedasticity.</li>
+<li>Residuals against explanatory variables not in the model. Any relation of the residuals to these variables would suggest considering these variables for inclusion in the model.</li>
+<li>Residuals against the fitted values, <img class="mwe-math-fallback-image-inline tex" alt="\hat{y}" src="//upload.wikimedia.org/math/7/b/5/7b5fdad25716879ce0706bf95efd82c0.png" />.</li>
+<li>Residuals against the preceding residual. This plot may identify serial correlations in the residuals.</li>
+</ul>
+<p>An important consideration when carrying out statistical inference using regression models is how the data were sampled. In this example, the data are averages rather than measurements on individual women. The fit of the model is very good, but this does not imply that the weight of an individual woman can be predicted with high accuracy based only on her height.</p>
+<h3><span class="mw-headline" id="Sensitivity_to_rounding">Sensitivity to rounding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=21" title="Edit section: Sensitivity to rounding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Errors-in-variables_models" title="Errors-in-variables models">Errors-in-variables models</a></div>
+<div role="note" class="hatnote">See also: <a href="/wiki/Quantization_error_model" title="Quantization error model" class="mw-redirect">Quantization error model</a></div>
+<p>This example also demonstrates that coefficients determined by these calculations are sensitive to how the data is prepared. The heights were originally given rounded to the nearest inch and have been converted and rounded to the nearest centimetre. Since the conversion factor is one inch to 2.54&#160;cm this is <i>not</i> an exact conversion. The original inches can be recovered by Round(x/0.0254) and then re-converted to metric without rounding. If this is done the results become:</p>
+<table class="wikitable">
+<tr>
+<th></th>
+<th>Const</th>
+<th>Height</th>
+<th>Height<sup>2</sup></th>
+</tr>
+<tr>
+<td>Converted to metric with rounding.</td>
+<td>128.8128</td>
+<td>-143.162</td>
+<td>61.96033</td>
+</tr>
+<tr>
+<td>Converted to metric without rounding.</td>
+<td>119.0205</td>
+<td>-131.5076</td>
+<td>58.5046</td>
+</tr>
+</table>
+<p>Using either of these equations to predict the weight of a 5' 6" (1.6764m) woman gives similar values: 62.94&#160;kg with rounding vs. 62.98&#160;kg without rounding. Thus a seemingly small variation in the data has a real effect on the coefficients but a small effect on the results of the equation.</p>
+<p>While this may look innocuous in the middle of the data range it could become significant at the extremes or in the case where the fitted model is used to project outside the data range (<a href="/wiki/Extrapolation" title="Extrapolation">extrapolation</a>).</p>
+<p>This highlights a common error: this example is an abuse of OLS which inherently requires that the errors in the independent variable (in this case height) are zero or at least negligible. The initial rounding to nearest inch plus any actual measurement errors constitute a finite and non-negligible error. As a result the fitted parameters are not the best estimates they are presumed to be. Though not totally spurious the error in the estimation will depend upon relative size of the x and y errors.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=22" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Minimum_mean_square_error" title="Minimum mean square error">Bayesian least squares</a></li>
+<li><a href="/wiki/Fama%E2%80%93MacBeth_regression" title="Fama–MacBeth regression">Fama–MacBeth regression</a></li>
+<li><a href="/wiki/Non-linear_least_squares" title="Non-linear least squares">Non-linear least squares</a></li>
+<li><a href="/wiki/Numerical_methods_for_linear_least_squares" title="Numerical methods for linear least squares" class="mw-redirect">Numerical methods for linear least squares</a></li>
+<li><a href="/wiki/Nonlinear_system_identification" title="Nonlinear system identification">Nonlinear system identification</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=23" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 7)</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 187)</span></li>
+<li id="cite_note-Hayashi_2000_loc.3Dpage_10-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-Hayashi_2000_loc.3Dpage_10_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Hayashi_2000_loc.3Dpage_10_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 10)</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 34)</span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 15)</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 18)</span></li>
+<li id="cite_note-Hayashi_2000_loc.3Dpage_19-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-Hayashi_2000_loc.3Dpage_19_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Hayashi_2000_loc.3Dpage_19_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 19)</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 20)</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 5)</span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web">Akbarzadeh, Vahab. <a rel="nofollow" class="external text" href="http://mlmadesimple.com/2014/05/07/line-estimation/">"Line Estimation"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOrdinary+least+squares&amp;rft.aufirst=Vahab&amp;rft.aulast=Akbarzadeh&amp;rft.btitle=Line+Estimation&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fmlmadesimple.com%2F2014%2F05%2F07%2Fline-estimation%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 49)</span></li>
+<li id="cite_note-Hayashi_2000_loc.3Dpage_52-12"><span class="mw-cite-backlink">^ <a href="#cite_ref-Hayashi_2000_loc.3Dpage_52_12-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Hayashi_2000_loc.3Dpage_52_12-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 52)</span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, pages 27, 30)</span></li>
+<li id="cite_note-HayashiFSP-14"><span class="mw-cite-backlink">^ <a href="#cite_ref-HayashiFSP_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-HayashiFSP_14-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-HayashiFSP_14-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><a href="#CITEREFHayashi2000">Hayashi (2000</a>, page 27)</span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><a href="#CITEREFAmemiya1985">Amemiya (1985</a>, page 13)</span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><a href="#CITEREFAmemiya1985">Amemiya (1985</a>, page 14)</span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><a href="#CITEREFRao1973">Rao (1973</a>, page 319)</span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><a href="#CITEREFAmemiya1985">Amemiya (1985</a>, page 20)</span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><a href="#CITEREFAmemiya1985">Amemiya (1985</a>, page 27)</span></li>
+<li id="cite_note-DvdMck33-20"><span class="mw-cite-backlink">^ <a href="#cite_ref-DvdMck33_20-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-DvdMck33_20-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a href="#CITEREFDavidsonMackinnon1993">Davidson &amp; Mackinnon (1993</a>, page 33)</span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><a href="#CITEREFDavidsonMackinnon1993">Davidson &amp; Mackinnon (1993</a>, page 36)</span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><a href="#CITEREFDavidsonMackinnon1993">Davidson &amp; Mackinnon (1993</a>, page 20)</span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><a href="#CITEREFAmemiya1985">Amemiya (1985</a>, page 21)</span></li>
+<li id="cite_note-Amemiya22-24"><span class="mw-cite-backlink">^ <a href="#cite_ref-Amemiya22_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Amemiya22_24-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a href="#CITEREFAmemiya1985">Amemiya (1985</a>, page 22)</span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation book">Burnham, Kenneth P.; David Anderson (2002). <i>Model Selection and Multi-Model Inference</i> (2nd ed.). Springer. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-387-95364-7" title="Special:BookSources/0-387-95364-7">0-387-95364-7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOrdinary+least+squares&amp;rft.au=David+Anderson&amp;rft.aufirst=Kenneth+P.&amp;rft.aulast=Burnham&amp;rft.btitle=Model+Selection+and+Multi-Model+Inference&amp;rft.date=2002&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.isbn=0-387-95364-7&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit&amp;section=24" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite id="CITEREFAmemiya1985" class="citation book">Amemiya, Takeshi (1985). <i>Advanced econometrics</i>. Harvard University Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-674-00560-0" title="Special:BookSources/0-674-00560-0">0-674-00560-0</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOrdinary+least+squares&amp;rft.aufirst=Takeshi&amp;rft.aulast=Amemiya&amp;rft.btitle=Advanced+econometrics&amp;rft.date=1985&amp;rft.genre=book&amp;rft.isbn=0-674-00560-0&amp;rft.pub=Harvard+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFDavidsonMackinnon1993" class="citation book">Davidson, Russell; Mackinnon, James G. (1993). <i>Estimation and inference in econometrics</i>. Oxford University Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-19-506011-9" title="Special:BookSources/978-0-19-506011-9">978-0-19-506011-9</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOrdinary+least+squares&amp;rft.aufirst=Russell&amp;rft.aulast=Davidson&amp;rft.au=Mackinnon%2C+James+G.&amp;rft.btitle=Estimation+and+inference+in+econometrics&amp;rft.date=1993&amp;rft.genre=book&amp;rft.isbn=978-0-19-506011-9&amp;rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFGreene2002" class="citation book">Greene, William H. (2002). <a rel="nofollow" class="external text" href="http://stat.smmu.edu.cn/DOWNLOAD/ebook/econometric.pdf"><i>Econometric analysis</i></a> <span style="font-size:85%;">(PDF)</span> (5th ed.). New Jersey: Prentice Hall. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-066189-9" title="Special:BookSources/0-13-066189-9">0-13-066189-9</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-01-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOrdinary+least+squares&amp;rft.aufirst=William+H.&amp;rft.aulast=Greene&amp;rft.btitle=Econometric+analysis&amp;rft.date=2002&amp;rft.edition=5th&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fstat.smmu.edu.cn%2FDOWNLOAD%2Febook%2Feconometric.pdf&amp;rft.isbn=0-13-066189-9&amp;rft.place=New+Jersey&amp;rft.pub=Prentice+Hall&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFHayashi2000" class="citation book">Hayashi, Fumio (2000). <i>Econometrics</i>. Princeton University Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-691-01018-8" title="Special:BookSources/0-691-01018-8">0-691-01018-8</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOrdinary+least+squares&amp;rft.aufirst=Fumio&amp;rft.aulast=Hayashi&amp;rft.btitle=Econometrics&amp;rft.date=2000&amp;rft.genre=book&amp;rft.isbn=0-691-01018-8&amp;rft.pub=Princeton+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite id="CITEREFRao1973" class="citation book">Rao, C.R. (1973). <i>Linear statistical inference and its applications</i> (2nd ed.). New York: John Wiley &amp; Sons.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOrdinary+least+squares&amp;rft.aufirst=C.R.&amp;rft.aulast=Rao&amp;rft.btitle=Linear+statistical+inference+and+its+applications&amp;rft.date=1973&amp;rft.edition=2nd&amp;rft.genre=book&amp;rft.place=New+York&amp;rft.pub=John+Wiley+%26+Sons&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">Wooldridge, Jeffrey M. (2013). <i>Introductory Econometrics: A Modern Approach</i> (5th international ed.). Australia: South Western, Cengage Learning. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781111534394" title="Special:BookSources/9781111534394">9781111534394</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOrdinary+least+squares&amp;rft.aufirst=Jeffrey+M.&amp;rft.aulast=Wooldridge&amp;rft.btitle=Introductory+Econometrics%3A+A+Modern+Approach&amp;rft.date=2013&amp;rft.edition=5th+international&amp;rft.genre=book&amp;rft.isbn=9781111534394&amp;rft.place=Australia&amp;rft.pub=South+Western%2C+Cengage+Learning&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<table class="navbox" style="border-spacing:0">
+<tr>
+<td style="padding:2px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Least_squares_and_regression_analysis" title="Template:Least squares and regression analysis"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Least_squares_and_regression_analysis" title="Template talk:Least squares and regression analysis"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Least_squares_and_regression_analysis&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div style="font-size:114%"><b><a href="/wiki/Least_squares" title="Least squares">Least squares</a></b> and <b><a href="/wiki/Regression_analysis" title="Regression analysis">regression analysis</a></b></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Computational_statistics" title="Computational statistics">Computational statistics</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Least_squares" title="Least squares">Least squares</a></li>
+<li><a href="/wiki/Linear_least_squares_(mathematics)" title="Linear least squares (mathematics)">Linear least squares</a></li>
+<li><a href="/wiki/Non-linear_least_squares" title="Non-linear least squares">Non-linear least squares</a></li>
+<li><a href="/wiki/Iteratively_reweighted_least_squares" title="Iteratively reweighted least squares">Iteratively reweighted least squares</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Correlation_and_dependence" title="Correlation and dependence">Correlation and dependence</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Pearson_product-moment_correlation_coefficient" title="Pearson product-moment correlation coefficient">Pearson product-moment correlation</a></li>
+<li><a href="/wiki/Rank_correlation" title="Rank correlation">Rank correlation</a> (<a href="/wiki/Spearman%27s_rank_correlation_coefficient" title="Spearman's rank correlation coefficient">Spearman's rho</a></li>
+<li><a href="/wiki/Kendall_tau_rank_correlation_coefficient" title="Kendall tau rank correlation coefficient" class="mw-redirect">Kendall's tau</a>)</li>
+<li><a href="/wiki/Partial_correlation" title="Partial correlation">Partial correlation</a></li>
+<li><a href="/wiki/Confounding" title="Confounding">Confounding variable</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Regression_analysis" title="Regression analysis">Regression analysis</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><strong class="selflink">Ordinary least squares</strong></li>
+<li><a href="/wiki/Partial_least_squares" title="Partial least squares" class="mw-redirect">Partial least squares</a></li>
+<li><a href="/wiki/Total_least_squares" title="Total least squares">Total least squares</a></li>
+<li><a href="/wiki/Ridge_regression" title="Ridge regression" class="mw-redirect">Ridge regression</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Regression as a<br />
+<a href="/wiki/Statistical_model" title="Statistical model">statistical model</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;"><a href="/wiki/Linear_regression" title="Linear regression">Linear regression</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Simple_linear_regression" title="Simple linear regression">Simple linear regression</a></li>
+<li><strong class="selflink">Ordinary least squares</strong></li>
+<li><a href="/wiki/Generalized_least_squares" title="Generalized least squares">Generalized least squares</a></li>
+<li><a href="/wiki/Weighted_least_squares" title="Weighted least squares" class="mw-redirect">Weighted least squares</a></li>
+<li><a href="/wiki/General_linear_model" title="General linear model">General linear model</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Predictor structure</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Polynomial_regression" title="Polynomial regression">Polynomial regression</a></li>
+<li><a href="/wiki/Growth_curve_(statistics)" title="Growth curve (statistics)">Growth curve (statistics)</a></li>
+<li><a href="/wiki/Segmented_regression" title="Segmented regression">Segmented regression</a></li>
+<li><a href="/wiki/Local_regression" title="Local regression">Local regression</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Non-standard</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Nonlinear_regression" title="Nonlinear regression">Nonlinear regression</a></li>
+<li><a href="/wiki/Nonparametric_regression" title="Nonparametric regression">Nonparametric</a></li>
+<li><a href="/wiki/Semiparametric_regression" title="Semiparametric regression">Semiparametric</a></li>
+<li><a href="/wiki/Robust_regression" title="Robust regression">Robust</a></li>
+<li><a href="/wiki/Quantile_regression" title="Quantile regression">Quantile</a></li>
+<li><a href="/wiki/Isotonic_regression" title="Isotonic regression">Isotonic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;">
+<div style="padding:0em 0.75em;">Non-normal errors</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Generalized_linear_model" title="Generalized linear model">Generalized linear model</a></li>
+<li><a href="/wiki/Binomial_regression" title="Binomial regression">Binomial</a></li>
+<li><a href="/wiki/Poisson_regression" title="Poisson regression">Poisson</a></li>
+<li><a href="/wiki/Logistic_regression" title="Logistic regression">Logistic</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Partition_of_sums_of_squares" title="Partition of sums of squares">Decomposition of variance</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Analysis_of_variance" title="Analysis of variance">Analysis of variance</a></li>
+<li><a href="/wiki/Analysis_of_covariance" title="Analysis of covariance">Analysis of covariance</a></li>
+<li><a href="/wiki/Multivariate_analysis_of_variance" title="Multivariate analysis of variance">Multivariate AOV</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Model exploration</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Mallows%27s_Cp" title="Mallows's Cp">Mallows's <i>C<sub>p</sub></i></a></li>
+<li><a href="/wiki/Stepwise_regression" title="Stepwise regression">Stepwise regression</a></li>
+<li><a href="/wiki/Model_selection" title="Model selection">Model selection</a></li>
+<li><a href="/wiki/Regression_model_validation" title="Regression model validation" class="mw-redirect">Regression model validation</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Background</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Mean_and_predicted_response" title="Mean and predicted response">Mean and predicted response</a></li>
+<li><a href="/wiki/Gauss%E2%80%93Markov_theorem" title="Gauss–Markov theorem">Gauss–Markov theorem</a></li>
+<li><a href="/wiki/Errors_and_residuals_in_statistics" title="Errors and residuals in statistics" class="mw-redirect">Errors and residuals</a></li>
+<li><a href="/wiki/Goodness_of_fit" title="Goodness of fit">Goodness of fit</a></li>
+<li><a href="/wiki/Studentized_residual" title="Studentized residual">Studentized residual</a></li>
+<li><a href="/wiki/Minimum_mean-square_error" title="Minimum mean-square error" class="mw-redirect">Minimum mean-square error</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Design_of_experiments" title="Design of experiments">Design of experiments</a></th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Response_surface_methodology" title="Response surface methodology">Response surface methodology</a></li>
+<li><a href="/wiki/Optimal_design" title="Optimal design">Optimal design</a></li>
+<li><a href="/wiki/Bayesian_experimental_design" title="Bayesian experimental design">Bayesian design</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Numerical_analysis" title="Numerical analysis">Numerical</a> <a href="/wiki/Approximation_theory" title="Approximation theory">approximation</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Numerical_analysis" title="Numerical analysis">Numerical analysis</a></li>
+<li><a href="/wiki/Approximation_theory" title="Approximation theory">Approximation theory</a></li>
+<li><a href="/wiki/Numerical_integration" title="Numerical integration">Numerical integration</a></li>
+<li><a href="/wiki/Gaussian_quadrature" title="Gaussian quadrature">Gaussian quadrature</a></li>
+<li><a href="/wiki/Orthogonal_polynomials" title="Orthogonal polynomials">Orthogonal polynomials</a></li>
+<li><a href="/wiki/Chebyshev_polynomials" title="Chebyshev polynomials">Chebyshev polynomials</a></li>
+<li><a href="/wiki/Chebyshev_nodes" title="Chebyshev nodes">Chebyshev nodes</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Applications</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Curve_fitting" title="Curve fitting">Curve fitting</a></li>
+<li><a href="/wiki/Calibration_curve" title="Calibration curve">Calibration curve</a></li>
+<li><a href="/wiki/Numerical_smoothing_and_differentiation" title="Numerical smoothing and differentiation" class="mw-redirect">Numerical smoothing and differentiation</a></li>
+<li><a href="/wiki/System_identification" title="System identification">System identification</a></li>
+<li><a href="/wiki/Moving_least_squares" title="Moving least squares">Moving least squares</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<ul>
+<li><a href="/wiki/Category:Regression_analysis" title="Category:Regression analysis">Regression analysis category</a></li>
+<li><a href="/wiki/Category:Statistics" title="Category:Statistics">Statistics category</a></li>
+<li><a href="/wiki/Portal:Statistics" title="Portal:Statistics">Statistics portal</a></li>
+<li><a href="/wiki/Outline_of_statistics" title="Outline of statistics">Statistics outline</a></li>
+<li><a href="/wiki/List_of_statistics_articles" title="List of statistics articles">Statistics topics</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1220
+Cached time: 20160226080442
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.542 seconds
+Real time usage: 0.883 seconds
+Preprocessor visited node count: 4181/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 68391/2097152 bytes
+Template argument size: 4601/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 3/500
+Lua time usage: 0.159/10.000 seconds
+Lua memory usage: 3.78 MB/50 MB
+Number of Wikibase entities loaded: 0-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  725.487      1 - -total
+ 19.99%  145.008      1 - Template:Reflist
+  7.77%   56.396     23 - Template:Harvtxt
+  7.37%   53.481      1 - Template:Citation_needed
+  6.40%   46.460     23 - Template:Harvard_citation/core
+  6.24%   45.277      1 - Template:Fix
+  5.98%   43.388      2 - Template:Navbox
+  5.96%   43.209      1 - Template:Cite_web
+  5.61%   40.707      2 - Template:Category_handler
+  5.25%   38.077      1 - Template:Least_Squares_and_Regression_Analysis
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1651906-0!*!0!!en!4!*!math=0 and timestamp 20160226080441 and revision id 699616180
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Ordinary_least_squares&amp;oldid=699616180">https://en.wikipedia.org/w/index.php?title=Ordinary_least_squares&amp;oldid=699616180</a>"					</div>
+				<div id='catlinks' class='catlinks' data-mw='interface'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Regression_analysis" title="Category:Regression analysis">Regression analysis</a></li><li><a href="/wiki/Category:Estimation_theory" title="Category:Estimation theory">Estimation theory</a></li><li><a href="/wiki/Category:Parametric_statistics" title="Category:Parametric statistics">Parametric statistics</a></li><li><a href="/wiki/Category:Least_squares" title="Category:Least squares">Least squares</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_February_2010" title="Category:Articles with unsourced statements from February 2010">Articles with unsourced statements from February 2010</a></li><li><a href="/wiki/Category:Articles_to_be_expanded_from_July_2010" title="Category:Articles to be expanded from July 2010">Articles to be expanded from July 2010</a></li><li><a href="/wiki/Category:All_articles_to_be_expanded" title="Category:All articles to be expanded">All articles to be expanded</a></li><li><a href="/wiki/Category:Articles_with_empty_sections_from_July_2010" title="Category:Articles with empty sections from July 2010">Articles with empty sections from July 2010</a></li><li><a href="/wiki/Category:All_articles_with_empty_sections" title="Category:All articles with empty sections">All articles with empty sections</a></li><li><a href="/wiki/Category:Articles_using_small_message_boxes" title="Category:Articles using small message boxes">Articles using small message boxes</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Ordinary+least+squares&amp;type=signup" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Ordinary+least+squares" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Ordinary_least_squares"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Talk:Ordinary_least_squares"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Ordinary_least_squares" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Ordinary_least_squares&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton" />							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Ordinary_least_squares" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Ordinary_least_squares" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Ordinary_least_squares&amp;oldid=699616180" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Ordinary_least_squares&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q2912993" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Ordinary_least_squares&amp;id=699616180" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Ordinary+least+squares">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Ordinary+least+squares&amp;returnto=Ordinary+least+squares&amp;oldid=699616180&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Ordinary_least_squares&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D9%85%D8%B1%D8%A8%D8%B9%D8%A7%D8%AA_%D8%B5%D8%BA%D8%B1%D9%89_%D8%B9%D8%A7%D8%AF%D9%8A%D8%A9" title="مربعات صغرى عادية – Arabic" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-de"><a href="//de.wikipedia.org/wiki/Methode_der_kleinsten_Quadrate" title="Methode der kleinsten Quadrate – German" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="//es.wikipedia.org/wiki/M%C3%ADnimos_cuadrados_ordinarios" title="Mínimos cuadrados ordinarios – Spanish" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="//fa.wikipedia.org/wiki/%DA%A9%D9%85%DB%8C%D9%86%D9%87_%D9%85%D8%B1%D8%A8%D8%B9%D8%A7%D8%AA_%D9%85%D8%B9%D9%85%D9%88%D9%84%DB%8C" title="کمینه مربعات معمولی – Persian" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="//fr.wikipedia.org/wiki/M%C3%A9thode_des_moindres_carr%C3%A9s_ordinaire" title="Méthode des moindres carrés ordinaire – French" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="//ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C%EB%B0%A9%EC%A0%95%EC%8B%9D" title="정규방정식 – Korean" lang="ko" hreflang="ko">한국어</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="//www.wikidata.org/wiki/Q2912993#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 13 January 2016, at 11:53.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="//wikimediafoundation.org/wiki/Cookie_statement">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Ordinary_least_squares&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="//wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ = window.RLQ || []).push(function () {
+mw.loader.state({"ext.globalCssJs.site":"ready","ext.globalCssJs.user":"ready","user":"ready","user.groups":"ready"});mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.eventLogging.subscriber","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.switcher","ext.gadget.featured-articles-links","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.wikimediaEvents","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage"]);
+} );</script><script>(window.RLQ = window.RLQ || []).push(function () {
+mw.config.set({"wgBackendResponseTime":82,"wgHostname":"mw1188"}); /* @nomin */
+} );</script>
+	</body>
+</html>
