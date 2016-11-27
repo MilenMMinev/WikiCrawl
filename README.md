@@ -1,2 +1,2 @@
 # WikiCrawl
-Mine Wikipedia pages and cluster articles 
+Mine Wikipedia pages and find similarity between them
