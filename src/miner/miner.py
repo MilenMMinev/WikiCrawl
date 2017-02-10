@@ -13,9 +13,9 @@ import re
 from threading import Thread
 from random import shuffle
 
-from miner.links_queue import LinkQueue
+from links_queue import LinkQueue
 
-THREADS_CNT = 2
+THREADS_CNT = 50
 
 # Downloaded pages counter
 WIKI_DOMAIN = 'http://wikipedia.org'
@@ -50,7 +50,6 @@ def mine(max_articles, outdir=WIKI_HTML_OUT_DIR, crawl_width=100):
         page_url = l_queue.pop()
         print(page_url)
         page_raw = fetch_article(page_url)
-        print(page_raw)
 
         logging.info('mine: saving article:{} of\t {}'.format(
             curr_page, max_articles))
@@ -82,11 +81,9 @@ def fetch_article(url):
             source = requests.get(url).text
             success = True
         except:
-            print('got ya')
-            logging.error('unable to fetch {}. Will retry in 10sec.'.format(url))
-            time.sleep(10)
+            logging.error('unable to fetch {}. Will retry in 2sec.'.format(url))
+            time.sleep(2)
 
-    # source = source.decode('utf-8')
     return source
 
 
@@ -108,11 +105,13 @@ def save_article(text, out_dir):
     assert(path.isdir(out_dir))
 
     f_name = path.join(out_dir, str(curr_page) + '.html')
-    curr_page += 1
 
     f = open(f_name, 'w')
+    text = text.encode('utf-8')
     f.write(text)
     f.close()
+
+    curr_page += 1
 
 def main():
     assert len(sys.argv[1:]) == 1, "You must specify how many articles to mine"
@@ -121,7 +120,7 @@ def main():
     bgn = time.time()
 
     start = time
-    threads = [Thread(target=mine, args=((n_pages, )), daemon=True)
+    threads = [Thread(target=mine, args=((n_pages, )))
                for i in range(THREADS_CNT)]
 
     for t in threads:
