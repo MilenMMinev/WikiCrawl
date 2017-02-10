@@ -78,6 +78,7 @@ def parse_html(html, min_word_len=3):
     Clean up raw html from tags
     Returns a pandas df with words
     """
+    title = get_title(html)
     paragraphs = _strip_html(html)
     words = _get_words(paragraphs, min_word_len)
     df = pd.DataFrame(words, columns=['term', 'cnt'])
@@ -90,7 +91,7 @@ def parse_all(files):
         # only the filename
         f_name = re.sub(r'.*/', '', f)
         df = parse_html(f_html)
-        df.to_csv(os.path.join(PAGES_CSV, f_name.split('.')[0] + '.csv'))
+        df.to_csv(os.path.join(PAGES_CSV, get_title(f_html) + '.csv'))
 
 def main(argv):
     begin = time.time()
