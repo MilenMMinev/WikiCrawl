@@ -1,7 +1,6 @@
 import re
 import sys
 import time
-import operator
 import os
 from multiprocessing import Process
 import pandas as pd
@@ -91,7 +90,7 @@ def parse_all(files):
         # only the filename
         f_name = re.sub(r'.*/', '', f)
         df = parse_html(f_html)
-        df.to_csv(os.path.join(PAGES_CSV, f_name + '.csv'))
+        df.to_csv(os.path.join(PAGES_CSV, f_name.split('.')[0] + '.csv'))
 
 def main(argv):
     begin = time.time()
@@ -104,7 +103,7 @@ def main(argv):
 
     file_chunks = [files[i:i + chunk_size] for i in range(0, len(files), chunk_size)]
     # Worker processes
-    threads = [Process(target=parse_all, args=((file_chunks[i], )), daemon=True)
+    threads = [Process(target=parse_all, args=((file_chunks[i], )))
                for i in range(THREADS_CNT)]
 
     for t in threads:
@@ -113,7 +112,7 @@ def main(argv):
     for t in threads:
         t.join()
 
-    print(time.time() - begin)
+    print('finished in: {}s.'.format(time.time() - begin))
 
 if __name__ == '__main__':
     main(sys.argv[1:])
