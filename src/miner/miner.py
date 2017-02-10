@@ -1,8 +1,8 @@
 import logging
 import time
+import sys
 
-import urllib.request
-import urllib.response
+import requests
 
 from os import listdir
 from os import path
@@ -13,33 +13,29 @@ import re
 from threading import Thread
 from random import shuffle
 
-from links_queue import LinkQueue
+from miner.links_queue import LinkQueue
 
-THREADS_CNT = 100
+THREADS_CNT = 2
 
 # Downloaded pages counter
-PAGE_CNT = 0
 WIKI_DOMAIN = 'http://wikipedia.org'
 PAGE_EARTH = 'https://en.wikipedia.org/wiki/Earth'
 
 # A path where to store downloaded pages
-WIKI_HTML = '../../data/raw/'
+WIKI_HTML_OUT_DIR = '../../data/raw/'
 LINKS_CACHE = '.links.cache'
 
 # Logger setup
-logging.basicConfig(filename='..\log.log', level=logging.INFO,
+logging.basicConfig(filename='../log.log', level=logging.INFO,
                     format='%(relativeCreated)6d %(threadName)s %(message)s')
 
 # A queue of page links
 l_queue = LinkQueue(maxsize=1000000)
 l_queue.put(PAGE_EARTH)
 
-"""
-Provide a function to crawl wikipedia pages.
-"""
+curr_page = 0
 
-
-def mine(max_articles, outdir=WIKI_HTML, crawl_width=100):
+def mine(max_articles, outdir=WIKI_HTML_OUT_DIR, crawl_width=100):
     """
     @brief Start Crawling the elements in the list queue
            Pages are saved as html in outdir
@@ -50,14 +46,18 @@ def mine(max_articles, outdir=WIKI_HTML, crawl_width=100):
     @crawl_width         Max count of links that will be extracted from a page
     """
     global l_queue
-    while PAGE_CNT < max_articles:
+    while curr_page < max_articles:
         page_url = l_queue.pop()
+        print(page_url)
         page_raw = fetch_article(page_url)
+        print(page_raw)
+
         logging.info('mine: saving article:{} of\t {}'.format(
-            PAGE_CNT, max_articles))
-        save_article(page_raw)
+            curr_page, max_articles))
+
+        save_article(page_raw, outdir)
         page_ext_links = get_links(page_raw)
-        l_queue.put_all(page_ext_links[:100])
+        l_queue.put_all(page_ext_links[:crawl_width])
 
 
 def dump_links(links):
@@ -74,8 +74,19 @@ def fetch_article(url):
     """
     Return raw html from url
     """
-    source = urllib.request.urlopen(url, timeout=10).read()
-    source = source.decode('utf-8')
+    success = False
+
+    source = ''
+    while not success:
+        try:
+            source = requests.get(url).text
+            success = True
+        except:
+            print('got ya')
+            logging.error('unable to fetch {}. Will retry in 10sec.'.format(url))
+            time.sleep(10)
+
+    # source = source.decode('utf-8')
     return source
 
 
@@ -88,26 +99,29 @@ def get_links(html):
     return links
 
 
-def save_article(text, out_dir=WIKI_HTML):
+def save_article(text, out_dir):
     """
     Manages files creation for pages
     The name of the file is a unique id
     """
-    global PAGE_CNT
+    global curr_page
     assert(path.isdir(out_dir))
 
-    f_name = path.join(out_dir, str(PAGE_CNT) + '.html')
-    PAGE_CNT += 1
+    f_name = path.join(out_dir, str(curr_page) + '.html')
+    curr_page += 1
 
     f = open(f_name, 'w')
     f.write(text)
-
+    f.close()
 
 def main():
+    assert len(sys.argv[1:]) == 1, "You must specify how many articles to mine"
+    n_pages = int (sys.argv[1])
+
     bgn = time.time()
 
     start = time
-    threads = [Thread(target=mine, args=((30000, )), daemon=True)
+    threads = [Thread(target=mine, args=((n_pages, )), daemon=True)
                for i in range(THREADS_CNT)]
 
     for t in threads:
@@ -118,7 +132,7 @@ def main():
 
     total_time = time.time() - bgn
     print('mined {} pages in total {}. avg: {}'.format(
-        PAGE_CNT, total_time, total_time / PAGE_CNT))
+        curr_page, total_time, total_time / curr_page))
 
 if __name__ == '__main__':
     main()
