@@ -2,7 +2,7 @@ import re
 import sys
 import time
 import os
-from multiprocessing import Process
+from multiprocessing import Process, Manager
 import pandas as pd
 from word_blacklist import WORD_BLACKLIST
 
@@ -10,9 +10,7 @@ PAGES_RAW = '../../data/raw'
 PAGES_CSV = '../../data/frames'
 
 THREADS_CNT = 4
-"""
-Provide a function to parse pages and create pandas dataframes.
-"""
+MIN_WORD_LEN = 3
 
 def get_title(html):
     title_match = re.search(r'<title>(.*?)</title>', html)
@@ -53,7 +51,7 @@ def _strip_html(html):
     paragraphs = list(map(lambda x: x.lower(), paragraphs))
     return paragraphs
 
-def _get_words(paragraphs, min_word_len):
+def _get_words(paragraphs):
     """
     Filter words
     @param paragraphs    A list of clean sentences
@@ -66,54 +64,76 @@ def _get_words(paragraphs, min_word_len):
     for p in paragraphs:
         words += p.split(' ')
 
-    words = list(filter(lambda x: x not in WORD_BLACKLIST, words))
-    words = list(filter(lambda x: len(x) > min_word_len, words))
+    words = list(filter(lambda x: (x not in WORD_BLACKLIST and len(x) > MIN_WORD_LEN), words))
 
     words_cnt = ((x, words.count(x)) for x in set(words))
     return words_cnt
 
-def parse_html(html, min_word_len=3):
+def parse_html(html):
 
     """
     Clean up raw html from tags
     Returns a pandas df with words
     """
+
     title = get_title(html)
     paragraphs = _strip_html(html)
-    words = _get_words(paragraphs, min_word_len)
-    df = pd.DataFrame(words, columns=['term', 'cnt'])
+    words = _get_words(paragraphs)
+    df = pd.DataFrame(words, columns=['term', title]).set_index(['term'])
 
     return df
 
-def parse_all(files):
-    for f in files:
-        f_html = open(f, 'r').read()
-        # only the filename
-        f_name = re.sub(r'.*/', '', f)
-        df = parse_html(f_html)
-        df.to_csv(os.path.join(PAGES_CSV, get_title(f_html) + '.csv'))
+def parse_all_worker(files, out_list):
+    """
+    Build a list of dataframes out of raw files
+    @param files:A list of file paths. Each file
+    contains meaningful text only.
+    @param out_list: A synchronised object to hold dfs.
+    """
 
-def main(argv):
+    for f in files:
+        try:
+            f_html = open(f, 'r').read()
+            df = parse_html(f_html)
+            out_list.append(df)
+        except:
+            print('failed to open file: {}'.format(f))
+
+def parse_all(files):
+    """
+    Spawn processes to parse files.
+    @return a list of dataframes.
+    """
     begin = time.time()
 
-    assert(os.path.isdir(argv[0]))
-
-    files = list(map(lambda x: os.path.join(argv[0], x), os.listdir(argv[0])))
-    chunk_size = len(files) // THREADS_CNT
-    chunk_size += 1
-
+    chunk_size = (len(files) // THREADS_CNT) + 1
     file_chunks = [files[i:i + chunk_size] for i in range(0, len(files), chunk_size)]
+    dfs_list = Manager().list()
     # Worker processes
-    threads = [Process(target=parse_all, args=((file_chunks[i], )))
+    threads = [Process(target=parse_all_worker, args=((file_chunks[i], dfs_list)))
                for i in range(THREADS_CNT)]
 
+    print('parsing {} files in total...'.format(len(files)))
     for t in threads:
         t.start()
 
     for t in threads:
         t.join()
 
+
     print('finished in: {}s.'.format(time.time() - begin))
+    return list(dfs_list)
+
+def merge_dfs(dfs):
+    return dfs
+
+
+def main(argv):
+    assert(len(argv) > 0)
+    dfs = parse_all(argv)
+    res = pd.concat(dfs, axis = 1)
+
+    print(res)
 
 if __name__ == '__main__':
     main(sys.argv[1:])

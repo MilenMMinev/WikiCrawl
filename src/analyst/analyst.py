@@ -6,36 +6,26 @@ from os.path import join
 
 PAGES_CSV = '../../data/frames'
 
-
-def sum_merge_df(dfs):
-    """
-    merge dataframes by adding all terms
-    and summing their occurance count
-    """
-    df_result = pd.concat(dfs)
-    df_result = df_result.groupby(['term'], as_index=False)
-    print(df_result)
-    df_result = df_result.agg(np.sum)
-
-    return df_result
-
-
 def build_global_data(data_frames):
     """
     Merge all dataframes given by summing the words count
     """
-    merged = sum_merge_df(data_frames)
-    # print(merged)
-    merged.to_csv('out.csv')
+    merged = pd.concat(data_frames, ignore_index=True)
+    return merged
 
-    pass
+def load_csvs(csvs):
+    """
+    Load a list of files into a list of dfs.
+    """
+    return [pd.read_csv(x) for x in csvs]
 
 
 def main():
     files_csv = list(map(lambda x: join(PAGES_CSV, x), listdir(PAGES_CSV)))
-    dfs = [pd.read_csv(x) for x in files_csv]
-    glob_data = build_global_data(dfs)
+    dfs = load_csvs(files_csv)
 
+    glob_data = build_global_data(dfs)
+    print(glob_data)
 
 if __name__ == '__main__':
     main()
