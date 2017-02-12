@@ -133,7 +133,7 @@ def main(argv):
     dfs = parse_all(argv)
     res = pd.concat(dfs, axis = 1)
 
-    print(res)
+    res.to_csv('../../data/out.csv')
 
 if __name__ == '__main__':
     main(sys.argv[1:])
