@@ -4,7 +4,6 @@ import sys
 
 import requests
 
-from os import listdir
 from os import path
 
 import csv
@@ -15,7 +14,7 @@ from random import shuffle
 
 from links_queue import LinkQueue
 
-THREADS_CNT = 50
+THREADS_CNT = 200
 
 # Downloaded pages counter
 WIKI_DOMAIN = 'http://wikipedia.org'
@@ -31,11 +30,13 @@ logging.basicConfig(filename='../log.log', level=logging.INFO,
 
 # A queue of page links
 l_queue = LinkQueue(maxsize=1000000)
+# Default root page
 l_queue.put(PAGE_EARTH)
 
 curr_page = 0
 
-def mine(max_articles, outdir=WIKI_HTML_OUT_DIR, crawl_width=100):
+
+def mine(max_articles, outdir=WIKI_HTML_OUT_DIR, crawl_width=50):
     """
     @brief Start Crawling the elements in the list queue
            Pages are saved as html in outdir
@@ -49,13 +50,16 @@ def mine(max_articles, outdir=WIKI_HTML_OUT_DIR, crawl_width=100):
     while curr_page < max_articles:
         page_url = l_queue.pop()
         print(page_url)
+        t1 = time.time()
         page_raw = fetch_article(page_url)
+        print(time.time() - t1)
 
         logging.info('mine: saving article:{} of\t {}'.format(
             curr_page, max_articles))
 
         save_article(page_raw, outdir)
         page_ext_links = get_links(page_raw)
+
         l_queue.put_all(page_ext_links[:crawl_width])
 
 
@@ -81,7 +85,8 @@ def fetch_article(url):
             source = requests.get(url).text
             success = True
         except:
-            logging.error('unable to fetch {}. Will retry in 2sec.'.format(url))
+            logging.error(
+                'unable to fetch {}. Will retry in 2sec.'.format(url))
             time.sleep(2)
 
     return source
@@ -113,17 +118,18 @@ def save_article(text, out_dir):
 
     curr_page += 1
 
+
 def main():
     assert len(sys.argv[1:]) == 1, "You must specify how many articles to mine"
-    n_pages = int (sys.argv[1])
+    n_pages = int(sys.argv[1])
 
     bgn = time.time()
 
-    start = time
     threads = [Thread(target=mine, args=((n_pages, )))
                for i in range(THREADS_CNT)]
 
     for t in threads:
+        t.daemon = True
         t.start()
 
     for t in threads:

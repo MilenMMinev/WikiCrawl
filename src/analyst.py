@@ -5,7 +5,6 @@ import multiprocessing as mp
 from os import listdir
 from os.path import isfile, join
 
-from threading import Thread
 from queue import Queue
 
 from constants import *
@@ -15,6 +14,7 @@ from article import SourceNullException
 logging.basicConfig(filename='analyst.log', level=logging.INFO)
 
 # article is a
+
 
 class AnalyzerProcess(mp.Process):
     def __init__(self, queue, files):
